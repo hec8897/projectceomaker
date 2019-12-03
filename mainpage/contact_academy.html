@@ -163,69 +163,72 @@
         <!--// form area -->
         <div class="form_area">
             <div class="form_box">
+                    <form action="php/file_upload.php" method='POST' id='frm' enctype="multipart/form-data">
+
                 <div>
                     <p>업체명</p>
-                    <input type="text">
+                    <input type="text" id='reqcompany' name='reqcompany'>
                 </div>
                 <div>
-                    <p>담당자 이름*</p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>연락처*</p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>이메일*</p>
-                    <input type="text">
-                </div>
+                        <p>담당자 이름*</p>
+                        <input type="text" id='reqname'>
+                    </div>
+                    <div>
+                        <p>연락처*</p>
+                        <input type="text" id='reqphone'>
+                    </div>
+                    <div>
+                        <p>이메일*</p>
+                        <input type="text" id='reqemail'>
+                    </div>
                 <div>
                     <p>문의 유형*</p>
-                    <select name="" id="">
-                        <option value="">아카데미 유형을 선택하세요</option>
-                        <option value="">SNS 마케팅</option>
-                        <option value="">블로그 &amp; 카페 활성화</option>
-                        <option value="">스마트폰 활용 교육</option>
+                    <select name="" id="reqinqr">
+                        <option value="아카데미 유형을 선택하세요">아카데미 유형을 선택하세요</option>
+                        <option value="SNS 마케팅">SNS 마케팅</option>
+                        <option value="블로그 &amp; 카페 활성화">블로그 &amp; 카페 활성화</option>
+                        <option value="스마트폰 활용 교육">스마트폰 활용 교육</option>
                     </select>
                 </div>
                 <div>
                     <p>참가 대상*</p>
-                    <input type="text">
+                    <input type="text" id='reqtarget'>
                 </div>
                 <div>
                     <p>참가 인원*</p>
-                    <select name="" id="">
+                    <select name="" id="reqperson">
                         <option value="">교육 참가 인원을 선택하세요</option>
-                        <option value="">1~10</option>
-                        <option value="">10~20</option>
-                        <option value="">20~30</option>
-                        <option value="">30~40</option>
-                        <option value="">40~50</option>
-                        <option value="">51명 이상</option>
+                        <option value="1~10">1~10</option>
+                        <option value="10~20">10~20</option>
+                        <option value="20~30">20~30</option>
+                        <option value="30~40">30~40</option>
+                        <option value="40~50">40~50</option>
+                        <option value="51명 이상">51명 이상</option>
                     </select>
                 </div>
                 <div>
                     <p>교육 예산*</p>
-                    <input type="text">
+                    <input type="text" id='reqpay'>
                 </div>
                 <div class="attach wid">
                     <p>파일 첨부</p>
-                    <input type="text" id="file1" placeholder="파일을 첨부 하세요" readonly>
-                    <label for="file_img1">
-                        <span class="b_file"><img src="images/icon_file.png" alt="file"></span>
-                        <input type="file" id="file_img1" onchange="document.getElementById('file1').value=this.value;">
-                    </label>
-                </div>
-                <div class="text_area">
-                    <p>문의 내용*</p>
-                    <textarea name="" id=""></textarea>
-                </div>
+                        <input type="text" id="file1" placeholder="파일을 첨부 하세요" name='file_name' readonly >
+                        <label for="file_img1">
+                            <span class="b_file"><img src="images/icon_file.png" alt="file"></span>
+                            <input type="file" id="file_img1" name='file' onchange="document.getElementById('file1').value=this.value;">
+                        </label>
+                    </div>
+                    <div class="text_area">
+                        <p>문의 내용*</p>
+                        <textarea name="" id="reqmemo"></textarea>
+                    </div>
+                </form>
             </div>
         </div>
         <!-- END form area //-->
         
         <div class="btn_area">
-            <a href="" class="btn">문의하기 <div class="pluarotate"><span></span><span></span></div></a>
+            <div class="btn" onclick="DataInserter.DataInsertFn('academy')">문의하기<div class="pluarotate"><span></span><span></span></div></div>
         </div>
     </section>
     
@@ -263,5 +266,6 @@
 
 
 <script src="js/layout.min.js"></script>
+<script src="js/data.min.js"></script>
 </body>
 </html>

@@ -3,13 +3,10 @@ include('../inc/conn.php');
 mysqli_set_charset($conn,"utf8");
 $data = json_decode(stripslashes($_POST['data']));
 $memid = $data->userId;
-$sql = "SELECT * FROM user_tb WHERE 'user_id'='$memid'";
-$test = "SELECT * FROM user_tb";
-$check =  mysqli_query($conn,$test);     
-
+$sql = "SELECT * FROM user_tb WHERE `user_id`='$memid'";
+$check =  mysqli_query($conn,$sql );     
 
 $row = mysqli_fetch_assoc($check);
-$test = mysqli_fetch_assoc($check);
 
 $check_DB =  count($row);
 $mempw = $data->userPw;
@@ -25,14 +22,11 @@ else{
         $check ='pwno';
     }
 }
-$Login_info = json_encode(
-    array("memId"=>$row['user_id'], 
-          "memPw"=>$row['user_pw'],
-          "memName"=>$row['user_name']
-));
+    $memId = $row['user_id'];
+    $memName = $row['user_name'];
 
-    $json =  json_encode(
-        array("DateData"=>$data,"sql"=>$test['user_id']
+    $json =  json_encode(   
+        array("DateData"=>$data,"memId"=>$memId,"name"=>$memName,"result"=>$check
 
     )); 
 

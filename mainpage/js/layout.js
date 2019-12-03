@@ -50,10 +50,10 @@
         }
 
         if(params.cate!=undefined){
-             for(let i = 0; i<_lnb.length; i++){
-                 _lnb[i].classList = 'h_lnb'
-                }
-                _lnb[params.cate].className = 'h_lnb on'
+                for(let i = 0; i<_lnb.length; i++){
+                    _lnb[i].classList = 'h_lnb'
+                    }
+                    _lnb[params.cate].className = 'h_lnb on'
             }
 
          _lnb[0].setAttribute('href', HtmlMokup.Service.main);

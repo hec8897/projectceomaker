@@ -20,7 +20,17 @@ input{
 input::placeholder{
     color: #444;
 }
-div#wrap{
+
+h1{
+    text-align: center;
+    color: #1dbfd7;
+}
+h1 span{
+    color: #015b96;
+}
+div.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 div.login_box{
     position: absolute;
@@ -32,23 +42,21 @@ div.login_box{
     border: 1px solid #d0d0d0;
     padding: 80px;
 }
-h1{
-    text-align: center;
-    color: #1dbfd7;
-    font-size: 2.5rem;
-}
-h1 span{
-    color: #015b96;
-}
+
 div.login_box ul{
     margin-top: 30px;
+    text-align: center;
+}
+div.login_box h1{
+    font-size: 2.5rem;
 }
 div.login_box ul li{
-    width: 100%;
+    width: 80%;
     height: 40px;
     display: block;
     margin-bottom: 30px;
     border: 1px solid #d0d0d0;
+    margin: 20px auto;
 }
 
 div.submit_btn{
@@ -61,5 +69,67 @@ div.submit_btn{
     text-align: center;
     line-height: 40px;
     font-weight: bold;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #f0f0f0;
+    line-height: 50px;
+}
+header h1{
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+main{
+    margin-top: 50px;
+}
+
+main table{
+    width: 1024px;
+    margin-top: 20px;
+    border: 1px solid #d0d0d0;
+}
+main table thead {
+    background: #1dbfd7;
+    border-bottom: 1px solid #d0d0d0;
 
 }
+
+main table thead tr{
+    width: 100%;
+
+
+
+}
+
+main table thead tr td{
+    text-align: center;
+    color: white;
+
+}
+main table thead tr td:nth-child(1){
+    width: 5%;
+}
+main table thead tr td:nth-child(2){
+    width: 20%;
+}
+main table thead tr td:nth-child(3){
+    width: 25%;
+}
+main table thead tr td:nth-child(4){
+    width: 30%;
+}
+main table thead tr td:nth-child(4){
+    width: 20%;
+}
+
+main table tbody tr {
+    height: 30px;
+    text-align: center;
+}
+
+
+
+
