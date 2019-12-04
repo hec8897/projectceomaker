@@ -1,0 +1,225 @@
+[
+{
+    "id":0,
+    "workCate":"homepage",
+    "projectName":"BM Company 홈페이지",
+    "company":"BM",
+    "mainTit":"보험 친구들",
+    "subTit":"국내 최고 보험 분석 전문가",
+    "background":"images/works_8.jpg",
+    "link":"bmcompany.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":1
+},
+
+{
+    "id":1,
+    "workCate":"homepage",
+    "projectName":"투게더인스 홈페이지",
+    "company":"togetherins",
+    "mainTit":"투게더인스",
+    "subTit":"안전하고 정확한 금융 라이프를 위한",
+    "background":"images/works_7.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":2
+
+},
+{
+    "id":0,
+    "workCate":"homepage",
+    "projectName":"BLOG AWARD",
+    "company":"CEOMAKER",
+    "mainTit":"BLOG AWARD",
+    "subTit":"2016 KOREA",
+    "background":"images/works_0.jpg",
+    "link":"bmcompany.kr",
+    "work":"ACADEMY & CONFERENCE",
+    "fontColor":"#fff",
+    "Oreder":3
+},
+
+{
+    "id":2,
+    "workCate":"Landingpage",
+    "projectName":"글로벌 금융 상담사 개인 랜딩 페이지",
+    "company":"BM",
+    "mainTit":"Life New Care",
+    "subTit":"당신만을 위한 라이프 뉴케어",
+    "background":"images/works_6.jpg",
+    "link":"tinsu.co.kr",
+    "work":"LANDING RESPONSIVE DESIGN / DEVELOP",
+    "fontColor":"#fff",
+    "Oreder":4
+
+
+},
+{
+    "id":3,
+    "workCate":"Landingpage",
+    "projectName":"BM 유전자 검사 랜딩 페이지",
+    "company":"BM",
+    "mainTit":"유전자검사",
+    "subTit":"총 24종 질병 예측의 확실한 방법",
+    "background":"images/works_5.jpg",
+    "link":"tinsu.co.kr",
+    "work":"LANDING RESPONSIVE DESIGN / DEVELOP",
+    "fontColor":"#fff",
+    "Oreder":5
+},
+{
+    "id":4,
+    "workCate":"homepage",
+    "projectName":"수협 은행",
+    "company":"수협",
+    "mainTit":"",
+    "subTit":"",
+    "background":"images/works_4.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":6
+},
+{
+    "id":5,
+    "workCate":"homepage",
+    "projectName":"굿뱅크 홈페이지",
+    "company":"굿뱅크",
+    "mainTit":"굿뱅크",
+    "subTit":"임대아파트 대출 정보",
+    "background":"images/works_3.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":7
+},
+
+{
+    "id":6,
+    "workCate":"homepage",
+    "projectName":"남건생",
+    "company":"남문식",
+    "mainTit":"남 건 생",
+    "subTit":"남문식 원장의 건강한 생활",
+    "background":"images/works_2.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":8
+},
+{
+    "id":7,
+    "workCate":"homepage",
+    "projectName":"이우호 명인",
+    "company":"이우호",
+    "mainTit":"이우호 명인",
+    "subTit":"무형문화재 한량무 명인",
+    "background":"images/works_1.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":9
+}
+,
+{
+    "id":5,
+    "workCate":"homepage",
+    "projectName":"굿뱅크 홈페이지",
+    "company":"굿뱅크",
+    "mainTit":"굿뱅크",
+    "subTit":"임대아파트 대출 정보",
+    "background":"images/works_3.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":6
+},
+
+{
+    "id":6,
+    "workCate":"homepage",
+    "projectName":"남건생",
+    "company":"남문식",
+    "mainTit":"남 건 생",
+    "subTit":"남문식 원장의 건강한 생활",
+    "background":"images/works_2.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":8
+},
+{
+    "id":7,
+    "workCate":"homepage",
+    "projectName":"이우호 명인",
+    "company":"이우호",
+    "mainTit":"이우호 명인",
+    "subTit":"무형문화재 한량무 명인",
+    "background":"images/works_1.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":9
+},
+{
+    "id":6,
+    "workCate":"homepage",
+    "projectName":"남건생",
+    "company":"남문식",
+    "mainTit":"남 건 생",
+    "subTit":"남문식 원장의 건강한 생활",
+    "background":"images/works_2.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":8
+},
+{
+    "id":7,
+    "workCate":"homepage",
+    "projectName":"이우호 명인",
+    "company":"이우호",
+    "mainTit":"이우호 명인",
+    "subTit":"무형문화재 한량무 명인",
+    "background":"images/works_1.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":9
+}
+,{
+    "id":6,
+    "workCate":"homepage",
+    "projectName":"남건생",
+    "company":"남문식",
+    "mainTit":"남 건 생",
+    "subTit":"남문식 원장의 건강한 생활",
+    "background":"images/works_2.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":8
+},
+{
+    "id":7,
+    "workCate":"homepage",
+    "projectName":"이우호 명인",
+    "company":"이우호",
+    "mainTit":"이우호 명인",
+    "subTit":"무형문화재 한량무 명인",
+    "background":"images/works_1.jpg",
+    "link":"tinsu.co.kr",
+    "work":"WEBSITE DESIGN / DEVELOP",
+    "fontColor":"#444",
+    "Oreder":9
+}
+
+
+
+
+
+
+
+]

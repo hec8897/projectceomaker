@@ -15,16 +15,16 @@ let DataInserter = {
         let reqTarget = document.getElementById('reqtarget');
         let reqPerson = document.getElementById('reqperson');
         let Checkd = document.getElementById('checkbox_1').checked;
-
+  
         // Addional values tag
-
+  
         let reqInqr;
         let payInqr;
         let reqTargetr;
         let reqPersonr;
         let reqNamer;
         let fileNamer;
-
+  
         if(mode!='basic'){
             reqInqr = reqInq.value;
             payInqr = reqPay.value;
@@ -35,9 +35,10 @@ let DataInserter = {
             reqTargetr = reqTarget.value;
             reqPersonr = reqPerson.value;
         }
-
+  
         this.dataArray = [
             {
+                
                 reqCompany,
                 reqPhone,
                 reqEmail,
@@ -52,19 +53,51 @@ let DataInserter = {
                 fileNamer
             }
         ]
-
-        if(this.dataArray[0].reqCompany == ""){
-            alert('회사명, 연락처는 필수입니다.');
-        }
-        else if(this.dataArray[0].reqPhone == ""){
-            alert('회사명, 연락처는 필수입니다.');
-        }
-        else if(Checkd == false){
-            alert('개인정보 수집 및 이용에 동의 해주세요')
-
-        }
-        else{
+  
+        const dataArray = this.dataArray[0]
+        if(mode == "basic"){
+            if(dataArray.reqPhone == "" || dataArray.reqEmail == "" || dataArray.reqMemo ==""){
+                alert('필수 입력정보가 누락되었습니다.')
+            }
+            else if(Checkd == false){
+                alert('개인정보수집 및 이용에 동의해주세요')
+            }
+            else{
+                InsertData()
+            }
             
+        }
+        else if(mode == "design" || mode == "marketing" || mode == "consulting"){  
+            if(dataArray.reqPhone == "" || dataArray.reqEmail == "" || dataArray.reqNamer == "" || dataArray.reqInqr == "" || dataArray.payInqr == "" || dataArray.reqMemo == ""){
+                alert('필수 입력정보가 누락되었습니다.')
+                console.log(dataArray)
+            }
+            else if(Checkd == false){
+                alert('개인정보수집 및 이용에 동의해주세요')
+            }
+            else{
+                InsertData()
+            }          
+        }
+        else if(mode == "academy"){
+            if(dataArray.reqPhone == "" || dataArray.reqEmail == "" || dataArray.reqNamer == "" || dataArray.reqInqr == "" || dataArray.payInqr == "" || dataArray.reqMemo == "" || dataArray.reqTargetr == "" || dataArray.reqPersonr ==""){
+                alert('필수 입력정보가 누락되었습니다.')
+                console.log(dataArray)
+  
+            }
+            else if(Checkd == false){
+                alert('개인정보수집 및 이용에 동의해주세요')
+            }
+            else{
+                InsertData()
+            }          
+        }
+      
+     
+        else{
+        }   
+  
+        function InsertData(){
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
@@ -79,10 +112,12 @@ let DataInserter = {
                                 alert('상담신청이 완료 되었습니다. 빠른시일안에 연락 드리겠습니다');
                                 location.reload()
                             }
-
+  
                         }
                         else{
                             alert('상담신청이 완료 되었습니다. 빠른시일안에 연락 드리겠습니다');
+                            location.reload()
+  
                         }
                     }
                     else{
@@ -93,7 +128,7 @@ let DataInserter = {
             xhttp.open('POST', 'php/insert.php', true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send(`data=${JSON.stringify(DataInserter.dataArray)}`)
-        }   
-
+        }
+  
     }
-}
+  }
