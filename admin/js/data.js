@@ -15,6 +15,8 @@ let UseAdminFn = {
                 }
                 else{
                     alert(`어서오세요 ${returnJson.name}님`)
+                    sessionStorage.setItem("name", returnJson.name);
+                    sessionStorage.setItem("ID", returnJson.memId);
                     location.href='main.html'
                 }
             }

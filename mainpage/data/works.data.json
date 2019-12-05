@@ -28,7 +28,7 @@
 
 },
 {
-    "id":0,
+    "id":2,
     "workCate":"homepage",
     "projectName":"BLOG AWARD",
     "company":"CEOMAKER",
@@ -42,7 +42,7 @@
 },
 
 {
-    "id":2,
+    "id":3,
     "workCate":"Landingpage",
     "projectName":"글로벌 금융 상담사 개인 랜딩 페이지",
     "company":"BM",
@@ -57,7 +57,7 @@
 
 },
 {
-    "id":3,
+    "id":4,
     "workCate":"Landingpage",
     "projectName":"BM 유전자 검사 랜딩 페이지",
     "company":"BM",
@@ -70,7 +70,7 @@
     "Oreder":5
 },
 {
-    "id":4,
+    "id":5,
     "workCate":"homepage",
     "projectName":"수협 은행",
     "company":"수협",
@@ -83,7 +83,7 @@
     "Oreder":6
 },
 {
-    "id":5,
+    "id":6,
     "workCate":"homepage",
     "projectName":"굿뱅크 홈페이지",
     "company":"굿뱅크",
@@ -97,7 +97,7 @@
 },
 
 {
-    "id":6,
+    "id":7,
     "workCate":"homepage",
     "projectName":"남건생",
     "company":"남문식",
@@ -110,7 +110,7 @@
     "Oreder":8
 },
 {
-    "id":7,
+    "id":8,
     "workCate":"homepage",
     "projectName":"이우호 명인",
     "company":"이우호",
@@ -124,7 +124,7 @@
 }
 ,
 {
-    "id":5,
+    "id":9,
     "workCate":"homepage",
     "projectName":"굿뱅크 홈페이지",
     "company":"굿뱅크",
@@ -138,7 +138,7 @@
 },
 
 {
-    "id":6,
+    "id":10,
     "workCate":"homepage",
     "projectName":"남건생",
     "company":"남문식",
@@ -151,7 +151,7 @@
     "Oreder":8
 },
 {
-    "id":7,
+    "id":11,
     "workCate":"homepage",
     "projectName":"이우호 명인",
     "company":"이우호",
@@ -164,7 +164,7 @@
     "Oreder":9
 },
 {
-    "id":6,
+    "id":12,
     "workCate":"homepage",
     "projectName":"남건생",
     "company":"남문식",

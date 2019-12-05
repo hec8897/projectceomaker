@@ -90,45 +90,55 @@ main table{
     width: 1024px;
     margin-top: 20px;
     border: 1px solid #d0d0d0;
-}
-main table thead {
     background: #1dbfd7;
-    border-bottom: 1px solid #d0d0d0;
+}
 
+main table thead {
+    border-bottom: 1px solid #d0d0d0;
 }
 
 main table thead tr{
     width: 100%;
-
-
-
 }
 
 main table thead tr td{
     text-align: center;
     color: white;
-
 }
+
 main table thead tr td:nth-child(1){
     width: 5%;
+
 }
 main table thead tr td:nth-child(2){
     width: 20%;
 }
+
 main table thead tr td:nth-child(3){
     width: 25%;
 }
+
 main table thead tr td:nth-child(4){
     width: 30%;
 }
+
 main table thead tr td:nth-child(4){
     width: 20%;
+}
+
+main table tbody{
+    background: white;
 }
 
 main table tbody tr {
     height: 30px;
     text-align: center;
 }
+
+main table tbody tr {
+    border: 1px solid #222;
+}
+
 
 
 

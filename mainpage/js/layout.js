@@ -144,12 +144,12 @@ let WorkDataRender = {
                         <div style="background:url(${WorkData[i].background}) center;" "background-size:auto 100%;" class="animated work_lists" data-animation="true" data-animation-type="fadeInUp">
                             <a href="javascript:void()">
                                 <div class="work_on">
-                                    <div class="btn btn_w">REAN MORE<div class="pluarotate"><span></span><span></span></div></div>
+                                    <div class="more_tag btn btn_w" >REAN MORE<div class="pluarotate"><span></span><span></span></div></div>
                                 </div>
                                 <div class="work_con">
                                     <p style="color:${WorkData[i].fontColor}">${WorkData[i].subTit}</p>
                                     <h2 style="color:${WorkData[i].fontColor}">${WorkData[i].mainTit}</h2>
-                                    <div style="color:${WorkData[i].fontColor}">WEBSITE DESIGN / DEVELOP</div>
+                                    <div style="color:${WorkData[i].fontColor}">${WorkData[i].work}</div>
                                 </div>
                                 <img src="images/img_dim.gif" alt="dim">
                             </a>
@@ -181,8 +181,15 @@ let WorkDataRender = {
                 var replaceAll3 = replaceAll2.replaceAll(null, ' ');
                 WorkListHtml.innerHTML = replaceAll3
 
-                const WorkList = document.querySelectorAll('.work_lists')
+                const WorkList = document.querySelectorAll('.work_lists');
 
+                const MoreBtn = document.querySelectorAll('.more_tag');
+
+
+
+                for(var i = 5; i<MoreBtn.length; i++){
+                    MoreBtn[i].classList = ""
+                }
                 for (var i = limitList; i < WorkList.length; i++) {
                     WorkList[i].style.display = "none"
 
@@ -220,13 +227,6 @@ let WorkDataRender = {
             }
 
 
-
-
-        // var resultArrayHtml =  limitArray.toString();
-        // var replaceAll1 = resultArrayHtml.replaceAll(',', '');
-        // var replaceAll2 = replaceAll1.replaceAll('|', ',');
-        // var replaceAll3 = replaceAll2.replaceAll(null, ' ');
-        // WorkListHtml.innerHTML = replaceAll3
 
 
     }

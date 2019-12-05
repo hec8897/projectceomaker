@@ -2,7 +2,7 @@
 
 include('../admin/inc/conn.php');
 
-$reqCompany = $_POST['reqcompany'];
+$reqName = $_POST['reqname'];
 
 if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
     $file = $_FILES['file'];
@@ -30,8 +30,7 @@ if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
             alert('3MB 까지만 업로드 가능합니다.')
             history.back();
         </script>
-        <?php
-        
+        <?php       
 
     }
 
@@ -40,6 +39,7 @@ if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
         $name_orig = $file['name'];
         $name_save = $path;
         $query = "INSERT INTO upload_file (reqcompany,file_id, name_orig, name_save, reg_time) VALUES('$reqCompany','$file_id','$name_orig','$name_save',now())";
+        $query = "UPDATE `Insert_tb` SET `fileId` = '$file_id' WHERE `Insert_tb`.`reqname` = '$reqName'";
 
         $stmt = mysqli_prepare($conn, $query);
 
