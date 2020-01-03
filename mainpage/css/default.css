@@ -369,8 +369,8 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .privacy .checkbox{margin-top:10px}
 
 .form_area{width:1200px; margin:0 auto; margin-top:50px; box-sizing:border-box}
-.form_area .form_box>div{width:48%; float:left; margin-bottom:30px}
-.form_area .form_box>div:nth-child(2n){float:right}
+.form_area .form_box form>div{width:48%; float:left; margin-bottom:30px}
+.form_area .form_box form>div:nth-child(2n){float:right}
 .form_area p{font-size:13px; margin-bottom:15px}
 .form_area input[type=text]{width:100%}
 
