@@ -31,16 +31,61 @@ const HtmlMokup = {
 }
 
 let navMokupRender = {
-    HeaderRender() {
+    // HeaderRender() {
 
+    //     const Gnb = document.getElementsByClassName('gnb')[0];
+    //     Gnb.innerHTML = `<nav>
+    //                             <div class="ci"><a href="${HtmlMokup.Main.main}"><img src="images/ci_white.png" alt="ceomaker"></a></div>
+    //                             <a href="${HtmlMokup.Service.main}">SERVICE</a>
+    //                             <a href="${HtmlMokup.Works.main}">WORKS</a>
+    //                             <a href="${HtmlMokup.Contact.main}">CONTACT</a>
+    //                             <a href="${HtmlMokup.About.main}">ABOUT</a>
+    //                         </nav>`
+    // },
+    HeaderRender() {
         const Gnb = document.getElementsByClassName('gnb')[0];
-        Gnb.innerHTML = `<nav>
-                                <div class="ci"><a href="${HtmlMokup.Main.main}"><img src="images/ci_white.png" alt="ceomaker"></a></div>
-                                <a href="${HtmlMokup.Service.main}">SERVICE</a>
-                                <a href="${HtmlMokup.Works.main}">WORKS</a>
-                                <a href="${HtmlMokup.Contact.main}">CONTACT</a>
-                                <a href="${HtmlMokup.About.main}">ABOUT</a>
-                            </nav>`
+        Gnb.innerHTML = `
+        <nav>
+        <div class="ci"><a href="${HtmlMokup.Main.main}"><img src="images/ci_white.png" alt="ceomaker"></a></div>        
+        <div class="dropdown">
+            <div>
+                <a href="${HtmlMokup.Service.main}" class="gnbm">SERVICE</a>
+            </div>
+            <!-- sub -->
+            <div class="sub_box">
+                <div class="depth">
+                <a href="${HtmlMokup.Service.design}">design</a>
+                <a href="${HtmlMokup.Service.marketing}">marketing</a>
+                <a href="${HtmlMokup.Service.academy}">academy</a>
+                <a href="${HtmlMokup.Service.consulting}">consulting</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div>
+                <a href="${HtmlMokup.Works.main}" class="gnbm">WORKS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div>
+                <a href="${HtmlMokup.Contact.main}" class="gnbm">CONTACT</a>
+            </div>
+            <!-- sub -->
+            <div class="sub_box">
+                <div class="depth">
+                    <a href="${HtmlMokup.Contact.design}">design</a>
+                    <a href="${HtmlMokup.Contact.marketing}">marketing</a>
+                    <a href="${HtmlMokup.Contact.academy}">academy</a>
+                    <a href="${HtmlMokup.Contact.consulting}">consulting</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div>
+                <a href="${HtmlMokup.About.main}" class="gnbm">ABOUT</a>
+            </div>
+        </div>
+    </nav>`
     },
     SideBarNav() {
         this.getQueryString();
@@ -187,7 +232,7 @@ let WorkDataRender = {
 
 
 
-                for(var i = 5; i<MoreBtn.length; i++){
+                for (var i = 5; i < MoreBtn.length; i++) {
                     MoreBtn[i].classList = ""
                 }
                 for (var i = limitList; i < WorkList.length; i++) {
@@ -219,12 +264,11 @@ let WorkDataRender = {
             if (WorkList.length <= this.moreDataCount) {
                 this.moreDataCount = WorkList.length
             }
+        } else {
+
+            workLoading.style.opacity = '0'
+
         }
-            else{
-
-                workLoading.style.opacity='0'
-
-            }
 
 
 
