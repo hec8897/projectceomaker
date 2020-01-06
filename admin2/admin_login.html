@@ -21,6 +21,14 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/apps.min.js"></script>
+
+      <!-- Automatically provides/replaces `Promise` if missing or broken. -->
+      <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+  
+      <!-- Minified version of `es6-promise-auto` below. -->
+      <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
@@ -31,6 +39,9 @@
         $(document).ready(function () {
             App.init();
         });
+    </script>
+      <script>
+        var Promise = require('es6-promise').Promise;
     </script>
 
 </head>
