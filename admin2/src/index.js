@@ -82,13 +82,13 @@ beforeCreate() {
             for(let i = 0; i < Data.length; i++){
                 TableData.push(
                     `<tr>
-                    <td>${i+1}</td>
-                    <td>${Data[i].reqcompany}</td>
-                    <td>${Data[i].reqmemo}</td>
-                    <td>${Data[i].reqname}</td>
-                    <td>${Data[i].reqphone}</td>
-                    <td>${Data[i].reqfilerout}</td>
-                    <td>${Data[i].time}</td>
+                        <td>${i+1}</td>
+                        <td>${Data[i].reqcompany}</td>
+                        <td>${Data[i].reqmemo}</td>
+                        <td>${Data[i].reqname}</td>
+                        <td>${Data[i].reqphone}</td>
+                        <td>${Data[i].reqfilerout}</td>
+                        <td>${Data[i].time}</td>
                     </tr>`
                     )
                 }
@@ -101,7 +101,6 @@ beforeCreate() {
 
 const AdminInfo = {
     template: `<div class="con_wrap">
-    <!-- my info -->
     <div class="info_wrap">
         <h4 class="title">관리자 정보</h4>
         <div class="panel">
@@ -539,7 +538,6 @@ const cousul = {
     </div>
 </div>`
 }
-
 const router = new VueRouter({
     routes:[
         {
@@ -575,7 +573,5 @@ var app = new Vue({
     data:{
         items:[]
     }
-    
-   
 }).$mount('#app')
 
