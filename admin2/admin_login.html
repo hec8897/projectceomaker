@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<title>관리자 페이지</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="title" content="administrator">
-	<meta name="author" content="administrator">
+    <title>관리자 페이지</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="title" content="administrator">
+    <meta name="author" content="administrator">
     <meta name="description" content="administrator">
-    
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    
+    <script src="src/axios.min.js"></script>
     <!--  BASE CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-	<link href="css/elements.min.css" rel="stylesheet" />
-	<link href="css/admin_default.css" rel="stylesheet" />
-	<!--  END BASE CSS  -->
-	
-	<!--  BASE JS  -->
-	<script src="js/jquery-1.9.1.min.js"></script>
+    <link href="css/elements.min.css" rel="stylesheet" />
+    <link href="css/admin_default.css" rel="stylesheet" />
+    <!--  END BASE CSS  -->
+
+    <!--  BASE JS  -->
+    <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/apps.min.js"></script>
@@ -26,39 +26,52 @@
 		<script src="js/respond.min.js"></script>
 	    <![endif]-->
     <!--  END BASE JS  -->
-    
+
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             App.init();
         });
     </script>
-    
+
 </head>
 
 <body>
-<div class="login_wrap">
-    <!-- Login area -->
-    <div class="login_box">
-        <div class="login_bi">
-            <h1>CEOMAKER</h1>
+    <div class="login_wrap">
+
+        <!-- Login area -->
+        <div class="login_box">
+            <div class="login_bi">
+                <h1>CEOMAKER</h1>
+            </div>
+            <div class="login_input">
+                <div class="mb10">
+                    <i class="material-icons">person</i>
+                    <input type="text" placeholder="아이디" id='reqid' onkeyup="enterLogin()">
+                </div>
+                <div>
+                    <i class="material-icons">lock</i>
+                    <input type="password" placeholder="비밀번호" id='reqpw' onkeyup="enterLogin()">
+                </div>
+                <div class="mt40">
+                    <button onclick='LoginProcess.PostLoginData()' type="submit" id="" class="btn_admin">관리자
+                        로그인</button>
+                    <!-- <button type="submit" id="" class="btn_pw">비밀번호 찾기</button> -->
+                </div>
+            </div>
         </div>
-        <div class="login_input">
-            <div class="mb10">
-                <i class="material-icons">person</i>
-                <input type="text" placeholder="아이디" id='reqid'>
-            </div>
-            <div>
-                <i class="material-icons">lock</i>
-                <input type="password" placeholder="비밀번호" id='reqpw'>
-            </div>
-            <div class="mt40">
-                <button onclick = 'LoginFn()' type="submit" id="" class="btn_admin">관리자 로그인</button>
-                <!-- <button type="submit" id="" class="btn_pw">비밀번호 찾기</button> -->
-            </div>
-        </div>
+        <!-- END Login area -->
     </div>
-    <!-- END Login area -->
-</div>
-<script src="data/data.js"></script>
+    <script src="src/main.js"></script>
+
+    <script>
+        function enterLogin() {
+            //엔터키 로그인
+            if (window.event.keyCode == 13) {
+                LoginProcess.PostLoginData()
+            }
+        }
+    </script>
+
 </body>
+
 </html>

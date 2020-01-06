@@ -44,12 +44,12 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .head_wrap{position:relative; z-index:9; width:100%; height:70px; background:#222; box-shadow:0 3px 5px rgba(0,0,0,0.3)}
 .head_wrap .head_bi{float:left}
 .head_wrap .head_bi .bi_img{float:left; width:80px; margin:0 20px; padding-top:20px}
-.head_wrap .head_bi h4{float:left; color:#fff; font-size:16px; font-weight:400; letter-spacing:0; margin-top:24px}
+.head_wrap .head_bi h4{float:left; color:#fff; font-size:16px; font-weight:400; letter-spacing:0; line-height: 70px; padding-left: 15px; cursor: pointer;}
 .head_wrap .head_info{float:right}
 .head_wrap .head_info h5{display:inline-block; color:#fff; font-weight:300; letter-spacing:0; margin-right:50px}
-.head_wrap .head_info a{display:inline-block; width:100px; height:30px; line-height:30px; font-size:14px; font-weight:400; text-align:center; margin:20px 10px 0 0}
-.head_wrap .head_info a.btn_info{background:#d9d9d9; color:#444}
-.head_wrap .head_info a.btn_out{background:#f4514a; color:#fff}
+.head_wrap .head_info span{display:inline-block; width:100px; height:30px; line-height:30px; font-size:14px; font-weight:400; text-align:center; margin:20px 10px 0 0; cursor: pointer;}
+.head_wrap .head_info a.btn_info{background:#d9d9d9; color:#444;}
+.head_wrap .head_info span.btn_out{background:#f4514a; color:#fff}
 
 /* Side GNB */
 .sidebar{position:absolute; z-index:6; padding-top:70px; height:100%; box-sizing:border-box}
@@ -58,8 +58,8 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
     display:inline-block; width:0; height:0; margin:20px 10px 0 0; vertical-align:middle;
     border-left:4px solid #444; border-top:4px solid transparent; border-bottom:4px solid transparent; box-sizing: border-box;
 }
-.sidebar .nav .has-sub{width:100%; border-bottom:1px solid #d9d9d9}
-.sidebar .nav .has-sub.on,
+.sidebar .nav .has-sub{width:100%; border-bottom:1px solid #d9d9d9; cursor: pointer;}
+.sidebar .nav .has-sub.router-link-active,
 .sidebar .nav .has-sub.active,
 .sidebar .nav .has-sub.expand,
 .sidebar .nav .has-sub:hover{background:#fff; border-right:1px solid #fff;}

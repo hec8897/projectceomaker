@@ -38,52 +38,16 @@
 <body>
 <div class="wrap">
     <!-- head area -->
-    <div class="head_wrap">
-        <div class="head_bi">
-            <div class="bi_img"><a href=""><img src="images/bi_yul.png" alt="yul_bi"></a></div>
-            <h4>ADMINISTRATOR</h4>
-        </div>
-        <!-- login ingo -->
-        <div class="head_info">
-            <a href="" class="btn_out">로그아웃</a>
-        </div>
+    <header class="head_wrap">
         <!-- END login ingo //-->
-    </div>
+    </header>
     <!-- END head area //-->
 
     <!-- side GNB -->
-    <div id="sidebar" class="sidebar">
-        <ul class="nav">
-            <li class="has-sub on">
-                <a href="javascript:;">
-                    <b class="caret fr"></b>
-                    <i class="material-icons ml20 mr10">group</i>
-                    <h5>관리자 관리</h5>
-                </a>
-            </li>
-            <li class="has-sub">
-                <a href="javascript:;">
-                    <b class="caret fr"></b>
-                    <i class="material-icons ml20 mr10">view_compact</i>
-                    <h5>메인 관리</h5>
-                </a>
-            </li>
-            <li class="has-sub">
-                <a href="javascript:;">
-                    <b class="caret fr"></b>
-                    <i class="material-icons ml20 mr10">dvr</i>
-                    <h5>포트폴리오</h5>
-                </a>
-            </li>
-            <li class="has-sub">
-                <a href="javascript:;">
-                    <b class="caret fr"></b>
-                    <i class="material-icons ml20 mr10">assignment_late</i>
-                    <h5>견적문의</h5>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <nav id="sidebar" class="sidebar">
+      
+    </nav>
+
     <div class="side_bg"></div>
     <!-- END side GNB //-->
     
@@ -164,6 +128,13 @@
     </div>
     <!-- END contents area //-->
 </div>
+
+<script src="src/index.js"></script>
+<script>
+    CommonUi.headerRender();
+    CommonUi.NavRender();
+
+</script>
 
 </body>
 </html>
