@@ -30,6 +30,23 @@ while($row = mysqli_fetch_array($query)){
     ));
 }
 
+// array_push($result, array(
+//     "idx"=>1,
+//     "reqcompany"=>1,
+//     "reqname"=>1,
+//     "reqphone"=>1,
+//     "reqemail"=>1,
+//     "reqinqr"=>1,
+//     "reqpay"=>1,
+//     "reqfilerout"=>1,
+//     "reqmemo"=>1,
+//     "reqperson"=>1,
+//     "reqtarget"=>1,
+//     "reqbordercate"=>1,
+//     "time"=>1,
+//     "fileId"=>1,
+// ));
+
 $json =  json_encode(
     array(
         "result"=>$result,

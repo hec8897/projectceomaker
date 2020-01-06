@@ -44,7 +44,6 @@ Vue.component('app-nav', {
 
 const MainPage = {
     props:['items'],
-
     template: `<div class="con_wrap">
                 <div class="table_wrap mt50">
                     <div class="tit_wrap">
@@ -59,6 +58,7 @@ const MainPage = {
                             <th>신청자</th>
                             <th>전화번호</th>
                             <th>파일</th>
+                            <th>상세보기</th>
                             <th>등록일</th>
                         </tr>
                         <tbody id='tables'>
@@ -73,22 +73,20 @@ beforeCreate() {
         .then((result) => {
             const Table = document.getElementById('tables')
             let TableData = [];
-
             router.options.routes[0].props.items = result.data.result
             this.props = result.data.result;
-
             let Data = this.props;
-            
             for(let i = 0; i < Data.length; i++){
                 TableData.push(
                     `<tr>
-                    <td>${i+1}</td>
-                    <td>${Data[i].reqcompany}</td>
-                    <td>${Data[i].reqmemo}</td>
-                    <td>${Data[i].reqname}</td>
-                    <td>${Data[i].reqphone}</td>
-                    <td>${Data[i].reqfilerout}</td>
-                    <td>${Data[i].time}</td>
+                        <td>${i+1}</td>
+                        <td><a href=''>${Data[i].reqcompany}</a></td>
+                        <td>${Data[i].reqmemo}</td>
+                        <td>${Data[i].reqname}</td>
+                        <td>${Data[i].reqphone}</td>
+                        <td>${Data[i].reqfilerout}</td>
+                        <td><a href="main.html#/view/${Data[i].idx}">상세보기</a></td>
+                        <td>${Data[i].time}</td>
                     </tr>`
                     )
                 }
@@ -98,7 +96,67 @@ beforeCreate() {
         .catch(err => console.log('Login: ', err));
     }
 }
-
+const CousulView = {
+    props: ['id'],
+    template:` <div class="con_wrap">
+    <!-- my info -->
+    <div class="info_wrap">
+        <h4 class="title">견적문의</h4>
+        <div class="order">
+            <table>
+                <tr>
+                    <th>분류</th>
+                    <td>주거공간</td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td>{{ id }}</td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td>아파트 30평 인테리어 견적 문의 드립니다.</td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td>
+                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다. <br>
+                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다.<br>
+                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다.<br>
+                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다.
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <td>010-1234-5678</td>
+                </tr>
+                <tr>
+                    <th>e-mail</th>
+                    <td>abcdefg@email.com</td>
+                </tr>
+                <tr>
+                    <th>공사예정 주소</th>
+                    <td>서울시 구로구 디지털로 1234번지 자이아파트</td>
+                </tr>
+                <tr>
+                    <th>공사면적</th>
+                    <td>30평 &nbsp; (74m<sup>3</sup>)</td>
+                </tr>
+                <tr>
+                    <th>공사예정일</th>
+                    <td>2020년 10월 1일</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <!-- button area -->
+    <div class="btn_wrap">
+        <a href="#modal-del" data-toggle="modal" class="b_red">삭제</a>
+        <a href="" class="b_sgrey">목록</a>
+    </div>
+    <!-- END button area //-->
+</div>`
+}
 const AdminInfo = {
     template: `<div class="con_wrap">
     <!-- my info -->
@@ -565,6 +623,11 @@ const router = new VueRouter({
         {
             path: '/counsul',
             component: cousul
+        },
+        {
+            path: '/view/:id',
+            component: CousulView,
+            props:true
         }
     ]
 })
