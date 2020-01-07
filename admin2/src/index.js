@@ -98,21 +98,21 @@ const MainPage = {
                             <th>분류</th>
                             <th>신청자</th>
                             <th>전화번호</th>
-                            <th>파일</th>
+                            <th>첨부파일</th>
                             <th>상세보기</th>
                             <th>등록일</th>
                         </tr>
                         <tbody id='tables'>
                             <tr v-for='list in lists'>
-                            <td>{{+1}}</td>
-                            <td><a href=''>{{list.reqcompany}}</a></td>
-                            <td>{{list.reqbordercate}}</td>
-                            <td>{{list.reqname}}</td>
-                            <td>{{list.reqphone}}</td>
-                            <td v-if="list.reqfilerout === ''">파일없음</td>
-                            <td v-else>{{list.reqfilerout}}</td>
-                            <td><span @click="ViewData(list.idx)" class='more_view'>상세보기</span></td>
-                            <td>{{list.time}}</td>
+                                <td></td>
+                                <td><a href=''>{{list.reqcompany}}</a></td>
+                                <td>{{list.reqbordercate}}</td>
+                                <td>{{list.reqname}}</td>
+                                <td>{{list.reqphone}}</td>
+                                <td v-if="list.reqfilerout === ''">파일없음</td>
+                                <td v-else>{{list.reqfilerout}}</td>
+                                <td><router-link v-bind:to="'/view/'+list.idx" class='more_view'>상세보기</router-link></td>
+                                <td>{{list.time}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -310,9 +310,7 @@ const Mbanner = {
 </div>`
 }
 
-const searchData = {
-    template:``
-}
+
 const portfolio = {
     template: `<div class="con_wrap">
     <search-data></search-data>
