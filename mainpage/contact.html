@@ -26,12 +26,19 @@
 	<link href="css/default.css" rel="stylesheet" />
 	<link href="css/responsive.min.css" rel="stylesheet" />
 	<!--  END BASE CSS  -->
-	
+    <script src="js/axios.min.js"></script>
 	<!--  BASE JS  -->
 	<script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/scrollMonitor.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/apps.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+
+    <!-- Minified version of `es6-promise-auto` below. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
@@ -41,6 +48,8 @@
         $(document).ready(function() {
             App.init();
         });
+        // var Promise = require('es6-promise').Promise;
+
     </script>
 </head>
 <body>
@@ -158,6 +167,8 @@
         <!--// form area -->
         <div class="form_area">
             <div class="form_box">
+                <form action="" method='POST' id='frm' enctype="multipart/form-data">
+
                 <div>
                     <p>업체명</p>
                     <input type="text" id='reqcompany'>
@@ -174,6 +185,7 @@
                     <p>문의 내용*</p>
                     <textarea name="" id="reqmemo"></textarea>
                 </div>
+                </form>
             </div>
         </div>
         <!-- END form area //-->
@@ -218,6 +230,8 @@
 
 <!-- <script src="js/layout.js"></script> -->
 <script src="js/layout.min.js"></script>
+<!-- <script src="js/data.min.js"></script> -->
 <script src="js/data.min.js"></script>
+
 </body>
 </html>

@@ -96,13 +96,11 @@ let DataInserter = {
      
         else{
         }   
-  
-        function InsertData(){
+ 
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     var returnJson = JSON.parse(this.response)
-                    console.log(returnJson)
                     if(returnJson.phpresult == 'ok'){
                         if(DataInserter.dataArray[0].fileNamer!=""){
                             if(mode!='basic'){

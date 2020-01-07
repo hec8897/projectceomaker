@@ -39,11 +39,12 @@ Vue.component('app-nav', {
                             <h5>견적문의</h5>
                             </router-link>
                     </li>
-                </ul></nav>`,
+                </ul></nav>`
 });
 
+var eventBus = new Vue();
+
 const MainPage = {
-    props:['items'],
     template: `<div class="con_wrap">
                 <div class="table_wrap mt50">
                     <div class="tit_wrap">
@@ -62,107 +63,148 @@ const MainPage = {
                             <th>등록일</th>
                         </tr>
                         <tbody id='tables'>
+                            <tr v-for='list in lists'>
+                            <td>{{+1}}</td>
+                            <td><a href=''>{{list.reqcompany}}</a></td>
+                            <td>{{list.reqbordercate}}</td>
+                            <td>{{list.reqname}}</td>
+                            <td>{{list.reqphone}}</td>
+                            <td v-if="list.reqfilerout === ''">파일없음</td>
+                            <td v-else>{{list.reqfilerout}}</td>
+                            <td><span @click="ViewData(list.idx)" class='more_view'>상세보기</span></td>
+                            <td>{{list.time}}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>`,
+    data:function(){
+        return{
+            loading:false,
+            lists:null,
+            post:null,
+            error:null
+        }
+    },
+    beforeCreate(){
+        // fetchData(){
+            const baseURI = 'api/cousel.data.php';
+            axios.post(`${baseURI}`, {
+                    mode: "Recently"
+                })
+                .then((result) => {
+                    this.lists = result.data.result
+                })
+                .catch(err => console.log('Login: ', err));
+        // }
+    },
+    methods:{
+        fetchData(){
+            const baseURI = 'api/cousel.data.php';
+            axios.post(`${baseURI}`, {
+                    mode: "Recently"
+                })
+                .then((result) => {
+                    this.lists = result.data.result
+                })
+                .catch(err => console.log('Login: ', err));
+        },
+        ViewData:function(datas){
+            // eventBus.$emit('propsId',datas)
+            location.href = `main.html#/view/${datas}`
+        }
 
-beforeCreate() {
-    const baseURI = 'api/cousel.data.php';
-    axios.post(`${baseURI}`, {})
-        .then((result) => {
-            const Table = document.getElementById('tables')
-            let TableData = [];
-            router.options.routes[0].props.items = result.data.result
-            this.props = result.data.result;
-            let Data = this.props;
-            for(let i = 0; i < Data.length; i++){
-                TableData.push(
-                    `<tr>
-                        <td>${i+1}</td>
-<<<<<<< HEAD
-                        <td>${Data[i].reqcompany}</td>
-=======
-                        <td><a href=''>${Data[i].reqcompany}</a></td>
->>>>>>> a47e6cfe12fee5672c2f6f1501cf39ba70e45780
-                        <td>${Data[i].reqmemo}</td>
-                        <td>${Data[i].reqname}</td>
-                        <td>${Data[i].reqphone}</td>
-                        <td>${Data[i].reqfilerout}</td>
-<<<<<<< HEAD
-=======
-                        <td><a href="main.html#/view/${Data[i].idx}">상세보기</a></td>
->>>>>>> a47e6cfe12fee5672c2f6f1501cf39ba70e45780
-                        <td>${Data[i].time}</td>
-                    </tr>`
-                    )
-                }
-                TableHtml = TableData.toString().replaceAll(",","");
-                Table.innerHTML = TableHtml;
-        })
-        .catch(err => console.log('Login: ', err));
     }
+
+  
 }
 const CousulView = {
     props: ['id'],
-    template:` <div class="con_wrap">
-    <!-- my info -->
-    <div class="info_wrap">
-        <h4 class="title">견적문의</h4>
-        <div class="order">
-            <table>
-                <tr>
-                    <th>분류</th>
-                    <td>주거공간</td>
-                </tr>
-                <tr>
-                    <th>이름</th>
-                    <td>{{ id }}</td>
-                </tr>
-                <tr>
-                    <th>제목</th>
-                    <td>아파트 30평 인테리어 견적 문의 드립니다.</td>
-                </tr>
-                <tr>
-                    <th>내용</th>
-                    <td>
-                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다. <br>
-                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다.<br>
-                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다.<br>
-                        아파트 30평 인테리어 견적 문의 드립니다. 아파트 30평 인테리어 견적 문의 드립니다.
-                    </td>
-                </tr>
-                <tr>
-                    <th>전화번호</th>
-                    <td>010-1234-5678</td>
-                </tr>
-                <tr>
-                    <th>e-mail</th>
-                    <td>abcdefg@email.com</td>
-                </tr>
-                <tr>
-                    <th>공사예정 주소</th>
-                    <td>서울시 구로구 디지털로 1234번지 자이아파트</td>
-                </tr>
-                <tr>
-                    <th>공사면적</th>
-                    <td>30평 &nbsp; (74m<sup>3</sup>)</td>
-                </tr>
-                <tr>
-                    <th>공사예정일</th>
-                    <td>2020년 10월 1일</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    
-    <!-- button area -->
-    <div class="btn_wrap">
-        <a href="#modal-del" data-toggle="modal" class="b_red">삭제</a>
-        <a href="" class="b_sgrey">목록</a>
-    </div>
-    <!-- END button area //-->
-</div>`
+    template: ` <div class="con_wrap">
+                    <div class="info_wrap">
+                        <h4 class="title">신청 문의</h4>
+                        <div class="order">
+                            <table>
+                                <tr>
+                                    <th>상담현황</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>분류</th>
+                                    <td>
+                                        {{post.reqbordercate}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>회사명/선청자명</th>
+                                    <td>{{post.reqcompany}}/{{post.reqname}}</td>
+                                </tr>
+                                <tr>
+                                    <th>연락처</th>
+                                    <td>{{post.reqphone}}</td>
+                                </tr>
+                                <tr>
+                                    <th>내용</th>
+                                    <td>
+                                        {{post.reqmemo}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td>{{post.reqemail}}</td>
+                                </tr>
+                                <tr>
+                                    <th>문의 유형</th>
+                                    <td>{{post.reqinqr}}</td>
+                                </tr>
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td v-if="post.reqfilerout === ''">파일없음</td>
+                                    <td v-else><a v-bind:href="'../upload/'+post.reqfilerout" download>{{post.reqfilerout}}<img src='images/downloading-file.png'/></a></td>
+                                </tr>
+                                <tr>
+                                    <th>프로젝트 예산</th>
+                                    <td>{{post.reqpay}}</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#modal-del" data-toggle="modal" class="b_red">삭제</a>
+                        <a href="main.html#/" class="b_sgrey">목록</a>
+                    </div>
+                </div>`,
+                data:function(){
+                    return{
+                        loading:false,
+                        post:null,
+                        file:null,
+                        getId:null,
+                        error:null
+                    }
+                },
+                created () {
+                    this.fetchData()
+                },
+                    methods:{
+                    fetchData(){
+                    const baseURI = 'api/cousel.data.php';
+                    axios.post(`${baseURI}`, {
+                        mode:'view',
+                        idx: this.id
+                    })
+                    .then((result) => {
+                        this.loading = true;
+                        this.post = result.data.result[0];
+                    })
+                    .catch(err => console.log('Login: ', err));
+                    },
+              
+            }
+
+
+
 }
 const AdminInfo = {
     template: `<div class="con_wrap">
@@ -224,9 +266,7 @@ const Mbanner = {
                 </a>
             </div>
         </div>
-        <!-- END main banner edit -->
     </div>
-    <!-- END main banner //-->
 </div>`
 }
 const portfolio = {
@@ -604,14 +644,11 @@ const cousul = {
 </div>`
 }
 const router = new VueRouter({
-    routes:[
+    routes: [
         {
             path: '/',
             component: MainPage,
-            props:{
-                items:[]
-            },
-
+            params:true,
         },
         {
             path: '/info',
@@ -632,16 +669,14 @@ const router = new VueRouter({
         {
             path: '/view/:id',
             component: CousulView,
-            props:true
+            props: true,
+            params:true
         }
     ]
 })
-
-
 var app = new Vue({
     router,
-    data:{
-        items:[]
+    data: {
+        items: []
     }
 }).$mount('#app')
-

@@ -133,6 +133,7 @@ table tr:last-child td{border-bottom:1px solid #444}
 table tr:hover td{background:#f9f9f9}
 table td a{display:block}
 table td a:hover{color:#222}
+table td span{cursor: pointer;}
 
 table tr.del td,table tr.del td a{background:#feeded; color:#b0b0b0}
 table tr.del2 td,table tr.del2 td a{color:#f4514a}
@@ -206,6 +207,11 @@ a.b_num{float:right; font-size:13px; color:#1a93d9; margin-top:7px}
 .order table th{width:15%; border-bottom:1px solid #e0e0e0}
 .order table tr:last-child th,.order table tr:last-child td{border-bottom:0}
 .order table td{text-align:left; border-bottom:1px solid #e0e0e0}
+.order table td img{
+    width: 25px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
 
 
 

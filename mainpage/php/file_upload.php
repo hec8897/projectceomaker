@@ -6,13 +6,13 @@ $reqName = $_POST['reqname'];
 
 if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
     $file = $_FILES['file'];
-    $upload_directory = '../admin/upload/';
+    $upload_directory = '../upload/';
     $ext_str = "hwp,xls,doc,xlsx,docx,pdf,jpg,gif,png,txt,ppt,pptx";
     $allowed_extensions = explode(',', $ext_str);
     $max_file_size = 3072000;
     $ext = substr($file['name'], strrpos($file['name'], '.') + 1);
     // 확장자 체크
-    $path = md5(microtime()) . '.' . $ext;
+    $path = $file['name'];
 
     if(!in_array($ext, $allowed_extensions)) {
         ?>
@@ -38,8 +38,8 @@ if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
         $file_id = md5(uniqid(rand(), true));
         $name_orig = $file['name'];
         $name_save = $path;
-        $query = "INSERT INTO upload_file (reqcompany,file_id, name_orig, name_save, reg_time) VALUES('$reqCompany','$file_id','$name_orig','$name_save',now())";
-        $query = "UPDATE `Insert_tb` SET `fileId` = '$file_id' WHERE `Insert_tb`.`reqname` = '$reqName'";
+        // $query = "INSERT INTO `upload_file` (reqcompany,file_id, name_orig, name_save, reg_time) VALUES('$reqCompany','$file_id','$name_orig','$name_save',now())";
+        $query = "UPDATE `Insert_tb` SET `reqfilerout` = '$path' WHERE `Insert_tb`.`reqname` = '$reqName'";
 
         $stmt = mysqli_prepare($conn, $query);
 
@@ -47,15 +47,26 @@ if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
 
         $exec = mysqli_stmt_execute($stmt);
 
-      
-
         mysqli_stmt_close($stmt);
+
+        if(isset($stmt)){
+
         ?>
         <script>
             alert('상담신청이 완료 되었습니다. 빠른시일안에 연락 드리겠습니다');
             history.back();
         </script>
         <?php
+
+    }
+    else{
+        ?>
+        <script>
+            alert('파일업로드에 실패하였습니다');
+            history.back();
+        </script>
+        <?php
+    }
 
         
 
@@ -65,6 +76,8 @@ if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
     ?>
     <script>
         alert('파일이 업로드 되지 않았습니다. 파일을 확인후 다시 업로드해주세요')
+        history.back();
+
     </script>
     <?php
 }

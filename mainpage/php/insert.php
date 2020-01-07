@@ -17,8 +17,9 @@ $fileNamer = (isset($data[0]->fileNamer)?$fileNamer=$data[0]->fileNamer:"");
 $time = date('Y-m-d H:i:s');
 
 
-$sql = "INSERT INTO `Insert_tb` (reqcompany, reqname, reqphone, reqemail, reqinqr, reqpay, reqfilerout, reqmemo, reqperson, reqtarget,time, reqbordercate) 
-VALUES ('$reqCompany','$reqName','$reqPhone','$reqEmail','$reqInq','$payInq','$fileNamer','$reqMode','$reqPerson','$reqTarget','$time','$reqMode')";
+$sql = "INSERT INTO `Insert_tb` 
+(reqcompany, reqname, reqphone, reqemail, reqinqr, reqpay, reqfilerout, reqmemo, reqperson, reqtarget,time, reqbordercate) 
+VALUES ('$reqCompany','$reqName','$reqPhone','$reqEmail','$reqInq','$payInq','$fileNamer','$reqMemo','$reqPerson','$reqTarget','$time','$reqMode')";
 
 $conn = mysqli_query($conn,$sql);
 if(isset($conn)){$phpresult = 'ok';}
