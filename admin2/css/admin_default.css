@@ -41,7 +41,8 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .login_box .login_input button[type=submit].btn_pw{background:#222}
 
 /* head area */
-.head_wrap{position: fixed;; z-index:9; width:100%; height:70px; background:#222; box-shadow:0 3px 5px rgba(0,0,0,0.3)}
+
+.head_wrap{position: fixed;; z-index:9; width:100%; height:70px; background:#222; box-shadow:0 3px 5px rgba(0,0,0,0.3);top:0px}
 .head_wrap .head_bi{float:left}
 .head_wrap .head_bi .bi_img{float:left; width:80px; margin:0 20px; padding-top:20px}
 .head_wrap .head_bi h4{float:left; color:#fff; font-size:16px; font-weight:400; letter-spacing:0; line-height: 70px; padding-left: 15px; cursor: pointer;}
