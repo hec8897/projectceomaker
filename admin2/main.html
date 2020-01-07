@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<title>관리자 페이지</title>
-	<meta charset="utf-8" />
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
-	<meta name="title" content="administrator">
-	<meta name="author" content="administrator">
+    <title>관리자 페이지</title>
+    <meta charset="utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <meta name="title" content="administrator">
+    <meta name="author" content="administrator">
     <meta name="description" content="administrator">
 
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    
+
     <!--  BASE CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-	<link href="css/elements.min.css" rel="stylesheet" />
-	<link href="css/admin_default.css" rel="stylesheet" />
-	<!--  END BASE CSS  -->
-	
-	<!--  BASE JS  -->
-	<script src="js/jquery-1.9.1.min.js"></script>
+    <link href="css/elements.min.css" rel="stylesheet" />
+    <link href="css/admin_default.css" rel="stylesheet" />
+    <!--  END BASE CSS  -->
+
+    <!--  BASE JS  -->
+    <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/apps.min.js"></script>
-
     <!-- vue.js -->
     <script src="src/axios.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
-        <!-- Automatically provides/replaces `Promise` if missing or broken. -->
-        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
-    
-        <!-- Minified version of `es6-promise-auto` below. -->
-        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <!-- Automatically provides/replaces `Promise` if missing or broken. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
 
+    <!-- Minified version of `es6-promise-auto` below. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+   
     <script src="src/main.js"></script>
+
     <!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
 	    <![endif]-->
     <!--  END BASE JS  -->
-    
+
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             App.init();
         });
-    
+
         // var Promise = require('es6-promise').Promise;
     </script>
 </head>
@@ -58,18 +59,21 @@
         <app-header></app-header>
         <app-nav></app-nav>
         <router-view></router-view>
-</div>
+    </div>
 
-<!-- <script src="src/index.min.js"></script> -->
-<script src="src/index.js"></script>
-<script>
+    <!-- <script src="src/index.min.js"></script> -->
+    <script src="js/form-plugins.min.js"></script>
+    <script src="src/index.js"></script>
+    <script>
+        //datapicker handle
+
     //   var sessionDefault = function () {
     // if (sessionStorage.length == 0) {
     //     alert('로그인후 사용해주세요');
     //     location.href = 'admin_login.html';
     // }
     // }();
-</script>
+    </script>
 </body>
 
 </html>

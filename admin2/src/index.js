@@ -1,6 +1,3 @@
-String.prototype.replaceAll = function (org, dest) {
-    return this.split(org).join(dest);
-}
 
 Vue.component('app-header', {
     template: `<header class="head_wrap"><div class="head_bi">
@@ -42,7 +39,50 @@ Vue.component('app-nav', {
                 </ul></nav>`
 });
 
-var eventBus = new Vue();
+Vue.component('search-data', {
+    props:['mode'],
+    template: ` <div class="search_wrap">
+    <div class="panel">
+        <ul>
+            <li><h5>등록일</h5></li>
+            <li>
+                <div class="daterange">
+                    <label for="datepicker-default"><i class="material-icons md-18">date_range</i></label>
+                    <input type="text" class="" name="start" id="datepicker-default" placeholder="날짜선택" />
+                </div>
+                ~
+                <div class="daterange">
+                    <label for="datepicker-autoClose"><i class="material-icons md-18">date_range</i></label>
+                    <input type="text" class="" name="end" id="datepicker-autoClose" placeholder="날짜선택" />
+                </div>
+            </li>
+            <li><h5>검색종류</h5></li>
+            <li class="search_input">
+                <div>
+                    <select name="" id="" class="">
+                        <option value="">검색종류</option>
+                        <option value="">컨텐츠 제목</option>
+                        <option value="">카테고리</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" placeholder="검색">
+                    <a href=""><i class="material-icons">search</i></a>
+                </div>
+                <div class='search_btn'>검색</div>
+            </li>
+        </ul>
+    </div>
+</div>`,
+mounted(){
+    this.dataPicker()
+},
+methods:{
+    dataPicker:function(){
+        handleDatepicker();
+    }
+}
+});
 
 const MainPage = {
     template: `<div class="con_wrap">
@@ -269,42 +309,13 @@ const Mbanner = {
     </div>
 </div>`
 }
+
+const searchData = {
+    template:``
+}
 const portfolio = {
-    template: `   <div class="con_wrap">
-    <!-- search -->
-    <div class="search_wrap">
-        <div class="panel">
-            <ul>
-                <li><h5>등록일</h5></li>
-                <li>
-                    <div class="daterange">
-                        <label for="datepicker-default"><i class="material-icons md-18">date_range</i></label>
-                        <input type="text" class="" name="start" id="datepicker-default" placeholder="날짜선택" />
-                    </div>
-                    ~
-                    <div class="daterange">
-                        <label for="datepicker-autoClose"><i class="material-icons md-18">date_range</i></label>
-                        <input type="text" class="" name="end" id="datepicker-autoClose" placeholder="날짜선택" />
-                    </div>
-                </li>
-                <li><h5>검색종류</h5></li>
-                <li class="search_input">
-                    <div>
-                        <select name="" id="" class="">
-                            <option value="">검색종류</option>
-                            <option value="">검색종류</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="text" placeholder="검색">
-                        <a href=""><i class="material-icons">search</i></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-    <!-- list table -->
+    template: `<div class="con_wrap">
+    <search-data></search-data>
     <div class="table_wrap mt40">
         <div class="tit_wrap">
             <h4>포트폴리오</h4>
@@ -312,180 +323,21 @@ const portfolio = {
         <table class="portfolio">
             <tr>
                 <th>No</th>
-                <th>제목</th>
-                <th>시공형태</th>
-                <th>시공주소</th>
-                <th>시공면적</th>
-                <th>천정</th>
-                <th>바닥</th>
-                <th>벽체</th>
-                <th>노출</th>
+                <th>컨텐츠 제목</th>
+                <th>켄텐츠 부제</th>
+                <th>프로젝트 요약</th>
+                <th>고객</th>
+                <th>기간</th>
             </tr>
-            <tr>
-                <td>123456</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr class="tgrey">
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>비공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr class="tgrey">
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>비공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
-            <tr>
-                <td>12345</td>
-                <td class="tal"><a href="">아이들이 행복한 집, 개포LG자이 APT</a></td>
-                <td>주거공간</td>
-                <td>구로 디지털로 1234 개포LG APT</td>
-                <td>220m<sup>3</sup></td>
-                <td>적삼목</td>
-                <td>대리석</td>
-                <td>적삼목</td>
-                <td>공개</td>
-            </tr>
+            <router-link to="/portfolioview" tag='tr'>
+                <td>1</td>
+                <td>투게더인스</td>
+                <td>국내 최고 금융 및 보험 전문가의 알찬 정보를 제공하는 투게더인스</td>
+                <td>보험친구들 웹사이트 / 보험비교 및 보험 계산 시스템</td>
+                <td>BM COMPANY</td>
+                <td>4주</td>
+            </router-link>
+         
         </table>
         <div class="foot_btn">
             <a href="" class="b_add b_blue">등록</a>
@@ -510,41 +362,78 @@ const portfolio = {
     <!-- END list table //-->
 </div>`
 }
-const cousul = {
-    template: `  <div class="con_wrap">
-    <!-- search -->
-    <div class="search_wrap">
-        <div class="panel">
+const PortFolioView = {
+    template:`<div class="con_wrap">
+    <div class="info_wrap">
+        <h4 class="title">포트폴리오</h4>
+        <div class="panel mody">
             <ul>
-                <li><h5>등록일</h5></li>
+                <li><h5>작성자 ID</h5></li>
                 <li>
-                    <div class="daterange">
-                        <label for="datepicker-default"><i class="material-icons md-18">date_range</i></label>
-                        <input type="text" class="" name="start" id="datepicker-default" placeholder="날짜선택" />
-                    </div>
-                    ~
-                    <div class="daterange">
-                        <label for="datepicker-autoClose"><i class="material-icons md-18">date_range</i></label>
-                        <input type="text" class="" name="end" id="datepicker-autoClose" placeholder="날짜선택" />
-                    </div>
+                    <input type="text" placeholder="작성자 ID">
                 </li>
-                <li><h5>검색종류</h5></li>
-                <li class="search_input">
+                <li><h5>노출여부</h5></li>
+                <li class="select_input">
                     <div>
                         <select name="" id="" class="">
-                            <option value="">검색종류</option>
-                            <option value="">검색종류</option>
+                            <option value="">공개</option>
+                            <option value="">비공개</option>
                         </select>
                     </div>
+                </li>
+                <li><h5>카태고리</h5></li>
+                <li class="select_input">
                     <div>
-                        <input type="text" placeholder="검색">
-                        <a href=""><i class="material-icons">search</i></a>
+                        <select name="" id="" class="">
+                            <option value="">분류</option>
+                            <option>디자인</option>
+                            <option>홈페이지</option>
+                            <option>교육</option>
+                            <option>마케팅</option>
+                            <option>컨설팅</option>
+                        </select>
                     </div>
                 </li>
+                
+                <li><h5>고객</h5></li>
+                <li>
+                    <input type="text" placeholder="회사명/개인사업자" class="mody_tit">
+                </li>
+                <li><h5>프로젝트명</h5></li>
+                <li class="half">
+                    <input type="text" placeholder="프로젝트명">
+                </li>
+                <li><h5>프로젝트 부제</h5></li>
+                <li class="half">
+                    <input type="text" placeholder="프로젝트 부제목">
+                </li>
+                
+                <li><h5>프로젝트 요약</h5></li>
+                <li>
+                    <input type="text" placeholder="제목" class="mody_tit">
+                </li>
+                <li><h5>상세내용</h5></li>
+                <li>
+                    <textarea name="" id="" placeholder="상세내용" style='resize:none'></textarea>
+                </li>
+                <li><h5>메인 이미지 (W 1920)</h5></li>
+                <li>
+                    <input type="file" placeholder="제목" class="mody_tit">
+                </li>
+
             </ul>
         </div>
     </div>
-    
+    <div class="btn_wrap">
+        <a href="#modal-del" data-toggle="modal" class="b_red">삭제</a>
+        <a href="#modal-alert" data-toggle="modal" class="b_blue">등록</a>
+        <a href="" class="b_sgrey">목록</a>
+    </div>
+</div>`
+}
+const cousul = {
+    template: `  <div class="con_wrap">
+    <search-data></search-data>
     <!-- list table -->
     <div class="table_wrap mt40">
         <div class="tit_wrap">
@@ -660,7 +549,14 @@ const router = new VueRouter({
         },
         {
             path: '/portfolio',
-            component: portfolio
+            component: portfolio,
+        },
+        {
+            path:'/portfolioview',
+            component:PortFolioView,
+            children:[
+                {path:''}
+            ]
         },
         {
             path: '/counsul',
