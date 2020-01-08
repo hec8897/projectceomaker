@@ -99,7 +99,7 @@ Vue.component('list-numbering',{
                     </span>
 
                     <span v-if="ListNumberLength >= 11">
-                        <a href="2">
+                        <a href="javascript:" v-on:click='NextList'>
                             <i class="material-icons vam">navigate_next</i>
                         </a>
                     </span>
@@ -112,14 +112,10 @@ Vue.component('list-numbering',{
                         NextNumber:null
                    }
                },
-               updated(){
-                this.NextNumber = this.start
-                console.log(this.NextNumber)
-
-               },
+     
                created(){
                     this.ListRenderData();
-
+      
                },
                methods:{
                    ListRenderData(){
@@ -129,8 +125,9 @@ Vue.component('list-numbering',{
                        this.ListNumberLength = ListNumberLength;
                    },
                    NextList(){
-                       this.start = this.start+10
-                       this.limit = this.limit+10
+                    NextIndex = Math.ceil(Number(this.index)+1)
+                    this.NextNumber = NextIndex;
+                    console.log(Math.ceil(Number(this.index)+1))
                    }
                }
     
@@ -396,9 +393,14 @@ const portfolio = {
     </div>
 </div>`,
 created(){
-  
-    this.start = Number(this.index)*10,
-    this.limit = Number(this.index)+9
+    if(this.index == 0){
+        this.start = Number(this.index)*10,
+        this.limit = Number(this.index)+9
+    }
+    else{
+        this.start = Number(this.index)*10,
+        this.limit = Number(this.index)*10+9
+    }
 
     const baseURI = 'api/work.data.php';
     axios.post(`${baseURI}`, {
