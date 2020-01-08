@@ -98,7 +98,7 @@ Vue.component('list-numbering',{
                         <router-link class v-bind:to="'/portfolio/'+(i-1)" >{{i}}</router-link>
                     </span>
 
-                    <span v-if="ListNumberLength >= 11">
+                    <span v-if="ListNumberLength >= limit">
                         <a class v-on:click='NextListIndex'>
                             <i class="material-icons vam">navigate_next</i>
                         </a>
@@ -119,6 +119,8 @@ Vue.component('list-numbering',{
 
                     this.ListRenderData();
                     const ListLength = this.listData.length;
+                    this.limit = Math.ceil(Number(this.index)/10)*10 
+                    this.start = (Math.ceil(Number(this.index)/10)*10)-9
                 //     if(ListLength > 10){
                 //         this.start = 0
                 //         this.limit = 10
@@ -147,8 +149,16 @@ Vue.component('list-numbering',{
                    },
                    PrevListIndex(){
                     this.prevNumber = this.start-2;
-                    this.limit = Number(this.prevNumber)+1;
-                    this.start = this.prevNumber-10
+                    if(this.prevNumber < 10){
+                        this.prevNumber = 9;
+                        this.limit = 10;
+                        this.start = 0
+                    }
+                    else{
+                        this.prevNumber = this.start-2;
+                        this.limit = Number(this.prevNumber)+1;
+                        this.start = this.prevNumber-10
+                    }
                     router.push(`${this.prevNumber}`)
 
                    }
