@@ -204,7 +204,7 @@ const CousulView = {
                                 </tr>
                                 <tr>
                                     <th>프로젝트 예산</th>
-                                    <td>{{post.reqpay}}</td>
+                                    <td class='dels'>{{post.reqpay}}</td>
                                 </tr>
 
                             </table>

@@ -136,7 +136,10 @@ table td a{display:block}
 table td a:hover{color:#222}
 table td span{cursor: pointer;}
 
-table tr.del td,table tr.del td a{background:#feeded; color:#b0b0b0}
+table tr.del td,table tr.del td a{background:#feeded; color:#b0b0b0;}
+table tr td.dels{
+    text-align: left;
+}
 table tr.del2 td,table tr.del2 td a{color:#f4514a}
 table tr.tgrey td,table tr.tgrey td a{color:#c0c0c0; font-weight:100}
 
