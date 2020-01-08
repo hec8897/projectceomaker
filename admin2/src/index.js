@@ -88,18 +88,18 @@ methods:{
 Vue.component('list-numbering',{
     props:['listData','index','pageClass'],
     template: ` <div class="page">
-                    <span v-if="ListNumberLength >= 11">
-                        <a href="1" class="none" v-if="ListNumberLength >= 11">
+                    <span v-if="index >= 10">
+                    <a class v-on:click='PrevListIndex'>
                         <i class="material-icons vam">navigate_before</i>
                         </a>
                     </span>
 
                     <span v-for="i in ListNumberLength" v-if ="i <= limit  && i >= start">
-                        <router-link class v-bind:to="'/portfolio/'+(i-1)">{{i}}</router-link>
+                        <router-link class v-bind:to="'/portfolio/'+(i-1)" >{{i}}</router-link>
                     </span>
 
                     <span v-if="ListNumberLength >= 11">
-                        <a href="javascript:" v-on:click='NextList'>
+                        <a class v-on:click='NextListIndex'>
                             <i class="material-icons vam">navigate_next</i>
                         </a>
                     </span>
@@ -109,12 +109,27 @@ Vue.component('list-numbering',{
                         ListNumberLength:null,
                         start:0,
                         limit:10,
-                        NextNumber:null
+                        NextNumber:null,
+                        prevNumber:null
                    }
+                   //start, limit 값 올려서 자동배여해야함ㅎㅎ
+                   //라스트페이지 넥스트버튼 삭제
                },
-     
-               created(){
+                created(){
+
                     this.ListRenderData();
+                    const ListLength = this.listData.length;
+                //     if(ListLength > 10){
+                //         this.start = 0
+                //         this.limit = 10
+                //     }
+                //     else{
+                //         this.start = 1
+                //         this.limit = this.ListNumberLength
+                //     }
+                //    if(this.ListNumberLength >= 11){
+                //        this.NextNumber = this.limit+1;
+                //    }
       
                },
                methods:{
@@ -124,11 +139,20 @@ Vue.component('list-numbering',{
                        const ListNumberLength = Math.round(DataLength) < 1 ?0:Math.round(DataLength)
                        this.ListNumberLength = ListNumberLength;
                    },
-                   NextList(){
-                    NextIndex = Math.ceil(Number(this.index)+1)
-                    this.NextNumber = NextIndex;
-                    console.log(Math.ceil(Number(this.index)+1))
+                   NextListIndex(){
+                        this.NextNumber = this.limit;
+                        this.start = Number(this.NextNumber)+1;
+                        this.limit = this.NextNumber+10
+                        router.push(`${this.NextNumber}`)
+                   },
+                   PrevListIndex(){
+                    this.prevNumber = this.start-2;
+                    this.limit = Number(this.prevNumber)+1;
+                    this.start = this.prevNumber-10
+                    router.push(`${this.prevNumber}`)
+
                    }
+                
                }
     
 })
@@ -387,9 +411,7 @@ const portfolio = {
         <div class="foot_btn">
             <router-link v-bind:to="NextpageNode+'new'" class="b_add b_blue">등록</router-link>
         </div>
-        <!-- page -->
         <list-numbering v-bind:listData="lists" v-bind:pageClass="NextpageNode" v-bind:index="index"></list-numbering>
-        <!-- END page -->
     </div>
 </div>`,
 created(){
@@ -3069,6 +3091,12 @@ data:function(){
         start:null,
         limit:null
         }
+},
+methods:{
+    indexUpdate(){
+        console.log(this.index)
+    }
+
 }
 
 }
