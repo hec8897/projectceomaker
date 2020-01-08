@@ -24,8 +24,9 @@
     <script src="js/apps.min.js"></script>
     <!-- vue.js -->
     <script src="src/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.min.js"></script>
 
     <!-- Automatically provides/replaces `Promise` if missing or broken. -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
@@ -44,12 +45,12 @@
     <!--  END BASE JS  -->
 
     <script>
-        var sessionDefault = function () {
-            if (sessionStorage.length == 0) {
-                alert('로그인후 사용해주세요');
-                location.href = 'admin_login.html';
-            }
-        }();
+        // var sessionDefault = function () {
+        //     if (sessionStorage.length == 0) {
+        //         alert('로그인후 사용해주세요');
+        //         location.href = 'admin_login.html';
+        //     }
+        // }();
 
         $(document).ready(function () {
             App.init();
@@ -72,8 +73,8 @@
 
 
     <script src="js/form-plugins.min.js"></script>
-    <script src="src/index.min.js"></script>
-    <!-- <script src="src/index.js"></script> -->
+    <!-- <script src="src/index.min.js"></script> -->
+    <script src="src/index.js"></script>
     <script>
 
     </script>

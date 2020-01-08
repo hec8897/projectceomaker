@@ -24,7 +24,7 @@ Vue.component('app-nav', {
                             <h5>메인 관리</h5>
                         </router-link>
 
-                        <router-link to="/portfolio" tag='li' class='has-sub' class-active="has-sub on">
+                        <router-link to="/portfolio/0" tag='li' class='has-sub' class-active="has-sub on">
                             <b class="caret fr"></b>
                             <i class="material-icons ml20 mr10">dvr</i>
                             <h5>포트폴리오</h5>
@@ -37,6 +37,7 @@ Vue.component('app-nav', {
                             </router-link>
                     </li>
                 </ul></nav>`
+            
 });
 
 Vue.component('search-data', {
@@ -84,6 +85,56 @@ methods:{
 }
 });
 
+Vue.component('list-numbering',{
+    props:['listData','index','pageClass'],
+    template: ` <div class="page">
+                    <span v-if="ListNumberLength >= 11">
+                        <a href="1" class="none" v-if="ListNumberLength >= 11">
+                        <i class="material-icons vam">navigate_before</i>
+                        </a>
+                    </span>
+
+                    <span v-for="i in ListNumberLength" v-if ="i <= limit  && i >= start">
+                        <router-link class v-bind:to="'/portfolio/'+(i-1)">{{i}}</router-link>
+                    </span>
+
+                    <span v-if="ListNumberLength >= 11">
+                        <a href="2">
+                            <i class="material-icons vam">navigate_next</i>
+                        </a>
+                    </span>
+               </div>`,
+               data(){
+                   return{
+                        ListNumberLength:null,
+                        start:0,
+                        limit:10,
+                        NextNumber:null
+                   }
+               },
+               updated(){
+                this.NextNumber = this.start
+                console.log(this.NextNumber)
+
+               },
+               created(){
+                    this.ListRenderData();
+
+               },
+               methods:{
+                   ListRenderData(){
+                       // 1보다 작을땐 출력안함
+                       var DataLength = this.listData.length/10
+                       const ListNumberLength = Math.round(DataLength) < 1 ?0:Math.round(DataLength)
+                       this.ListNumberLength = ListNumberLength;
+                   },
+                   NextList(){
+                       this.start = this.start+10
+                       this.limit = this.limit+10
+                   }
+               }
+    
+})
 const MainPage = {
     template: `<div class="con_wrap">
                 <div class="table_wrap mt50">
@@ -103,8 +154,8 @@ const MainPage = {
                             <th>등록일</th>
                         </tr>
                         <tbody id='tables'>
-                            <tr v-for='list in lists'>
-                                <td></td>
+                            <tr v-for='(list, index) in lists'>
+                                <td>{{index+1}}</td>
                                 <td><a href=''>{{list.reqcompany}}</a></td>
                                 <td>{{list.reqbordercate}}</td>
                                 <td>{{list.reqname}}</td>
@@ -122,7 +173,7 @@ const MainPage = {
         return{
             loading:false,
             lists:null,
-            post:null,
+                post:null,
             error:null
         }
     },
@@ -155,8 +206,6 @@ const MainPage = {
         }
 
     }
-
-  
 }
 const CousulView = {
     props: ['id'],
@@ -312,6 +361,7 @@ const Mbanner = {
 
 
 const portfolio = {
+    props:['index'],
     template: `<div class="con_wrap">
     <search-data></search-data>
     <div class="table_wrap mt40">
@@ -327,40 +377,2701 @@ const portfolio = {
                 <th>고객</th>
                 <th>기간</th>
             </tr>
-            <router-link to="/portfolioview" tag='tr'>
-                <td>1</td>
-                <td>투게더인스</td>
-                <td>국내 최고 금융 및 보험 전문가의 알찬 정보를 제공하는 투게더인스</td>
-                <td>보험친구들 웹사이트 / 보험비교 및 보험 계산 시스템</td>
-                <td>BM COMPANY</td>
-                <td>4주</td>
+            <router-link v-bind:to="NextpageNode+list.idx" tag='tr' v-for='(list, no) in lists' v-if="no <= limit && no >= start">
+                <td>{{no+1}}</td>
+                <td>{{list.title}}</td>
+                <td>{{list.subTit}}</td>
+                <td>{{list.projectDesc}}</td>
+                <td>{{list.customer}}</td>
+                <td>{{list.Period}}</td>
             </router-link>
          
         </table>
         <div class="foot_btn">
-            <a href="" class="b_add b_blue">등록</a>
+            <router-link v-bind:to="NextpageNode+'new'" class="b_add b_blue">등록</router-link>
         </div>
         <!-- page -->
-        <div class="page">
-            <a href="" class="none"><i class="material-icons vam">navigate_before</i></a>
-            <a href="" class="on">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">6</a>
-            <a href="">7</a>
-            <a href="">8</a>
-            <a href="">9</a>
-            <a href="">10</a>
-            <a href=""><i class="material-icons vam">navigate_next</i></a>
-        </div>
+        <list-numbering v-bind:listData="lists" v-bind:pageClass="NextpageNode" v-bind:index="index"></list-numbering>
         <!-- END page -->
     </div>
-    <!-- END list table //-->
-</div>`
+</div>`,
+created(){
+  
+    this.start = Number(this.index)*10,
+    this.limit = Number(this.index)+9
+
+    const baseURI = 'api/work.data.php';
+    axios.post(`${baseURI}`, {
+        mode:'list',
+    })
+    .then((result) => {
+        if(result.data.result.length > 0){
+            this.lists = result.data.result;
+        }
+    })
+    .catch(err => console.log('Login: ', err));
+},
+updated(){
+    this.start = Number(this.index)*10,
+    this.limit = Number(this.index)*10+9
+},
+data:function(){
+    return{
+        NextpageNode:"/portfolioview/",
+        lists:[
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            }, {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+           
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:0,
+                writer:'김다운',
+                title:"보험친구들",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+            {
+                idx:1,
+                writer:'김다운',
+                title:"투게더인스",
+                subTit:"보험친구들 테스트",
+                projectDesc:"관리자페이지 테스트 글",
+                customer:"BM",
+                Period:"4주",
+                mainRoute:"",
+                imgRoute:"",
+                activation:1
+            },
+        ],
+        loading:null,
+        start:null,
+        limit:null
+        }
+}
+
 }
 const PortFolioView = {
+    props:['mode'],
     template:`<div class="con_wrap">
     <div class="info_wrap">
         <h4 class="title">포트폴리오</h4>
@@ -368,7 +3079,7 @@ const PortFolioView = {
             <ul>
                 <li><h5>작성자 ID</h5></li>
                 <li>
-                    <input type="text" placeholder="작성자 ID">
+                    <input type="text" placeholder="작성자 ID" v-bind:value='mode'>
                 </li>
                 <li><h5>노출여부</h5></li>
                 <li class="select_input">
@@ -425,7 +3136,7 @@ const PortFolioView = {
     <div class="btn_wrap">
         <a href="#modal-del" data-toggle="modal" class="b_red">삭제</a>
         <a href="#modal-alert" data-toggle="modal" class="b_blue">등록</a>
-        <a href="" class="b_sgrey">목록</a>
+        <router-link to="/portfolio/0" class="b_sgrey">목록</router-link>
     </div>
 </div>`
 }
@@ -513,20 +3224,9 @@ const cousul = {
             </tr>
         </table>
         <!-- page -->
-        <div class="page">
-            <a href="" class="none"><i class="material-icons vam">navigate_before</i></a>
-            <a href="" class="on">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">6</a>
-            <a href="">7</a>
-            <a href="">8</a>
-            <a href="">9</a>
-            <a href="">10</a>
-            <a href=""><i class="material-icons vam">navigate_next</i></a>
-        </div>
+            <list-numbering></list-numbering>
+        <!-- page -->
+
     </div>
 </div>`
 }
@@ -546,15 +3246,15 @@ const router = new VueRouter({
             component: Mbanner
         },
         {
-            path: '/portfolio',
+            path: '/portfolio/:index',
             component: portfolio,
+            props:true
         },
         {
-            path:'/portfolioview',
+            path:'/portfolioview/:mode',
             component:PortFolioView,
-            children:[
-                {path:''}
-            ]
+            props:true
+          
         },
         {
             path: '/counsul',
