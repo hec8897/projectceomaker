@@ -563,8 +563,8 @@ const PortFolioView = {
                 <li class="select_input">
                     <div>
                         <select name="" id="" class="">
-                            <option value="">공개</option>
-                            <option value="">비공개</option>
+                            <option value="1">공개</option>
+                            <option value="0">비공개</option>
                         </select>
                     </div>
                 </li>
