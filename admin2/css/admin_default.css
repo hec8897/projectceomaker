@@ -155,7 +155,7 @@ table.portfolio th:nth-child(6){width:7%}
 /* table.portfolio th:nth-child(8){width:7%} */
 
 /* admin sub */
-.panel input{height:40px; width:80%}
+.panel input{height:40px; width:100%}
 .panel{border:1px solid #d9d9d9; background:#f0f0f0; padding:15px 25px 5px 25px; overflow:hidden}
 .panel li{float:left; width:10%; margin-bottom:10px; line-height:40px}
 .panel li:nth-child(2n){float:left; width:40%; line-height:20px}
@@ -201,7 +201,10 @@ a.b_num{float:right; font-size:13px; color:#1a93d9; margin-top:7px}
 
 .panel.mody textarea{width:100%; height:200px}
 .panel.mody li:nth-child(2n){float:left; width:90%; line-height:20px}
-.panel.mody li.half{float:left; width:40%}
+.panel.mody li.half{float:left; width:40%; padding-right: 20px; box-sizing: border-box;}
+.panel.mody li.half input{
+    width: 100%;
+}
 .panel.mody input.mody_tit{width:100%}
 
 .panel.mody2 textarea{width:100%; height:200px}

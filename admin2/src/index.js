@@ -588,12 +588,12 @@ const PortFolioView = {
                     <input v-else type="text" placeholder="회사명/개인사업자" v-bind:value='Data[0].customer'>
                 </li>
                 <li><h5>프로젝트명</h5></li>
-                <li class="half">
+                <li>
                     <input v-if="mode ==='new'" type="text" placeholder="프로젝트명">
                     <input v-else type="text" placeholder="프로젝트명" v-bind:value='Data[0].title'>
                 </li>
                 <li><h5>프로젝트 부제목</h5></li>
-                <li class="half">
+                <li>
                     <input v-if="mode ==='new'" type="text" placeholder="프로젝트 부제목">
                     <input v-else type="text" placeholder="프로젝트 부제목" v-bind:value='Data[0].subTit'>
                 </li>
@@ -601,11 +601,13 @@ const PortFolioView = {
                 <li><h5>프로젝트 요약</h5></li>
                 <li>
                     <input v-if="mode === 'new'" type="text" placeholder="제목" class="mody_tit">
-                    <input v-else type="text" placeholder="제목" class="mody_tit">
+                    <input v-else type="text" placeholder="제목" class="mody_tit" v-bind:value='Data[0].projectDesc'>
                 </li>
                 <li><h5>상세내용</h5></li>
                 <li>
-                    <textarea name="" id="" placeholder="상세내용" style='resize:none'></textarea>
+                    <textarea v-if="mode === 'new'" name="" id="" placeholder="상세내용" style='resize:none'></textarea>
+                    <textarea v-else placeholder="상세내용" style='resize:none'>{{Data[0].Desc}}</textarea>
+
                 </li>
                 <li><h5>메인 이미지 (W 1920)</h5></li>
                 <li>
@@ -638,6 +640,7 @@ data:function(){
                 title:"임시데이터",
                 subTit:"보험친구들 테스트",
                 projectDesc:"관리자페이지 테스트 글",
+                Desc:"관리자페이지 테스트 글 설명충",
                 customer:"BM",
                 Period:"4주",
                 mainRoute:"",
