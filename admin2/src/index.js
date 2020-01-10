@@ -40,6 +40,39 @@ Vue.component('app-nav', {
             
 });
 
+Vue.component('modal-open-update',{
+    props:['mode','dataFn'],
+    template:`<div class="pop-window fade" id="modal-alert">
+    <div class="alert">
+        <div class="alert_con">
+            <i class="material-icons tblue">error_outline</i>
+            <p>등록하시겠습니까?{{mode}}</p>
+
+        </div>
+        <div class="modal_foot">
+            <a href="javascript:;" v-on:click='dataFn' data-dismiss="modal" class="b_red">확인</a>
+            <a href="javascript:;" data-dismiss="modal" class="b_sgrey">취소</a>
+        </div>
+    </div>
+</div>`
+})
+
+Vue.component('modal-open-delete',{
+    props:['mode','dataFn'],
+    template:`<div class="pop-window fade" id="modal-del">
+    <div class="alert">
+        <div class="alert_con">
+            <i class="material-icons red">error_outline</i>
+            <p>정말로 삭제 하시겠습니까?{{mode}}</p>
+        </div>
+        <div class="modal_foot">
+            <a href="javascript:;" data-dismiss="modal" class="b_red">확인</a>
+            <a href="javascript:;" data-dismiss="modal" class="b_sgrey">취소</a>
+        </div>
+    </div>
+</div>`
+})
+
 Vue.component('search-data', {
     props:['mode'],
     template: ` <div class="search_wrap">
@@ -428,9 +461,11 @@ created(){
         mode:'list',
     })
     .then((result) => {
-        if(result.data.result.length > 0){
+        // if(result.data.result.length > 0){
+            console.log(result)
+
             this.lists = result.data.result;
-        }
+        // }
     })
     .catch(err => console.log('Login: ', err));
 },
@@ -549,71 +584,120 @@ methods:{
 }
 const PortFolioView = {
     props:['mode'],
-    template:`<div class="con_wrap">
+    template:`   
+    <div class="con_wrap">
+    <div class="pop-window fade" id="modal-alert">
+    <div class="alert">
+        <div class="alert_con">
+            <i class="material-icons tblue">error_outline</i>
+            <p>등록하시겠습니까?</p>
+
+                </div>
+                <div class="modal_foot">
+                    <a href="javascript:" v-on:click="PostData" data-dismiss="modal" class="b_red">확인</a>
+                    <a href="javascript:" data-dismiss="modal" class="b_sgrey">취소</a>
+                </div>
+            </div>
+        </div>
+        <modal-open-delete mode='PortFolioView' dataFn=''></modal-open-delete>
+
     <div class="info_wrap">
         <h4 class="title">포트폴리오</h4>
         <div class="panel mody">
             <ul>
-                <li><h5>작성자 ID</h5></li>
+                <li><h5>작성자</h5></li>
                 <li>
-                    <input  v-if="mode ==='new'"  type="text" placeholder="작성자 이름" value=''>
-                    <input v-else type="text" placeholder="작성자 ID"  v-bind:value='mode'>
+                    <input id='reqwriter' v-if="mode ==='new'" type="text" placeholder="작성자 이름" value=''>
+                    <input id='reqwriter' v-else type="text" placeholder="작성자 ID"  v-bind:value='mode'>
                 </li>
                 <li><h5>노출여부</h5></li>
                 <li class="select_input">
                     <div>
-                        <select name="" id="" class="">
-                            <option value="1">공개</option>
-                            <option value="0">비공개</option>
+                        <select id="activation" v-if="mode ==='new'">
+                            <option value='1'>공개</option>
+                            <option value='0'>비공개</option>
+                        </select>
+                        <select id="activation" v-else>
+                            <option v-if="Data[0].activation === 1" selected value='1'>공개</option>
+                            <option v-else value='1'>공개</option>
+                            <option v-if="Data[0].activation === 0" selected value='0'>비공개</option>
+                            <option v-else value='0'>비공개</option>
                         </select>
                     </div>
                 </li>
-                <li><h5>카태고리</h5></li>
+                <li><h5>카테태고리</h5></li>
                 <li class="select_input">
                     <div>
-                        <select name="" id="" class="">
-                            <option value="">분류</option>
-                            <option>디자인</option>
-                            <option>홈페이지</option>
-                            <option>교육</option>
-                            <option>마케팅</option>
-                            <option>컨설팅</option>
+                        <select id="reqclass" v-if="mode === 'new'">
+                            <option value="" selected disabled>분류</option>
+                            <option value='디자인'>디자인</option> 
+                            <option value='홈페이지'>홈페이지</option>
+                            <option value='교육'>교육</option>
+                            <option value='마케팅'>마케팅</option>
+                            <option value='컨설팅'>컨설팅</option>
                         </select>
+                        <select id="reqclass" v-else>
+                            <option v-if="Data[0].class!=null" value="" selected disabled>{{Data[0].class}}</option>
+                            <option v-else value="" selected disabled>분류</option>
+                            <option value='디자인'>디자인</option> 
+                            <option value='홈페이지'>홈페이지</option>
+                            <option value='교육'>교육</option>
+                            <option value='마케팅'>마케팅</option>
+                            <option value='컨설팅'>컨설팅</option>
+                    </select>
                     </div>
                 </li>
                 
                 <li><h5>고객</h5></li>
                 <li>
-                    <input v-if="mode ==='new'" type="text" placeholder="회사명/개인사업자" class="mody_tit">
-                    <input v-else type="text" placeholder="회사명/개인사업자" v-bind:value='Data[0].customer'>
+                    <input id='reqcustomer' v-if="mode ==='new'" type="text" placeholder="회사명/개인사업자" class="mody_tit">
+                    <input id='reqcustomer' v-else type="text" placeholder="회사명/개인사업자" v-bind:value='Data[0].customer'>
+                </li>
+                <li><h5>프로젝트기간</h5></li>
+                <li>
+                    <input id='reqperiod' v-if="mode ==='new'" type="text" placeholder="프로젝트기간">
+                    <input id='reqperiod' v-else type="text" placeholder="프로젝트기간" v-bind:value='Data[0].Period'>
                 </li>
                 <li><h5>프로젝트명</h5></li>
                 <li>
-                    <input v-if="mode ==='new'" type="text" placeholder="프로젝트명">
-                    <input v-else type="text" placeholder="프로젝트명" v-bind:value='Data[0].title'>
+                    <input id='reqtit' v-if="mode ==='new'" type="text" placeholder="프로젝트명">
+                    <input id='reqtit' v-else type="text" placeholder="프로젝트명" v-bind:value='Data[0].title'>
                 </li>
                 <li><h5>프로젝트 부제목</h5></li>
                 <li>
-                    <input v-if="mode ==='new'" type="text" placeholder="프로젝트 부제목">
-                    <input v-else type="text" placeholder="프로젝트 부제목" v-bind:value='Data[0].subTit'>
+                    <input id='req_subtit' v-if="mode ==='new'" type="text" placeholder="프로젝트 부제목">
+                    <input id='req_subtit' v-else type="text" placeholder="프로젝트 부제목" v-bind:value='Data[0].subTit'>
                 </li>
                 
                 <li><h5>프로젝트 요약</h5></li>
                 <li>
-                    <input v-if="mode === 'new'" type="text" placeholder="제목" class="mody_tit">
-                    <input v-else type="text" placeholder="제목" class="mody_tit" v-bind:value='Data[0].projectDesc'>
+                    <input id='req_projectdesc' v-if="mode === 'new'" type="text" placeholder="제목" class="mody_tit">
+                    <input id='req_projectdesc' v-else type="text" placeholder="제목" class="mody_tit" v-bind:value='Data[0].project'>
                 </li>
                 <li><h5>상세내용</h5></li>
                 <li>
-                    <textarea v-if="mode === 'new'" name="" id="" placeholder="상세내용" style='resize:none'></textarea>
-                    <textarea v-else placeholder="상세내용" style='resize:none'>{{Data[0].Desc}}</textarea>
+                    <textarea v-if="mode === 'new'" name="" id="main_desc" placeholder="상세내용" style='resize:none'></textarea>
+                    <textarea v-else placeholder="상세내용" id="main_desc" style='resize:none'>{{Data[0].mainDesc}}</textarea>
 
+                </li>
+                <li><h5>미리보기 (400*400)</h5></li>
+                <li v-if="mode === 'new'">
+                    <input id='img_route' v-on:change='SelectSubImg' type="file" placeholder="제목" class="mody_tit" ref="subimg">
+                </li>
+                <li v-else>
+                    <input id='img_route' v-on:change='SelectSubImg' type="file" v-if="Data[0].imgRoute === ''" placeholder="제목" class="mody_tit" ref="subimg">
+                    <input id='img_route' type="text" v-else style='display:none'  v-bind:placeholder="Data[0].imgRoute" class="mody_tit" v-bind:value='Data[0].imgRoute'>
+                    <a v-bind:href='Data[0].imgRoute' v-if="Data[0].imgRoute!= ''" target='blank'>미리보기</a>
                 </li>
                 <li><h5>메인 이미지 (W 1920)</h5></li>
-                <li>
-                    <input type="file" placeholder="제목" class="mody_tit">
+                <li v-if="mode === 'new'">
+                    <input id='img_route' v-on:change='SelectSubImg' type="file" placeholder="제목" class="mody_tit" ref="subimg">
                 </li>
-
+                <li v-else>
+                    <input id='main_img_route' v-on:change='SelectMainImg' type="file" v-if="Data[0].mainRoute === ''" placeholder="제목" class="mody_tit" ref="mainimg">
+                    <input id='main_img_route' type="text" style='display:none' v-else v-bind:placeholder="Data[0].mainRoute" class="mody_tit" v-bind:value='Data[0].mainRoute'>
+                    <a v-bind:href="''+Data[0].mainRoute" v-if="Data[0].mainRoute!= ''" target='blank'>미리보기:{{Data[0].mainRoute}}</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -623,33 +707,95 @@ const PortFolioView = {
         <router-link to="/portfolio/0" class="b_sgrey">목록</router-link>
     </div>
 </div>`,
-
-//여기부터해야함
-//여기부터해야함
-//여기부터해야함
-//여기부터해야함
-//여기부터해야함
-//여기부터해야함
+created(){
+    const baseURI = 'api/work.data.php';
+    axios.post(`${baseURI}`, {
+        mode:'view',
+        idx:this.mode
+    })
+    .then((result) => {
+        console.log(result)
+        if(result.data.result[0].idx!=null){
+            this.Data = result.data.result;
+        }
+    })
+    .catch(err => console.log('Login: ', err));
+},
 
 data:function(){
     return{
         Data:[
-            {   
-                idx:0,
-                writer:'김다운',
-                title:"임시데이터",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                Desc:"관리자페이지 테스트 글 설명충",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            }
-        ]
+                {   
+                    idx:0,
+                    writer:'김다운',
+                    activation:0,
+                    customer:"BM",
+                    class:"디자인",
+                    title:"임시데이터",
+                    subTit:"보험친구들 테스트",
+                    project:"관리자페이지 테스트 글",
+                    mainDesc:"관리자페이지 테스트 글 설명충",
+                    Period:"4주",
+                    imgRoute:"1",
+                    mainRoute:"1",
+                }
+            ],
+            UploadsubImg:null,
+            UploadMainImg:null
+    }
+},
+
+methods:{
+    SelectSubImg(){
+        this.UploadsubImg = this.$refs.subimg.files[0];
+    },
+    SelectMainImg(){
+        this.UploadMainImg = this.$refs.mainimg.files[0];
+    },
+    PostData(){
+        const reqWriter = document.getElementById('reqwriter');
+        const Activation = document.getElementById('activation');
+        const Class = document.getElementById('reqclass');
+        const reqCustomer = document.getElementById('reqcustomer');
+        const reqTit = document.getElementById('reqtit');
+        const reqPeriod = document.getElementById('reqperiod');
+
+        const reqSubTit = document.getElementById('req_subtit');
+        const reqProjectDesc = document.getElementById('req_projectdesc');
+        const mainDesc = document.getElementById('main_desc');
+
+
+
+        let formData = new FormData();
+        formData.append('subImg', this.UploadsubImg);
+        formData.append('MainImg', this.UploadMainImg);
+
+        formData.append('reqWriter', reqWriter.value);
+        formData.append('Activation',Activation.value)
+        formData.append('Class',Class.value)
+        formData.append('reqCustomer',reqCustomer.value)
+        formData.append('reqTit',reqTit.value)
+        formData.append('reqSubTit',reqSubTit.value)
+        formData.append('reqProjectDesc',reqProjectDesc.value)
+        formData.append('mainDesc',mainDesc.value)
+        formData.append('reqPeriod',reqPeriod.value)
+
+        const baseURI = 'api/work.update.pro.php';
+        axios.post(
+            baseURI, formData
+            )
+        .then((result) => {
+            console.log(result.data)
+        })
+        .catch(err => console.log('Login: ', err));
+
+        alert('등록되었습니다.')
+
+        
+
     }
 }
+
 }
 const cousul = {
     template: `  <div class="con_wrap">
