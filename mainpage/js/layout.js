@@ -256,7 +256,6 @@ let WorkDataRender = {
     },
     moreDataCount: 9,
     moreDataRender() {
-
         const WorkList = document.querySelectorAll('.work_lists')
         const workLoading = document.getElementById('work_loading')
         let limitCount = this.moreDataCount;
@@ -279,6 +278,9 @@ let WorkDataRender = {
 
 
 
+    },
+    WorkViewPage(){
+        const WorkHead = document.getElementById('workhead')
     }
 
 }
