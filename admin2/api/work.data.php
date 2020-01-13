@@ -32,7 +32,7 @@ if($mode == "view"){
     ));
 }
 
-else{
+else{   
     $sql = "SELECT * FROM `works_tb`";
     $query = mysqli_query($conn,$sql);
     while($row = mysqli_fetch_array($query)){ 
@@ -56,7 +56,8 @@ else{
 $json =  json_encode(
     array(
         "result"=>$result,
-        "sql"=>$sql
+        "sql"=>$sql,
+        "test"=>$targetFile
 )); 
 
 echo urldecode($json);

@@ -461,11 +461,10 @@ created(){
         mode:'list',
     })
     .then((result) => {
-        // if(result.data.result.length > 0){
-            console.log(result)
+        if(result.data.result.length > 0){
 
             this.lists = result.data.result;
-        // }
+        }
     })
     .catch(err => console.log('Login: ', err));
 },
@@ -564,9 +563,6 @@ data:function(){
                 imgRoute:"",
                 activation:1
             },
-         
-    
-          
             
         ],
         loading:null,
@@ -590,11 +586,13 @@ const PortFolioView = {
     <div class="alert">
         <div class="alert_con">
             <i class="material-icons tblue">error_outline</i>
-            <p>등록하시겠습니까?</p>
+            <p v-if="mode == 'new'">등록하시겠습니까?</p>
+            <p v-else>수정하시겠습니까?</p>
 
                 </div>
                 <div class="modal_foot">
-                    <a href="javascript:" v-on:click="PostData" data-dismiss="modal" class="b_red">확인</a>
+                    <a v-if="mode == 'new'" href="javascript:"  v-on:click="PostData" data-dismiss="modal" class="b_red">새로등록</a>
+                    <a v-else href="javascript:" v-on:click="UpDateData" data-dismiss="modal" class="b_red">수정</a>
                     <a href="javascript:" data-dismiss="modal" class="b_sgrey">취소</a>
                 </div>
             </div>
@@ -614,8 +612,8 @@ const PortFolioView = {
                 <li class="select_input">
                     <div>
                         <select id="activation" v-if="mode ==='new'">
-                            <option value='1'>공개</option>
-                            <option value='0'>비공개</option>
+                        <option value='0'>비공개</option>
+                        <option value='1'>공개</option>
                         </select>
                         <select id="activation" v-else>
                             <option v-if="Data[0].activation === 1" selected value='1'>공개</option>
@@ -682,21 +680,70 @@ const PortFolioView = {
                 </li>
                 <li><h5>미리보기 (400*400)</h5></li>
                 <li v-if="mode === 'new'">
-                    <input id='img_route' v-on:change='SelectSubImg' type="file" placeholder="제목" class="mody_tit" ref="subimg">
+                    <input 
+                    v-on:change='SelectSubImg' 
+                    ref="subimg"
+                    type="file" 
+                    id='img_route' 
+                    class="mody_tit" 
+                    >
                 </li>
                 <li v-else>
-                    <input id='img_route' v-on:change='SelectSubImg' type="file" v-if="Data[0].imgRoute === ''" placeholder="제목" class="mody_tit" ref="subimg">
-                    <input id='img_route' type="text" v-else style='display:none'  v-bind:placeholder="Data[0].imgRoute" class="mody_tit" v-bind:value='Data[0].imgRoute'>
-                    <a v-bind:href='Data[0].imgRoute' v-if="Data[0].imgRoute!= ''" target='blank'>미리보기</a>
+                <input 
+                    v-if="Data[0].imgRoute === ''" 
+                    v-on:change='SelectSubImg' 
+                    ref="subimg" 
+                    id='img_route' 
+                    class="mody_tit"
+                    type="file"  
+                    >
+
+                    <a 
+                    v-if="Data[0].imgRoute != ''" 
+                    v-bind:href="'admin/'+Data[0].imgRoute" 
+                    target='blank'>
+                    {{Data[0].imgRoute}}
+                    </a>
+
+                    <span v-if="Data[0].imgRoute!=''" 
+                    class='del_btn' 
+                    v-on:click="DelteImg(Data[0].imgRoute,'sub')">
+                    삭제
+                    </span>
+
                 </li>
                 <li><h5>메인 이미지 (W 1920)</h5></li>
                 <li v-if="mode === 'new'">
-                    <input id='img_route' v-on:change='SelectSubImg' type="file" placeholder="제목" class="mody_tit" ref="subimg">
+                    <input 
+                    v-on:change='SelectMainImg' 
+                    ref="mainimg"
+                    id='img_route' 
+                    class="mody_tit" 
+                    type="file" 
+                    >
                 </li>
                 <li v-else>
-                    <input id='main_img_route' v-on:change='SelectMainImg' type="file" v-if="Data[0].mainRoute === ''" placeholder="제목" class="mody_tit" ref="mainimg">
-                    <input id='main_img_route' type="text" style='display:none' v-else v-bind:placeholder="Data[0].mainRoute" class="mody_tit" v-bind:value='Data[0].mainRoute'>
-                    <a v-bind:href="''+Data[0].mainRoute" v-if="Data[0].mainRoute!= ''" target='blank'>미리보기:{{Data[0].mainRoute}}</a>
+                  <input 
+                    v-if="Data[0].mainRoute === ''" 
+                    v-on:change='SelectMainImg'
+                    ref="mainimg" 
+                    id='img_route' 
+                    class="mody_tit"
+                    type="file"  
+                    >
+
+                    <a 
+                    v-if="Data[0].mainRoute != ''" 
+                    v-bind:href="'admin/'+Data[0].mainRoute" 
+                    target='blank'>
+                    {{Data[0].mainRoute}}
+                    </a>
+
+                    <span v-if="Data[0].mainRoute!=''" 
+                    class='del_btn' 
+                    v-on:click="DelteImg(Data[0].mainRoute,'main')">
+                    삭제
+                    </span>
                 </li>
             </ul>
         </div>
@@ -708,18 +755,7 @@ const PortFolioView = {
     </div>
 </div>`,
 created(){
-    const baseURI = 'api/work.data.php';
-    axios.post(`${baseURI}`, {
-        mode:'view',
-        idx:this.mode
-    })
-    .then((result) => {
-        console.log(result)
-        if(result.data.result[0].idx!=null){
-            this.Data = result.data.result;
-        }
-    })
-    .catch(err => console.log('Login: ', err));
+  this.GetData()
 },
 
 data:function(){
@@ -736,8 +772,8 @@ data:function(){
                     project:"관리자페이지 테스트 글",
                     mainDesc:"관리자페이지 테스트 글 설명충",
                     Period:"4주",
-                    imgRoute:"1",
-                    mainRoute:"1",
+                    imgRoute:"test",
+                    mainRoute:"test",
                 }
             ],
             UploadsubImg:null,
@@ -746,11 +782,25 @@ data:function(){
 },
 
 methods:{
+    GetData(){
+        const baseURI = 'api/work.data.php';
+        axios.post(`${baseURI}`, {
+            mode:'view',
+            idx:this.mode
+        })
+        .then((result) => {
+            if(result.data.result[0].idx!=null){
+                this.Data = result.data.result;
+            }
+        })
+        .catch(err => console.log('Login: ', err));
+    },
     SelectSubImg(){
         this.UploadsubImg = this.$refs.subimg.files[0];
     },
     SelectMainImg(){
         this.UploadMainImg = this.$refs.mainimg.files[0];
+        console.log(this.UploadMainImg)
     },
     PostData(){
         const reqWriter = document.getElementById('reqwriter');
@@ -763,10 +813,8 @@ methods:{
         const reqSubTit = document.getElementById('req_subtit');
         const reqProjectDesc = document.getElementById('req_projectdesc');
         const mainDesc = document.getElementById('main_desc');
-
-
-
         let formData = new FormData();
+
         formData.append('subImg', this.UploadsubImg);
         formData.append('MainImg', this.UploadMainImg);
 
@@ -780,23 +828,58 @@ methods:{
         formData.append('mainDesc',mainDesc.value)
         formData.append('reqPeriod',reqPeriod.value)
 
-        const baseURI = 'api/work.update.pro.php';
+        const baseURI = 'api/work.post.pro.php';
         axios.post(
             baseURI, formData
             )
         .then((result) => {
             console.log(result.data)
+            router.push({path:'/portfolio/0'})
+            // this.Data = result.data.result;
         })
         .catch(err => console.log('Login: ', err));
+    },
+    UpDateData(){
+        alert(this.mode)
+        let y = confirm('내용을 수정하시겠습니까?')
+        if(y == true){
+            const baseURI = 'api/work.update.pro.php';
+            axios.post( 
+                `${baseURI}`, {
+                    idx:this.mode,
+                })
+                .then((result) => {
+                    console.log(result.data)
+                    this.GetData()
+                })
+                .catch(err => console.log('Login: ', err));
+            }
+        }
 
-        alert('등록되었습니다.')
 
-        
+    },
+    DelteImg(Route,col){
+        let y = confirm('이미지를 삭제하시겠습니까?')
+        if(y == true){
+
+            const baseURI = 'api/delete.img.php';
+            axios.post( 
+                `${baseURI}`, {
+                    mode:'DeleteImg',
+                    target:Route,
+                    idx:this.mode,
+                    col:col
+                })
+                .then((result) => {
+                    console.log(result.data.phpResult)
+                    this.GetData()
+                })
+                .catch(err => console.log('Login: ', err));
+            }
 
     }
 }
 
-}
 const cousul = {
     template: `  <div class="con_wrap">
     <search-data></search-data>

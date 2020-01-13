@@ -159,6 +159,14 @@ table.portfolio th:nth-child(6){width:7%}
 .panel{border:1px solid #d9d9d9; background:#f0f0f0; padding:15px 25px 5px 25px; overflow:hidden}
 .panel li{float:left; width:10%; margin-bottom:10px; line-height:40px}
 .panel li:nth-child(2n){float:left; width:40%; line-height:20px}
+.panel li span.del_btn{
+    cursor: pointer;
+    background:#f4514a;
+    width: 100px;
+    text-align: center;
+    float: right;
+    color: white;
+}
 
 .btn_wrap{width:100%; padding:30px; text-align:center; box-sizing:border-box}
 .btn_wrap a{display:inline-block; margin:0 5px; width:150px; height:40px; line-height:40px; color:#fff; text-align:center}
