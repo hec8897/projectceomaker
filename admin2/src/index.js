@@ -488,82 +488,7 @@ data:function(){
                 mainRoute:"",
                 imgRoute:"",
                 activation:1
-            },
-           
-            {
-                idx:1,
-                writer:'김다운',
-                title:"보험친구들",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            },
-            {
-                idx:2,
-                writer:'김다운',
-                title:"투게더인스",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            },
-            {
-                idx:3,
-                writer:'김다운',
-                title:"보험친구들",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            },
-            {
-                idx:4,
-                writer:'김다운',
-                title:"투게더인스",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            },
-            {
-                idx:5,
-                writer:'김다운',
-                title:"보험친구들",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            },
-
-            {
-                idx:6,
-                writer:'김다운',
-                title:"투게더인스",
-                subTit:"보험친구들 테스트",
-                projectDesc:"관리자페이지 테스트 글",
-                customer:"BM",
-                Period:"4주",
-                mainRoute:"",
-                imgRoute:"",
-                activation:1
-            },
-            
+            }
         ],
         loading:null,
         start:null,
@@ -591,8 +516,8 @@ const PortFolioView = {
 
                 </div>
                 <div class="modal_foot">
-                    <a v-if="mode == 'new'" href="javascript:"  v-on:click="PostData" data-dismiss="modal" class="b_red">새로등록</a>
-                    <a v-else href="javascript:" v-on:click="UpDateData" data-dismiss="modal" class="b_red">수정</a>
+                    <a v-if="mode == 'new'" href="javascript:"  v-on:click="PostData('new')" data-dismiss="modal" class="b_red">새로등록</a>
+                    <a v-else href="javascript:" v-on:click="PostData('update')" data-dismiss="modal" class="b_red">수정</a>
                     <a href="javascript:" data-dismiss="modal" class="b_sgrey">취소</a>
                 </div>
             </div>
@@ -608,22 +533,37 @@ const PortFolioView = {
                     <input id='reqwriter' v-if="mode ==='new'" type="text" placeholder="작성자 이름" value=''>
                     <input id='reqwriter' v-else type="text" placeholder="작성자 ID"  v-bind:value='mode'>
                 </li>
-                <li><h5>노출여부</h5></li>
+                <li><h5>미리보기 노출여부</h5></li>
                 <li class="select_input">
                     <div>
                         <select id="activation" v-if="mode ==='new'">
                         <option value='0'>비공개</option>
-                        <option value='1'>공개</option>
+                        <option value='1' disabled>공개</option>
                         </select>
                         <select id="activation" v-else>
-                            <option v-if="Data[0].activation === 1" selected value='1'>공개</option>
+                            <option v-if="Data[0].activation === '1'" selected value='1'>공개</option>
                             <option v-else value='1'>공개</option>
-                            <option v-if="Data[0].activation === 0" selected value='0'>비공개</option>
+                            <option v-if="Data[0].activation === '0'" selected value='0'>비공개</option>
                             <option v-else value='0'>비공개</option>
                         </select>
                     </div>
                 </li>
-                <li><h5>카테태고리</h5></li>
+                <li><h5>상세포트폴리오</h5></li>
+                <li class="select_input">
+                    <div>
+                        <select id="port" v-if="mode ==='new'">
+                        <option value='0'>비공개</option>
+                        <option value='1' disabled>공개</option>
+                        </select>
+                        <select id="port" v-else>
+                            <option v-if="Data[0].port === '1'" selected value='1'>공개</option>
+                            <option v-else value='1'>공개</option>
+                            <option v-if="Data[0].port === '0'" selected value='0'>비공개</option>
+                            <option v-else value='0'>비공개</option>
+                        </select>
+                    </div>
+                </li>
+                <li><h5>카태고리</h5></li>
                 <li class="select_input">
                     <div>
                         <select id="reqclass" v-if="mode === 'new'">
@@ -707,7 +647,7 @@ const PortFolioView = {
 
                     <span v-if="Data[0].imgRoute!=''" 
                     class='del_btn' 
-                    v-on:click="DelteImg(Data[0].imgRoute,'sub')">
+                    v-on:click="DelteImg('Data[0].imgRoute','sub')">
                     삭제
                     </span>
 
@@ -741,7 +681,7 @@ const PortFolioView = {
 
                     <span v-if="Data[0].mainRoute!=''" 
                     class='del_btn' 
-                    v-on:click="DelteImg(Data[0].mainRoute,'main')">
+                    v-on:click="DelteImg('Data[0].mainRoute','main')">
                     삭제
                     </span>
                 </li>
@@ -757,126 +697,142 @@ const PortFolioView = {
 created(){
   this.GetData()
 },
+mounted(){
+    this.ActivationWork()
 
+},
 data:function(){
     return{
         Data:[
                 {   
                     idx:0,
                     writer:'김다운',
-                    activation:0,
                     customer:"BM",
                     class:"디자인",
-                    title:"임시데이터",
+                    title:"",
                     subTit:"보험친구들 테스트",
                     project:"관리자페이지 테스트 글",
                     mainDesc:"관리자페이지 테스트 글 설명충",
                     Period:"4주",
                     imgRoute:"test",
                     mainRoute:"test",
+                    activation:0,
+                    port:1
                 }
             ],
             UploadsubImg:null,
             UploadMainImg:null
     }
 },
-
 methods:{
-    GetData(){
-        const baseURI = 'api/work.data.php';
-        axios.post(`${baseURI}`, {
-            mode:'view',
-            idx:this.mode
-        })
-        .then((result) => {
-            if(result.data.result[0].idx!=null){
-                this.Data = result.data.result;
-            }
-        })
-        .catch(err => console.log('Login: ', err));
-    },
-    SelectSubImg(){
-        this.UploadsubImg = this.$refs.subimg.files[0];
-    },
-    SelectMainImg(){
-        this.UploadMainImg = this.$refs.mainimg.files[0];
-        console.log(this.UploadMainImg)
-    },
-    PostData(){
-        const reqWriter = document.getElementById('reqwriter');
-        const Activation = document.getElementById('activation');
-        const Class = document.getElementById('reqclass');
-        const reqCustomer = document.getElementById('reqcustomer');
-        const reqTit = document.getElementById('reqtit');
-        const reqPeriod = document.getElementById('reqperiod');
+        GetData(){
+            const baseURI = 'api/work.data.php';
+            axios.post(`${baseURI}`, {
+                mode:'view',
+                idx:this.mode
+            })
+            .then((result) => {
+                if(result.data.result[0].idx!=null){
+                    this.Data = result.data.result;
+                    console.log(this.Data)
+                }
+            })
+            .catch(err => console.log('Login: ', err));
+        },
+        SelectSubImg(){
+            this.UploadsubImg = this.$refs.subimg.files[0];
+        },
+        SelectMainImg(){
+            this.UploadMainImg = this.$refs.mainimg.files[0];
+            console.log(this.UploadMainImg)
+        },
+        PostData(methods){
+            const reqWriter = document.getElementById('reqwriter');
+            const Activation = document.getElementById('activation');
+            const Class = document.getElementById('reqclass');
+            const reqCustomer = document.getElementById('reqcustomer');
+            const reqTit = document.getElementById('reqtit');
+            const reqPeriod = document.getElementById('reqperiod');
 
-        const reqSubTit = document.getElementById('req_subtit');
-        const reqProjectDesc = document.getElementById('req_projectdesc');
-        const mainDesc = document.getElementById('main_desc');
-        let formData = new FormData();
+            const reqSubTit = document.getElementById('req_subtit');
+            const reqProjectDesc = document.getElementById('req_projectdesc');
+            const mainDesc = document.getElementById('main_desc');
+            const port = document.getElementById('port');
 
-        formData.append('subImg', this.UploadsubImg);
-        formData.append('MainImg', this.UploadMainImg);
+            let formData = new FormData();
 
-        formData.append('reqWriter', reqWriter.value);
-        formData.append('Activation',Activation.value)
-        formData.append('Class',Class.value)
-        formData.append('reqCustomer',reqCustomer.value)
-        formData.append('reqTit',reqTit.value)
-        formData.append('reqSubTit',reqSubTit.value)
-        formData.append('reqProjectDesc',reqProjectDesc.value)
-        formData.append('mainDesc',mainDesc.value)
-        formData.append('reqPeriod',reqPeriod.value)
+            formData.append('subImg', this.UploadsubImg);
+            formData.append('MainImg', this.UploadMainImg);
 
-        const baseURI = 'api/work.post.pro.php';
-        axios.post(
-            baseURI, formData
-            )
-        .then((result) => {
-            console.log(result.data)
-            router.push({path:'/portfolio/0'})
-            // this.Data = result.data.result;
-        })
-        .catch(err => console.log('Login: ', err));
-    },
-    UpDateData(){
-        alert(this.mode)
-        let y = confirm('내용을 수정하시겠습니까?')
-        if(y == true){
-            const baseURI = 'api/work.update.pro.php';
-            axios.post( 
-                `${baseURI}`, {
-                    idx:this.mode,
-                })
+            formData.append('reqWriter', reqWriter.value);
+            formData.append('Activation',Activation.value)
+            formData.append('Class',Class.value)
+            formData.append('reqCustomer',reqCustomer.value)
+            formData.append('reqTit',reqTit.value)
+            formData.append('reqSubTit',reqSubTit.value)
+            formData.append('reqProjectDesc',reqProjectDesc.value)
+            formData.append('mainDesc',mainDesc.value)
+            formData.append('port',port.value)
+
+            formData.append('reqPeriod',reqPeriod.value)
+
+            formData.append('mode',methods)
+            const baseURI = 'api/work.post.pro.php';
+
+            if(methods == 'update'){
+            formData.append('idx',this.mode)
+            axios.post(
+                baseURI, formData
+                )
                 .then((result) => {
+                    router.push({path:'/portfolio/0'})
                     console.log(result.data)
-                    this.GetData()
+                    // this.Data = result.data.result;
                 })
                 .catch(err => console.log('Login: ', err));
             }
+            else{
+                axios.post(
+                    baseURI, formData
+                    )
+                    .then((result) => {
+                        router.push({path:'/portfolio/0'})
+                        console.log(result.data)
+                        // this.Data = result.data.result;
+                    })
+                    .catch(err => console.log('Login: ', err));
+
+            }
+
+         
+        },
+        DelteImg(Route,col){
+            let y = confirm('이미지를 삭제하시겠습니까?')
+            if(y == true){
+                console.log(Route)
+
+                const baseURI = 'api/delete.img.php';
+                axios.post( 
+                    `${baseURI}`, {
+                        mode:'DeleteImg',
+                        target:Route,
+                        idx:this.mode,
+                        col:col
+                    })
+                    .then((result) => {
+                        this.GetData()
+                    })
+                    .catch(err => console.log('Login: ', err));
+                }
+
+        },
+        ActivationWork(mode){
+            // const Class = document.getElementById('reqclass');
+            const ActivationSelect = document.getElementById('activation');
+            console.log(ActivationSelect.value)
+            
+     
         }
-
-
-    },
-    DelteImg(Route,col){
-        let y = confirm('이미지를 삭제하시겠습니까?')
-        if(y == true){
-
-            const baseURI = 'api/delete.img.php';
-            axios.post( 
-                `${baseURI}`, {
-                    mode:'DeleteImg',
-                    target:Route,
-                    idx:this.mode,
-                    col:col
-                })
-                .then((result) => {
-                    console.log(result.data.phpResult)
-                    this.GetData()
-                })
-                .catch(err => console.log('Login: ', err));
-            }
-
     }
 }
 

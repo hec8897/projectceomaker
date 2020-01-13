@@ -173,28 +173,34 @@ let WorkDataRender = {
 
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-
-                WorkDataRender.WorkData = JSON.parse(this.response);
+                WorkDataRender.WorkData = JSON.parse(this.response).result;
+                console.log(WorkDataRender.WorkData)
                 const WorkListHtml = document.getElementById('work_list');
                 const WorkData = WorkDataRender.WorkData
 
                 TemplateArray = [];
 
-
+    
+                // <div style="color:${WorkData[i].fontColor}">${WorkData[i].work}</div>
 
 
                 for (var i = 0; i < WorkData.length; i++) {
+                    if(WorkData[i].activation == 1){
+                        portlink = `works_view.html?id=${WorkData[i].idx}`
+                    }
+                    else{
+                        portlink = 'javascirt:void()'
+                    }
                     TemplateArray.push(
                         `<div data-scrollview="true">
-                        <div style="background:url(${WorkData[i].background}) center;" "background-size:auto 100%;" class="animated work_lists" data-animation="true" data-animation-type="fadeInUp">
-                            <a href="javascript:void()">
+                        <div style="background:url(admin${(WorkData[i].background).replace("..","")}) center;" "background-size:auto 100%;" class="animated work_lists" data-animation="true" data-animation-type="fadeInUp">
+                            <a href="${portlink}">
                                 <div class="work_on">
                                     <div class="more_tag btn btn_w" >REAN MORE<div class="pluarotate"><span></span><span></span></div></div>
                                 </div>
                                 <div class="work_con">
-                                    <p style="color:${WorkData[i].fontColor}">${WorkData[i].subTit}</p>
-                                    <h2 style="color:${WorkData[i].fontColor}">${WorkData[i].mainTit}</h2>
-                                    <div style="color:${WorkData[i].fontColor}">${WorkData[i].work}</div>
+                                <p style="color:${WorkData[i].fontColor}">${WorkData[i].subTit}</p>
+                                <h2 style="color:${WorkData[i].fontColor}">${WorkData[i].mainTit}</h2>
                                 </div>
                                 <img src="images/img_dim.gif" alt="dim">
                             </a>
@@ -208,7 +214,7 @@ let WorkDataRender = {
                 if (page == "main") {
                     limitArray.push(`<div data-scrollview="true">
                         <div style="background:url(images/works_more.jpg) center;" class="animated delay_4" data-animation="true" data-animation-type="fadeInUp">
-                            <a href="${HtmlMokup.Works.main}">
+                            <a href="works_view.html?id=${HtmlMokup.Works}">
                                 <div class="work_more">
                                     <h4>MORE PROJECT</h4>
                                     <div class="pluarotate"><span></span><span></span></div>
@@ -244,7 +250,7 @@ let WorkDataRender = {
             }
 
         }
-        xhttp.open('POST', 'data/works.data.json', true);
+        xhttp.open('POST', 'data/works.data.php', true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("data=0")
     },

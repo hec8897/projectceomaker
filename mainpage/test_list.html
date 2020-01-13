@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>CEOMAKER - Digital Agency</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="title" content="CEOMAKER" />
+    <meta name="author" content="CEOMAKER" />
+    <meta name="keywords" content="CEOMAKER" />
+    <meta name="description" content="CEOMAKER - Digital Agency" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/opengraph.jpg" />
+    <meta property="og:title" content="CEOMAKER" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:description" content="CEOMAKER - Digital Agency" />
+    <meta property="og:url" content="http://ceomaker.kr/" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- BEGIN Touch icon -->
+    <link rel="apple-touch-icon-precomposed" href="images/ticon.png" />
+    <!-- END Touch icon -->
+
+    <!--  BASE CSS  -->
+    <link href="fonts/fonts.min.css" rel="stylesheet" />
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/responsive.min.css" rel="stylesheet" />
+    <!--  END BASE CSS  -->
+
+    <!--  BASE JS  -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/scrollMonitor.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/apps.min.js"></script>
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	    <![endif]-->
+    <!--  END BASE JS  -->
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="page-container" class="wrap">
+        <!--// Header -->
+        <header id="header" class="sub">
+            <!--// popover GNB -->
+            <div class="pop_gnb">
+                <div class="b_menu navbar-toggle" data-click="sidebar-toggled">
+                    <span></span><span></span><span class="m_half"></span>
+                </div>
+                <div id="sidebar" class="sidebar">
+                    <div class="ci_color"><a href="" class='ci_lnb'><img src="images/ci_color.png" alt="CEOMAKER"></a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="" class="h_lnb">SERVICE</a>
+                            <ul class="s_lnb">
+                                <li><a href="">design</a></li>
+                                <li><a href="">marketing</a></li>
+                                <li><a href="">academy</a></li>
+                                <li><a href="">consulting</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="h_lnb on">WORKS</a>
+                        </li>
+                        <li>
+                            <a href="" class="h_lnb">CONTACT</a>
+                            <ul class="s_lnb">
+                                <li><a href="">design</a></li>
+                                <li><a href="">marketing</a></li>
+                                <li><a href="">academy</a></li>
+                                <li><a href="">consulting</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="h_lnb">ABOUT</a>
+                        </li>
+                    </ul>
+                    <a href="" class="brief">COMPANY BRIEF</a>
+                    <p class="contact">ceomaker@nate.com &nbsp;/&nbsp; 02<span>&#8226;</span>877<span>&#8226;</span>7814
+                    </p>
+                </div>
+            </div>
+            <!-- END popover GNB //-->
+
+            <div class="gnb">
+                <!-- layout.js -->
+                <!-- commonLayout.HeaderRender() -->
+            </div>
+            <!--// visual -->
+            <div class="swiper-container sub">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="visual v_sub sub_works">
+                            <div class="visual_con">
+                                <h1>OUR CREATIVE STORY</h1>
+                                <p class="s_tit">혁신적인 경험을 통해 고객의 니즈에 최적화된 솔루션을 제공합니다</p>
+                                <div class="ci_symbol works"><img src="images/ci_symbol.png" alt="symbol"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END visual //-->
+                <a href="contact.html?cate=2&pageno=0" class="btn_contact">                <div class="contact">
+                    <div class="cont_icon"><img src="images/icon_comt.png" alt="contact"></div>
+                    <div class="cont_txt">
+                        <p>상담문의</p>
+                        <h6>02-877-7814</h6>
+                    </div>
+                </div>
+            </a>
+        </header>
+        <!-- END Header //-->
+
+        <!--// contents -->
+        <section id="section" class="con_works">
+            <!--// tab menu -->
+            <div class="tabs dp_none">
+                <ul class="wid_5">
+                    <li><a href="" class="on">전체</a></li>
+                    <li><a href="">디자인</a></li>
+                    <li><a href="">마케팅</a></li>
+                    <li><a href="">컨설팅</a></li>
+                    <li><a href="">아카데미</a></li>
+                </ul>
+            </div>
+            <!-- END tab menu //-->
+
+            <!-- search -->
+            <div class="search_area" style="opacity:0.0;">
+                <a href=""><img src="images/icon_search.png" alt="search"></a>
+                <input type="text" placeholder="검색">
+            </div>
+            <div class="work_list" id="work_list">
+                <!-- WorkDataRender.WorkDataRender(); -->
+            </div>
+            <!-- loading -->
+            <!-- <div class="loading" id='work_loading'>
+                <span class="pluarotate"></span>
+            </div> -->
+        </section>
+
+        <!--END contents //-->
+
+        <!--// footer -->
+        <footer id="footer" class="foot_line">
+            <a href="" class='ci_lnb'><img src="images/ci_color.png" alt="CEOMAKER"></a>
+            <div>
+                <ul>
+                    <li>CEOMAKER</li>
+                    <li><span></span></li>
+                    <li>대표 : 김봉윤</li>
+                    <li><span></span></li>
+                    <li>이메일 : ceomaker@nate.com</li>
+                    <li><span></span></li>
+
+                    <li>사업자등록번호 : 119-17-48422</li>
+                    <li><span></span></li>
+
+                    <li>전화 : 02-877-7814</li>
+                    <li><span></span></li>
+                    <li>팩스 : 02-877-7815</li>
+                    <li><span></span></li>
+
+                    <li>주소 : 서울시 서초구 사임당로 39 한성빌딩 3층 335호</li>
+                    <li><span></span></li>
+
+                    <li>copyright&copy; 한국소셜마케팅연구소 all rights reserved.</li>
+                </ul>
+            </div>
+        </footer>
+        <!--END footer //-->
+    </div>
+
+
+    <!-- <script src="js/layout.min.js"></script> -->
+    <script src="js/layout.js"></script>
+
+
+    <script>
+        WorkDataRender.WorkDataRender('works');
+        $(window).scroll(function () {
+            var scrolltop = parseInt($(window).scrollTop());
+            if (scrolltop >= $(document).height() - $(window).height() - 5) {
+                // _WorkDataRender.moreDataRender()
+
+            }
+        });
+    </script>
+</body>
+
+</html>
