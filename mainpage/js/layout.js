@@ -169,12 +169,11 @@ let navMokupRender = {
 let WorkDataRender = {
     WorkData: [],
     WorkDataRender: function (page) {
-        var xhttp = new XMLHttpRequest();
+        let xhttp = new XMLHttpRequest();
 
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 WorkDataRender.WorkData = JSON.parse(this.response).result;
-                console.log(WorkDataRender.WorkData)
                 const WorkListHtml = document.getElementById('work_list');
                 const WorkData = WorkDataRender.WorkData
 
@@ -184,8 +183,8 @@ let WorkDataRender = {
                 // <div style="color:${WorkData[i].fontColor}">${WorkData[i].work}</div>
 
 
-                for (var i = 0; i < WorkData.length; i++) {
-                    if(WorkData[i].activation == 1){
+                for (let i = 0; i < WorkData.length; i++) {
+                    if(WorkData[i].port == 1){
                         portlink = `works_view.html?id=${WorkData[i].idx}`
                     }
                     else{
@@ -209,7 +208,7 @@ let WorkDataRender = {
                 }
                 const limitList = page == 'main' ? 8 : 9;
 
-                var limitArray = TemplateArray.slice(0, WorkData.length)
+                let limitArray = TemplateArray.slice(0, WorkData.length)
 
                 if (page == "main") {
                     limitArray.push(`<div data-scrollview="true">
@@ -226,10 +225,10 @@ let WorkDataRender = {
                 }
 
 
-                var resultArrayHtml = limitArray.toString();
-                var replaceAll1 = resultArrayHtml.replaceAll(',', '');
-                var replaceAll2 = replaceAll1.replaceAll('|', ',');
-                var replaceAll3 = replaceAll2.replaceAll(null, ' ');
+                let resultArrayHtml = limitArray.toString();
+                let replaceAll1 = resultArrayHtml.replaceAll(',', '');
+                let replaceAll2 = replaceAll1.replaceAll('|', ',');
+                let replaceAll3 = replaceAll2.replaceAll(null, ' ');
                 WorkListHtml.innerHTML = replaceAll3
 
                 const WorkList = document.querySelectorAll('.work_lists');
@@ -238,14 +237,13 @@ let WorkDataRender = {
 
 
 
-                for (var i = 5; i < MoreBtn.length; i++) {
-                    MoreBtn[i].classList = ""
-                }
-                for (var i = limitList; i < WorkList.length; i++) {
+                // for (let i = 5; i < MoreBtn.length; i++) {
+                //     MoreBtn[i].classList = ""
+                // }
+                for (let i = limitList; i < WorkList.length; i++) {
                     WorkList[i].style.display = "none"
 
                 }
-                // console.log(WorkList.slice(9,WorkData.length))
 
             }
 
@@ -260,7 +258,7 @@ let WorkDataRender = {
         const workLoading = document.getElementById('work_loading')
         let limitCount = this.moreDataCount;
         if (limitCount < WorkList.length) {
-            for (var i = limitCount; i < limitCount + 3; i++) {
+            for (let i = limitCount; i < limitCount + 3; i++) {
                 $(WorkList[i]).fadeIn()
                 //스크롤 이벤트 걸어줘야함
                 // WorkList[i].style.display="block"
@@ -280,7 +278,51 @@ let WorkDataRender = {
 
     },
     WorkViewPage(){
-        const WorkHead = document.getElementById('workhead')
+        const WorkHead = document.getElementById('workhead');
+        const WorksImg = document.getElementById('works_area');
+       
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let RetrunJson = JSON.parse(this.responseText);
+                let ViewData =RetrunJson.result[0]
+                WorkHead.innerHTML =`<div>
+                <h6>PROJECT</h6>
+                <p>${ViewData.project}</p>
+            </div>
+            <div>
+                <h6>CLIENT</h6>
+                <p>${ViewData.company}</p>
+            </div>
+            <div>
+                <h6>PERIOD</h6>
+                <p>${ViewData.Period}</p>
+            </div>
+            <div>
+                <h6>CONTENTS</h6>
+                <div>
+                    <h1>${ViewData.mainTit}</h1>
+                    <p>${ViewData.subTit}</p>
+                    <a href="" class="btn">방문하기 <div class="pluarotate"><span></span><span></span></div></a>
+                </div>
+            </div>`
+
+            WorksImg.innerHTML=`<img src="admin/${(ViewData.mainRoute).replace("..","")}" alt="works img">`
+            }
+        }
+        Insertdata = {
+            id:params.id,
+            mode:"View"
+        }
+       
+
+        xhttp.open('POST', 'data/works.data.php', true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("data="+JSON.stringify(Insertdata))
+
+
+
+
     }
 
 }

@@ -141,21 +141,24 @@ Vue.component('list-numbering',{
                    return{
                         ListNumberLength:null,
                         start:0,
-                        limit:10,
+                        limit:15,
                         NextNumber:null,
                         prevNumber:null
                    }
                    //start, limit 값 올려서 자동배여해야함ㅎㅎ
                    //라스트페이지 넥스트버튼 삭제
                },
+               mounted(){
+                //    this.ListRenderData();
+
+               },
                 created(){
-                    this.ListRenderData();
                     const ListLength = this.listData.length;
                     // this.limit = Math.ceil(Number(this.index)/10)*10 
                     // this.start = (Math.ceil(Number(this.index)/10)*10)-9
                     if(ListLength < 10){
                         this.start = 0
-                        this.limit = 10
+                        this.limit = 15
                     }
                     else{
                         const Indexs = Number(this.index)+1
@@ -168,8 +171,16 @@ Vue.component('list-numbering',{
                methods:{
                    ListRenderData(){
                        // 1보다 작을땐 출력안함
-                       var DataLength = this.listData.length/10
-                       const ListNumberLength = Math.round(DataLength) < 1 ?0:Math.round(DataLength)
+                       let DataLength = this.listData.length/10
+                       if(DataLength>0){
+                        
+                       }
+
+                       const ListNumberLength = Math.round(DataLength) <= 1 ?0:Math.round(DataLength)
+                       console.log(this.listData)
+                       console.log(this.listData.length)
+                    //    console.log(DataLength)
+                    //    console.log(ListNumberLength)
                        this.ListNumberLength = ListNumberLength;
                    },
                    NextListIndex(){
@@ -412,7 +423,6 @@ const Mbanner = {
     </div>
 </div>`
 }
-
 const portfolio = {
     props:['index'],
     template: `<div class="con_wrap">
@@ -470,7 +480,7 @@ created(){
 },
 updated(){
     this.start = Number(this.index)*10,
-    this.limit = Number(this.index)*10+9
+    this.limit = Number(this.index)*10+15
 },
 data:function(){
     return{
@@ -531,7 +541,7 @@ const PortFolioView = {
                 <li><h5>작성자</h5></li>
                 <li>
                     <input id='reqwriter' v-if="mode ==='new'" type="text" placeholder="작성자 이름" value=''>
-                    <input id='reqwriter' v-else type="text" placeholder="작성자 ID"  v-bind:value='mode'>
+                    <input id='reqwriter' v-else type="text" placeholder="작성자 ID"  v-bind:value='Data[0].writer'>
                 </li>
                 <li><h5>미리보기 노출여부</h5></li>
                 <li class="select_input">
@@ -552,9 +562,9 @@ const PortFolioView = {
                 <li class="select_input">
                     <div>
                         <select id="port" v-if="mode ==='new'">
-                        <option value='0'>비공개</option>
-                        <option value='1' disabled>공개</option>
-                        </select>
+                            <option value='0'>비공개</option>
+                            <option value='1' disabled>공개</option>
+                        </select>   
                         <select id="port" v-else>
                             <option v-if="Data[0].port === '1'" selected value='1'>공개</option>
                             <option v-else value='1'>공개</option>
@@ -572,7 +582,8 @@ const PortFolioView = {
                             <option value='홈페이지'>홈페이지</option>
                             <option value='교육'>교육</option>
                             <option value='마케팅'>마케팅</option>
-                            <option value='컨설팅'>컨설팅</option>
+                            <option value=
+                            '컨설팅'>컨설팅</option>
                         </select>
                         <select id="reqclass" v-else>
                             <option v-if="Data[0].class!=null" value="" selected disabled>{{Data[0].class}}</option>
@@ -618,6 +629,22 @@ const PortFolioView = {
                     <textarea v-else placeholder="상세내용" id="main_desc" style='resize:none'>{{Data[0].mainDesc}}</textarea>
 
                 </li>
+                <li><h5>미리보기 폰트</h5></li>
+                <li class="select_input">
+                <div>
+                <select v-if="mode === 'new'" id='font_color'>
+                <option value='#444'>검정(기본값)</option>
+                <option value='#fff'>흰색</option>
+                </select>
+                <select v-else id='font_color'>
+                <option v-if="Data[0].fontColor === '#444'" value='#444' selected>검정</option>
+                <option v-else-if="Data[0].fontColor ==='#fff'" value='#fff'>흰색</option>
+
+              
+                </select>
+                </div>
+                </li>
+
                 <li><h5>미리보기 (400*400)</h5></li>
                 <li v-if="mode === 'new'">
                     <input 
@@ -671,14 +698,12 @@ const PortFolioView = {
                     class="mody_tit"
                     type="file"  
                     >
-
                     <a 
                     v-if="Data[0].mainRoute != ''" 
                     v-bind:href="'admin/'+Data[0].mainRoute" 
                     target='blank'>
                     {{Data[0].mainRoute}}
                     </a>
-
                     <span v-if="Data[0].mainRoute!=''" 
                     class='del_btn' 
                     v-on:click="DelteImg('Data[0].mainRoute','main')">
@@ -689,7 +714,7 @@ const PortFolioView = {
         </div>
     </div>
     <div class="btn_wrap">
-        <a href="#modal-del" data-toggle="modal" class="b_red">삭제</a>
+        <a href="#modal-del" data-toggle="modal" class="b_red" v-on:click='DeletData'>삭제</a>
         <a href="#modal-alert" data-toggle="modal" class="b_blue">등록</a>
         <router-link to="/portfolio/0" class="b_sgrey">목록</router-link>
     </div>
@@ -709,11 +734,12 @@ data:function(){
                     writer:'김다운',
                     customer:"BM",
                     class:"디자인",
-                    title:"",
+                    title:"보험친구들",
                     subTit:"보험친구들 테스트",
                     project:"관리자페이지 테스트 글",
                     mainDesc:"관리자페이지 테스트 글 설명충",
                     Period:"4주",
+                    fontColor:"#fff",
                     imgRoute:"test",
                     mainRoute:"test",
                     activation:0,
@@ -753,6 +779,8 @@ methods:{
             const reqCustomer = document.getElementById('reqcustomer');
             const reqTit = document.getElementById('reqtit');
             const reqPeriod = document.getElementById('reqperiod');
+            const fontColor = document.getElementById('font_color');
+
 
             const reqSubTit = document.getElementById('req_subtit');
             const reqProjectDesc = document.getElementById('req_projectdesc');
@@ -773,6 +801,8 @@ methods:{
             formData.append('reqProjectDesc',reqProjectDesc.value)
             formData.append('mainDesc',mainDesc.value)
             formData.append('port',port.value)
+            formData.append('fontColor',fontColor.value)
+
 
             formData.append('reqPeriod',reqPeriod.value)
 
@@ -809,8 +839,6 @@ methods:{
         DelteImg(Route,col){
             let y = confirm('이미지를 삭제하시겠습니까?')
             if(y == true){
-                console.log(Route)
-
                 const baseURI = 'api/delete.img.php';
                 axios.post( 
                     `${baseURI}`, {
@@ -830,8 +858,17 @@ methods:{
             // const Class = document.getElementById('reqclass');
             const ActivationSelect = document.getElementById('activation');
             console.log(ActivationSelect.value)
-            
-     
+        },
+        DeletData(){
+            const baseURI = 'api/delete.data.php';
+            axios.post( 
+                `${baseURI}`, {
+                    idx:this.mode,
+                })
+                .then((result) => {
+                    router.push({path:'/portfolio/0'})
+                })
+                .catch(err => console.log('Login: ', err));
         }
     }
 }

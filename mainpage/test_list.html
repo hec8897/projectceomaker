@@ -181,12 +181,12 @@
     </div>
 
 
-    <!-- <script src="js/layout.min.js"></script> -->
-    <script src="js/layout.js"></script>
+    <script src="js/layout.min.js"></script>
+    <!-- <script src="js/layout.js"></script> -->
 
 
     <script>
-        WorkDataRender.WorkDataRender('works');
+        _WorkDataRender.WorkDataRender('works');
         $(window).scroll(function () {
             var scrolltop = parseInt($(window).scrollTop());
             if (scrolltop >= $(document).height() - $(window).height() - 5) {

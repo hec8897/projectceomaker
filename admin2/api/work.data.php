@@ -25,6 +25,7 @@ if($mode == "view"){
         "class"=>$row['class'],
         "title"=>$row['title'],
         "subTit"=>$row['sub_tit'],
+        "fontColor"=>$row['font_color'],
         "project"=>$row['project'],
         "mainDesc"=>$row['main_desc'],
         "Period"=>$row['period'],
@@ -34,7 +35,7 @@ if($mode == "view"){
 }
 
 else{   
-    $sql = "SELECT * FROM `works_tb`";
+    $sql = "SELECT * FROM `works_tb` ORDER by idx desc";
     $query = mysqli_query($conn,$sql);
     while($row = mysqli_fetch_array($query)){ 
     array_push($result, array(
@@ -46,6 +47,7 @@ else{
         "class"=>$row['class'],
         "title"=>$row['title'],
         "subTit"=>$row['sub_tit'],
+        "fontColor"=>$row['font_color'],
         "project"=>$row['project'],
         "mainDesc"=>$row['main_desc'],
         "Period"=>$row['period'],

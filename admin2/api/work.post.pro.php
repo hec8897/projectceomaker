@@ -19,6 +19,8 @@
     $mode = $_POST['mode'];
     $port = $_POST['port'];
     $idx = $_POST['idx'];
+    $fontColor = $_POST['fontColor'];
+
 
 
     function FileUploader($files,$Result,$mode){
@@ -71,8 +73,8 @@
         $UploadResult2 = FileUploader($MainImg,$UploadResult2,'main');
         $fileRoute1 = FileRoutRetrun($UploadResult1);
         $fileRoute2 = FileRoutRetrun($UploadResult2);
-        $sql = "INSERT INTO `works_tb` (writer,activation,port,customer,class,title,sub_tit,project,main_desc,period,img_route,main_img_route) 
-        VALUES ('$reqWriter','0','0','$reqCustomer','$Class','$reqTit','$reqSubTit','$reqProjectDesc','$mainDesc','$reqPeriod',
+        $sql = "INSERT INTO `works_tb` (writer,activation,port,customer,class,title,sub_tit,font_color,project,main_desc,period,img_route,main_img_route) 
+        VALUES ('$reqWriter','0','0','$reqCustomer','$Class','$reqTit','$reqSubTit','   ','$reqProjectDesc','$mainDesc','$reqPeriod',
         '$fileRoute1','$fileRoute2')";
     }
     else if($mode =='update'){
@@ -97,7 +99,7 @@
             $fileQuery2 = "main_img_route='$fileRoute2',";
         }
         $sql = "UPDATE `works_tb` SET writer ='$reqWriter', activation = '$Activation', customer ='$reqCustomer',
-         class = '$Class', title = '$reqTit', sub_tit = '$reqSubTit', project = '$reqProjectDesc', period = '$reqPeriod',
+         class = '$Class', title = '$reqTit', sub_tit = '$reqSubTit', font_color = '$fontColor', project = '$reqProjectDesc', period = '$reqPeriod',
          $fileQuery1 $fileQuery2 port='$port' WHERE idx = '$idx'";
     }
     else if($mode == 'Activation'){
