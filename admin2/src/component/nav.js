@@ -18,7 +18,9 @@ Vue.component('app-nav', {
                             <h5>포트폴리오</h5>
                             </router-link>
 
-                            <router-link to="/counsul" tag='li' class='has-sub' class-active="has-sub on">
+                            
+                            <router-link to="/" tag='li' class='has-sub' class-active="has-sub on">
+
                             <b class="caret fr"></b>
                             <i class="material-icons ml20 mr10">assignment_late</i>
                             <h5>견적문의</h5>
@@ -27,3 +29,6 @@ Vue.component('app-nav', {
                 </ul></nav>`
             
 });
+
+
+                            // <router-link to="/counsul" tag='li' class='has-sub' class-active="has-sub on">
