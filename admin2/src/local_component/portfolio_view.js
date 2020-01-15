@@ -71,8 +71,7 @@ const PortFolioView = {
                             '컨설팅'>컨설팅</option>
                         </select>
                         <select id="reqclass" v-else>
-                            <option v-if="Data[0].class!=null" value="" selected disabled>{{Data[0].class}}</option>
-                            <option v-else value="" selected disabled>분류</option>
+                            <option v-bind:value="Data[0].class" selected disabled>{{ Data[0].class }}</option>
                             <option value='디자인'>디자인</option> 
                             <option value='홈페이지'>홈페이지</option>
                             <option value='교육'>교육</option>
@@ -102,7 +101,11 @@ const PortFolioView = {
                     <input id='req_subtit' v-if="mode ==='new'" type="text" placeholder="프로젝트 부제목">
                     <input id='req_subtit' v-else type="text" placeholder="프로젝트 부제목" v-bind:value='Data[0].subTit'>
                 </li>
-                
+                <li><h5>프로젝트 링크</h5></li>
+                <li>
+                    <input id='req_link' v-if="mode ==='new'" type="text" placeholder="없을경우 공란 (http:// https:// 는 제외하고 작성해주세요)">
+                    <input id='req_link' v-else type="text" placeholder="없을경우 공란 (http:// https:// 는 제외하고 작성해주세요)" v-bind:value='Data[0].siteLink'>
+                </li>
                 <li><h5>프로젝트 요약</h5></li>
                 <li>
                     <input id='req_projectdesc' v-if="mode === 'new'" type="text" placeholder="제목" class="mody_tit">
@@ -118,14 +121,14 @@ const PortFolioView = {
                 <li class="select_input">
                 <div>
                 <select v-if="mode === 'new'" id='font_color'>
-                <option value='#444'>검정(기본값)</option>
+                <option value='#222'>검정(기본값)</option>
                 <option value='#fff'>흰색</option>
                 </select>
                 <select v-else id='font_color'>
-                <option v-if="Data[0].fontColor === '#444'" value='#444' selected>검정</option>
-                <option v-else-if="Data[0].fontColor ==='#fff'" value='#fff'>흰색</option>
-
-              
+                    <option v-if="Data[0].fontColor === '#444'" value='#444' selected>검정</option>
+                    <option v-else value='#222'>검정</option>
+                    <option v-if="Data[0].fontColor ==='#fff'" value='#fff' selected>흰색</option>
+                    <option v-else value='#fff'>흰색</option>
                 </select>
                 </div>
                 </li>
@@ -222,9 +225,10 @@ data:function(){
                     title:"보험친구들",
                     subTit:"보험친구들 테스트",
                     project:"관리자페이지 테스트 글",
+                    siteLink:'bmcompany.kr/bmadmin/index.html',
                     mainDesc:"관리자페이지 테스트 글 설명충",
                     Period:"4주",
-                    fontColor:"#fff",
+                    fontColor:"#444",
                     imgRoute:"test",
                     mainRoute:"test",
                     activation:0,
@@ -264,7 +268,9 @@ methods:{
             const reqCustomer = document.getElementById('reqcustomer');
             const reqTit = document.getElementById('reqtit');
             const reqPeriod = document.getElementById('reqperiod');
+
             const fontColor = document.getElementById('font_color');
+            const siteLink = document.getElementById('req_link');
 
 
             const reqSubTit = document.getElementById('req_subtit');
@@ -287,7 +293,7 @@ methods:{
             formData.append('mainDesc',mainDesc.value)
             formData.append('port',port.value)
             formData.append('fontColor',fontColor.value)
-
+            formData.append('siteLink',siteLink.value)
 
             formData.append('reqPeriod',reqPeriod.value)
 

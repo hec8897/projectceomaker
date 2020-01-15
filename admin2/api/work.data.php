@@ -30,7 +30,8 @@ if($mode == "view"){
         "mainDesc"=>$row['main_desc'],
         "Period"=>$row['period'],
         "imgRoute"=>$row['img_route'],
-        "mainRoute"=>$row['main_img_route']
+        "mainRoute"=>$row['main_img_route'],
+        "siteLink"=>$row['site_link']
     ));
 }
 

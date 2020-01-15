@@ -185,35 +185,43 @@ let WorkDataRender = {
 
                 for (let i = 0; i < WorkData.length; i++) {
                     if(WorkData[i].port == 1){
-                        portlink = `works_view.html?id=${WorkData[i].idx}`
+                        portlink = 
+                        `<a href="works_view.html?id=${WorkData[i].idx}">
+                        <div class="work_on">
+                            <div class="more_tag btn btn_w" >REAN MORE<div class="pluarotate"><span></span><span></span></div></div>
+                        </div>
+                        <div class="work_con">
+                        <p style="color:${WorkData[i].fontColor}">${WorkData[i].subTit}</p>
+                        <h2 style="color:${WorkData[i].fontColor}">${WorkData[i].mainTit}</h2>
+                        </div>
+                        <img src="images/img_dim.gif" alt="dim">
+                    </a>`
                     }
                     else{
-                        portlink = 'javascirt:void()'
+                        portlink =  `<a href="javascript:void()">
+                        <div class="work_on">
+                        </div>
+                        <div class="work_con">
+                        <p style="color:${WorkData[i].fontColor}">${WorkData[i].subTit}</p>
+                        <h2 style="color:${WorkData[i].fontColor}">${WorkData[i].mainTit}</h2>
+                        </div>
+                        <img src="images/img_dim.gif" alt="dim">
+                    </a>`
                     }
                     TemplateArray.push(
                         `<div data-scrollview="true">
                         <div style="background:url(admin${(WorkData[i].background).replace("..","")}) center;" "background-size:auto 100%;" class="animated work_lists" data-animation="true" data-animation-type="fadeInUp">
-                            <a href="${portlink}">
-                                <div class="work_on">
-                                    <div class="more_tag btn btn_w" >REAN MORE<div class="pluarotate"><span></span><span></span></div></div>
-                                </div>
-                                <div class="work_con">
-                                <p style="color:${WorkData[i].fontColor}">${WorkData[i].subTit}</p>
-                                <h2 style="color:${WorkData[i].fontColor}">${WorkData[i].mainTit}</h2>
-                                </div>
-                                <img src="images/img_dim.gif" alt="dim">
-                            </a>
+                        ${portlink}
                         </div>
                     </div>`)
                 }
                 const limitList = page == 'main' ? 8 : 9;
-
                 let limitArray = TemplateArray.slice(0, WorkData.length)
 
                 if (page == "main") {
                     limitArray.push(`<div data-scrollview="true">
                         <div style="background:url(images/works_more.jpg) center;" class="animated delay_4" data-animation="true" data-animation-type="fadeInUp">
-                            <a href="works_view.html?id=${HtmlMokup.Works}">
+                            <a href="works_list.html?cate=1 ">
                                 <div class="work_more">
                                     <h4>MORE PROJECT</h4>
                                     <div class="pluarotate"><span></span><span></span></div>
@@ -235,14 +243,12 @@ let WorkDataRender = {
 
                 const MoreBtn = document.querySelectorAll('.more_tag');
 
-
-
                 // for (let i = 5; i < MoreBtn.length; i++) {
                 //     MoreBtn[i].classList = ""
                 // }
+
                 for (let i = limitList; i < WorkList.length; i++) {
                     WorkList[i].style.display = "none"
-
                 }
 
             }
@@ -285,7 +291,14 @@ let WorkDataRender = {
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 let RetrunJson = JSON.parse(this.responseText);
-                let ViewData =RetrunJson.result[0]
+                let ViewData = RetrunJson.result[0]
+
+                if(ViewData.link == ""){
+                    Link = 'javascript:void()'
+                }
+                else{
+                    Link = `http://${ViewData.siteLink}`
+                }
                 WorkHead.innerHTML =`<div>
                 <h6>PROJECT</h6>
                 <p>${ViewData.project}</p>
@@ -303,7 +316,7 @@ let WorkDataRender = {
                 <div>
                     <h1>${ViewData.mainTit}</h1>
                     <p>${ViewData.subTit}</p>
-                    <a href="" class="btn">방문하기 <div class="pluarotate"><span></span><span></span></div></a>
+                    <a href="${Link}" class="btn" target='blank'>방문하기 <div class="pluarotate"><span></span><span></span></div></a>
                 </div>
             </div>`
 

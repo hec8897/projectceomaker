@@ -1,3 +1,4 @@
+
 Vue.component('modal-open-delete',{
     props:['mode','dataFn'],
     template:`<div class="pop-window fade" id="modal-del">

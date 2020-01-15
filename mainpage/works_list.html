@@ -143,9 +143,9 @@
                 <!-- WorkDataRender.WorkDataRender(); -->
             </div>
             <!-- loading -->
-            <!-- <div class="loading" id='work_loading'>
+            <div class="loading" id='work_loading'>
                 <span class="pluarotate"></span>
-            </div> -->
+            </div>
         </section>
 
         <!--END contents //-->
@@ -187,10 +187,11 @@
 
     <script>
         _WorkDataRender.WorkDataRender('works');
+
         $(window).scroll(function () {
             var scrolltop = parseInt($(window).scrollTop());
             if (scrolltop >= $(document).height() - $(window).height() - 5) {
-                // _WorkDataRender.moreDataRender()
+                _WorkDataRender.moreDataRender()
 
             }
         });

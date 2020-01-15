@@ -25,13 +25,14 @@ if(isset($mode)){
         "project"=>$row['project'],
         "Period"=>$row['period'],
         "background"=>$row['img_route'],
-        "mainRoute"=>$row['main_img_route']
+        "mainRoute"=>$row['main_img_route'],
+        "siteLink"=>$row['site_link']
     ));
 
 }
 else{
 
-    $sql = "SELECT * FROM `works_tb` WHERE `activation` = 1";
+    $sql = "SELECT * FROM `works_tb` WHERE `activation` = 1 Order by idx DESC";
     $query = mysqli_query($conn,$sql);
     
     while($row = mysqli_fetch_array($query)){ 
@@ -47,7 +48,9 @@ else{
             "project"=>$row['project'],
             "Period"=>$row['period'],
             "background"=>$row['img_route'],
-            "mainRoute"=>$row['main_img_route']
+            "mainRoute"=>$row['main_img_route'],
+            "siteLink"=>$row['site_link']
+
         ));
     }
 }
