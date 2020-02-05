@@ -23,7 +23,6 @@ const portfolio = {
                 <td>{{list.customer}}</td>
                 <td>{{list.Period}}</td>
             </router-link>
-         
         </table>
         <div class="foot_btn">
             <router-link v-bind:to="NextpageNode+'new'" class="b_add b_blue">등록</router-link>

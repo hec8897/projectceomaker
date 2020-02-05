@@ -259,7 +259,6 @@ methods:{
         },
         SelectMainImg(){
             this.UploadMainImg = this.$refs.mainimg.files[0];
-            console.log(this.UploadMainImg)
         },
         PostData(methods){
             const reqWriter = document.getElementById('reqwriter');

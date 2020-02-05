@@ -60,7 +60,7 @@ Vue.component('list-numbering',{
                },
                methods:{
                    NextListIndex(){
-                    this.start = this.limit+1
+                    this.start = this.limit+1;
                     this.limit = this.start+10;
                     console.log(this.start)
 
