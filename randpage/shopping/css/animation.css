@@ -1,0 +1,100 @@
+#figure_box div.figure_box {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  transition: 0.3s;
+}
+div.figure_box:hover {
+  margin-top: -5px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.38);
+}
+#figure_box div.figure_box:nth-child(1) {
+  animation-delay: 0s;
+}
+#figure_box div.figure_box:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#figure_box div.figure_box:nth-child(3) {
+  animation-delay: 0.2s;
+}
+#figure_box div.figure_box:nth-child(4) {
+  animation-delay: 0.3s;
+}
+#figure_box div.figure_box:nth-child(5) {
+  animation-delay: 0.4s;
+}
+#con1_fig img {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+#con1_fig img:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.circle_boxs div.circle {
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 0.8s;
+}
+#circle1 {
+  animation-delay: 0s;
+}
+#circle2 {
+  animation-delay: 0.2s;
+}
+#circle3 {
+  animation-delay: 0.4s;
+}
+@keyframes fadein_ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes up_fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+div.con5 .obj1 {
+  transform: translate(-50px, -50px);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+div.con5 .obj2 {
+  transform: translate(50px, 50px);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+@keyframes objAni {
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+#head_btn {
+  transition: 0.2s ease-in-out;
+}
+#footer_btn {
+  transition: 0.2s ease-in-out;
+}
+#head_btn:hover {
+  background-color: rgba(242, 68, 83, 0.85);
+}
+#footer_btn:hover {
+  background-color: rgba(242, 68, 83, 0.85);
+}
