@@ -9,7 +9,7 @@ $reqPhone = $data->reqPhone;
 $time = date('Y-m-d H:i:s');
 
 $sql = "INSERT INTO `Insert_tb` (`idx`, `reqcompany`, `reqname`, `reqphone`, `reqemail`, `reqinqr`, `reqpay`, `reqfilerout`, `reqmemo`, `reqperson`, `reqtarget`, `reqbordercate`, `time`, `fileId`) 
-VALUES (NULL, '', '', '$reqName', '$reqPhone', '', '', '', '', '', '', 'shopping', '$time', NULL)";
+VALUES (NULL, '', '$reqName', '$reqPhone', '', '', '', '', '', '', '', 'shopping', '$time', NULL)";
 
 $conn = mysqli_query($conn,$sql);
 if(isset($conn)){$phpresult = 'ok';}
