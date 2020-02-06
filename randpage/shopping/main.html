@@ -8,18 +8,43 @@
     <link rel="stylesheet" href="css/element.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/insert.js"></script>
     <title>Ceomaker Shopping mall</title>
 </head>
 
 <body>
     <div id="wrap">
+        <div id="popup" class='popups'>
+            <div class='popup_box'>
+                <div class='x_box' onclick="PopupOut()">
+                    <img src="images/x_box.png" alt="">
+                </div>
+                <h2>강의 신청하기</h2>
+                <div class='forms'>
+                    <ul>
+                        <li><label for="reqname">이름</label><input type="text" name="" id="reqname"></li>
+                        <li><label for="reqphone">전화번호</label><input type="text" name="" id="reqphone"></li>
+                        <li> 
+                            <label class="container">개인정보 수집 이용에 관하여 동의합니다.(자세히보기)
+                                <input type="checkbox" id='reqcheck'>
+                                <span class="checkmark"></span>
+                              </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class='submit_btn' onclick="InsertData()">강의 신청하기</div>
+            </div>
+        </div>
         <div class="con head_line">
-            <h4>올해는 나도 사장님! 쇼핑몰 창업자 홍보마케팅 마스터 과정 <span id='head_btn'>바로 신청 하기</span></h4>
+            <h4><b>올해는 나도 사장님!</b> 쇼핑몰 창업자 홍보마케팅 마스터 과정 <span id='head_btn' onclick="PopupON()">바로 신청 하기</span></h4>
         </div>
         <header>
-            <img src="images/pc_head.jpg" alt="head">
+            <img src="images/pc_head.jpg" alt="head" class='head'>
+            <img src="images/mo_head.jpg" alt="head" class='mo_head'>
+
             <div class="figure_boxs" id='figure_box'>
                 <div class="figure_box">
                     <figure class='fig_1'>
@@ -128,11 +153,11 @@
                     <div class='con4_desc'>
                         <h4>4주 미션과정 + 4회 교육 + 1:1컨설팅과정</h4>
                         <ul>
-                            <li><img src='images/con4-no1.png' alt='no'>쇼핑몰 창업, 기획부터 제작까지 어떻게 해야 할지 모르겠어요.</li>
-                            <li><img src='images/con4-no2.png' alt='no'>제품은 준비되었는데 오픈마켓 등록하는 방법이 어려워요.</li>
-                            <li><img src='images/con4-no3.png' alt='no'>자체 SNS채널 홍보하고 싶은데 막막해요.</li>
-                            <li><img src='images/con4-no4.png' alt='no'>네이버 키워드 광고 직접 하긴 어려울 것 같아요.</li>
-                            <li><img src='images/con4-no5.png' alt='no'>상세페이지 제작 비용이 만만치 않아 고민이에요.</li>
+                            <li><img src='images/con4-no1.png' alt='no'><b>쇼핑몰 창업, 기획부터 제작까지 어떻게 해야 할지 모르겠어요.</b></li>
+                            <li><img src='images/con4-no2.png' alt='no'><b>제품은 준비되었는데 오픈마켓 등록하는 방법이 어려워요.</b></li>
+                            <li><img src='images/con4-no3.png' alt='no'><b>자체 SNS채널 홍보하고 싶은데 막막해요.</b></li>
+                            <li><img src='images/con4-no4.png' alt='no'><b>네이버 키워드 광고 직접 하긴 어려울 것 같아요.</b></li>
+                            <li><img src='images/con4-no5.png' alt='no'><b>상세페이지 제작 비용이 만만치 않아 고민이에요.</b></li>
                         </ul>
                     </div>
                 </div>
@@ -187,21 +212,21 @@
             <div class='con_wrap'>
                 <h2>강의안내</h2>
                 <ul>
-                    <li><span>강의 모집</span> 매월1,3주 월요일 개강(5인 이하 수업)</li>
-                    <li><span>강의 기간</span> 매월 월요일 오전, 오후반 1일 3시간 교육(총 4회))</li>
-                    <li><span>강의 장소</span> 서울시 구로구 디지털로 31길 38-21 이엔씨벤처드림타워 3차 6층 607호</li>
-                    <li><span>입금 계좌</span> 신한은행/ 110-180-196235/ 김봉윤</li>
-                    <li><span>환불 규정</span> 반환 사유 발생 시 수강기간 전 전액 환불됩니다.(교육 진행중 환불 불가 및 다음 기수 참여기회 제공)</li>
-                    <li><span>강의 문의</span> 02-877-7814 / 이메일 문의: ceomaker79@gmail.com </br></li>
+                    <li><span>강의 모집</span> <b>매월1,3주 월요일 개강(5인 이하 수업)</b></li>
+                    <li><span>강의 기간</span> <b>매월 월요일 오전, 오후반 1일 3시간 교육(총 4회))</b></li>
+                    <li><span>강의 장소</span> <b>서울시 구로구 디지털로 31길 38-21 이엔씨벤처드림타워 3차 6층 607호</b></li>
+                    <li><span>입금 계좌</span> <b>신한은행/ 110-180-196235/ 김봉윤</b></li>
+                    <li><span>환불 규정</span> <b>반환 사유 발생 시 수강기간 전 전액 환불됩니다.(교육 진행중 환불 불가 및 다음 기수 참여기회 제공)</b></li>
+                    <li><span>강의 문의</span> <b>02-877-7814 / 이메일 문의: ceomaker79@gmail.com </br></b></li>
                     <li class='none'><span></span> *1차 전화 면접 후 탈락될 수 있음 </br></li>
                 </ul>
-             
+
             </div>
 
         </div>
 
         <footer>
-            <div class='btn' id='footer_btn'>
+            <div class='btn' id='footer_btn' onclick="PopupON()">
                 교육 신청 문의
             </div>
             <div class="con_wrap">

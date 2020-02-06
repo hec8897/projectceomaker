@@ -1,14 +1,15 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean');
-@White:#ffffff;
-@Black:#222;
+@White: #ffffff;
+@Black: #222;
 
-.bundleCenterAbsol(){
+.bundleCenterAbsol() {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 html,
 body {
     position: relative;
@@ -34,9 +35,11 @@ p {
     border: 0;
     outline: none
 }
-img{
+
+img {
     width: 100%;
 }
+
 html,
 body,
 ul,
@@ -60,13 +63,15 @@ i {
     color: #444;
     letter-spacing: -0.5px;
 }
-#wrap{
+
+#wrap {
     margin: 0 auto;
     max-width: 1920px;
     overflow-x: hidden;
 
 }
-div.head_line{
+
+div.head_line {
     max-width: 1920px;
     width: 100%;
     height: 60px;
@@ -76,10 +81,12 @@ div.head_line{
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     line-height: 60px;
-    h4{
+
+    h4 {
         color: @White;
         font-size: 1.125rem;
-        span{
+
+        span {
             width: 150px;
             height: 40px;
             margin-top: 10px;
@@ -95,11 +102,177 @@ div.head_line{
         }
     }
 }
-header{
+
+div.popups {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+div.popups div.popup_box {
+    width: 90%;
+    max-width: 480px;
+    height: 420px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    div.x_box {
+        width: 50px;
+        height: 50px;
+        background-color: #222;
+        float: right;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        img{
+            vertical-align: middle;
+            width: 25px;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    div.forms {
+        width: 70%;
+        height: 180px;
+        border-top: 2px solid #444;
+        border-bottom: 2px solid #444;
+        margin: 0 auto;
+    }
+
+    div.submit_btn {
+        text-align: center;
+        width: 250px;
+        height: 50px;
+        margin: 35px auto;
+        background-color: #f24453;
+        border-radius: 50px;
+        line-height: 50px;
+        font-size: 1.25rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    ul {
+        height: 100%;
+
+        li {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            border-bottom: 1px solid #d9d9d9;
+            box-sizing: border-box;
+            label{
+                display: inline-block;
+                text-align: center;
+                width: 80px;
+            }
+            input{
+                width: 70%;
+                outline: none;
+                border: 1px solid #d0d0d0;
+                display: inline-block;
+                height: 40px;
+            }
+        }
+        li:nth-last-child(1){
+            border: 0px;
+            text-align: center;
+            label{display: inline;}
+            .container {
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                position: relative;
+                padding-left: 0px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                width: 100%;
+                font-size: 0.875rem;
+              }
+              
+              /* Hide the browser's default checkbox */
+              .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+              
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 5px;
+                height: 25px;
+                width: 25px;
+                background-color: #eee;
+                top: 20px;
+              }
+              
+              /* On mouse-over, add a grey background color */
+              .container:hover input ~ .checkmark {
+                background-color: #ccc;
+              }
+              
+              /* When the checkbox is checked, add a blue background */
+              .container input:checked ~ .checkmark {
+                background-color: #f24453;
+              }
+              
+              /* Create the checkmark/indicator (hidden when not checked) */
+              .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              
+              /* Show the checkmark when checked */
+              .container input:checked ~ .checkmark:after {
+                display: block;
+              }
+              
+              /* Style the checkmark/indicator */
+              .container .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+        }
+
+    }
+}
+
+header {
     width: 100%;
     position: relative;
 
-    div.figure_boxs{
+    img.mo_head {
+        display: none;
+    }
+
+    div.figure_boxs {
         position: absolute;
         max-width: 1200px;
         width: 100%;
@@ -112,53 +285,62 @@ header{
         padding-left: 20px;
         box-sizing: border-box;
         text-align: center;
-    
-        &>div{
+
+        &>div {
             float: left;
             width: calc(100%/5);
             max-width: 220px;
             height: 100%;
             margin-right: 15px;
             background: white;
-            figure{
+
+            figure {
                 width: 100%;
                 height: 150px;
                 position: relative;
-                img{
+
+                img {
                     .bundleCenterAbsol();
                 }
             }
-            figure.fig_1{
-                img{
+
+            figure.fig_1 {
+                img {
                     width: 80px;
                 }
             }
-            figure.fig_2{
-                img{
+
+            figure.fig_2 {
+                img {
                     width: 80px;
                 }
             }
-            figure.fig_3{
-                img{
+
+            figure.fig_3 {
+                img {
                     width: 140px;
                 }
             }
-            figure.fig_4{
-                img{
+
+            figure.fig_4 {
+                img {
                     width: 130px;
                 }
             }
-            figure.fig_5{
-                img{
+
+            figure.fig_5 {
+                img {
                     width: 130px;
                 }
             }
-            div.fig_line{
+
+            div.fig_line {
                 width: 100%;
                 height: 70px;
                 background-color: #f0f0f0;
                 position: relative;
-                span{
+
+                span {
                     text-align: center;
                     .bundleCenterAbsol();
                     font-size: 0.875rem;
@@ -168,52 +350,58 @@ header{
                 }
             }
         }
-      
+
     }
 }
-div.con{
 
-}
-div.con1{
+div.con {}
+
+div.con1 {
     box-sizing: border-box;
     padding-top: 100px;
     height: 500px;
     text-align: center;
     position: relative;
-    h2{
+
+    h2 {
         font-size: 3.125rem;
         color: @Black;
         font-weight: 100;
         letter-spacing: -1px;
-        span{
+
+        span {
             font-size: 3.125rem;
             color: @Black;
             font-weight: bolder;
         }
     }
-    figure{
+
+    figure {
         width: 100%;
         max-width: 1200px;
         margin: 54px auto;
         position: relative;
         z-index: -2;
-        img{
+
+        img {
             width: 45%;
             margin-right: 2%;
             margin-left: 2%;
         }
     }
-    img.obj{
+
+    img.obj {
         position: absolute;
         width: 35%;
         top: -25%;
         right: -10%;
-        z-index: -1;
+        z-index: 0;
     }
-  
- 
+
+
 }
-div.con2{
+
+div.con2 {
     width: 100%;
     height: 900px;
     position: relative;
@@ -221,7 +409,7 @@ div.con2{
     background-repeat: no-repeat;
     background-position: top;
 
-    img.obj{
+    img.obj {
         position: absolute;
         width: 35%;
         top: -20%;
@@ -229,31 +417,33 @@ div.con2{
         z-index: -2;
     }
 
-    img.obj2{
+    img.obj2 {
         position: absolute;
-        width:80%;
+        width: 85%;
         z-index: 10;
         bottom: 13%;
         left: -1%;
     }
-    div.con_wrap{
-  
 
-        .con2-graph{
+    div.con_wrap {
+
+
+        .con2-graph {
             width: 50%;
             display: block;
             float: right;
             position: relative;
-        z-index: 11;
+            z-index: 11;
             top: 300px;
         }
-        div.con2_tit{
+
+        div.con2_tit {
             position: absolute;
-            bottom:45%;
+            bottom: 45%;
             width: 450px;
             float: left;
-  
-            p{
+
+            p {
                 font-size: 1.25rem;
                 margin-bottom: 5px;
 
@@ -261,84 +451,101 @@ div.con2{
         }
     }
 }
-div.con3{
+
+div.con3 {
     width: 100%;
     height: 800px;
     background-image: url(../images/con3-bg.png);
     background-position: top;
     margin-top: -300px;
-    position: relative;z-index: 10;
-    div.con_wrap{
+    position: relative;
+    z-index: 10;
+
+    div.con_wrap {
         height: 100%;
         position: relative;
-        div.con3_tit{
+
+        div.con3_tit {
             position: absolute;
-            bottom:50%;
+            bottom: 50%;
             right: 0;
             float: left;
             text-align: right;
 
-  
-            p{
+
+            p {
                 font-size: 1.25rem;
                 margin-bottom: 5px;
             }
         }
-        img{
+
+        img {
             width: 85%;
             position: absolute;
             left: -6%;
-            bottom:18%;
+            bottom: 18%;
         }
     }
-   
+
 }
 
-div.con4{
+div.con4 {
     width: 100%;
     height: 800px;
     background-image: url(../images/con4-bg.png);
     background-position: top;
     margin-top: -350px;
-    position: relative;z-index: 10;
-    div.con_wrap{
-        
+    position: relative;
+    z-index: 10;
+
+    div.con_wrap {
+
         margin: 0 auto;
-        div.con4_texts{
+
+        div.con4_texts {
             width: 100%;
             max-width: 1200px;
             position: absolute;
             top: 40%;
-            &>div{
+
+            &>div {
                 display: inline-block;
             }
-            .con4_tit{
+
+            .con4_tit {
                 float: left;
-                h3{
+
+                h3 {
                     color: @White;
                 }
-                h2{
+
+                h2 {
                     color: @White;
                 }
             }
-            .con4_desc{
+
+            .con4_desc {
                 width: 50%;
                 float: right;
                 transform: translateY(-30px);
-                h4{
+
+                h4 {
                     padding-left: 50px;
 
                     color: white;
                     font-size: 1.5rem;
                     margin-bottom: 20px;
                 }
-                ul{
+
+                ul {
                     padding-left: 45px;
-                    li{
+
+                    li {
                         margin-bottom: 10px;
                         color: white;
                         font-size: 1rem;
-                        img{
+
+                        img {
                             width: 20px;
                             vertical-align: text-bottom;
                             margin-right: 15px;
@@ -351,33 +558,39 @@ div.con4{
     }
 }
 
-div.con5{
+div.con5 {
     width: 100%;
     height: 1300px;
     background-image: url(../images/con5-bg.png);
     background-position: top;
     margin-top: -350px;
-    position: relative;z-index: 10;
-    div.con_wrap{
+    position: relative;
+    z-index: 10;
+
+    div.con_wrap {
         width: 100%;
         height: 500px;
         position: absolute;
         top: 30%;
         left: 50%;
         transform: translateX(-50%);
-        h3{
+
+        h3 {
             text-align: center;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
-        p{
+
+        p {
             font-size: 1.25rem;
             margin-bottom: 5px;
             text-align: center;
             color: #444;
         }
-        div.price_tag{
+
+        div.price_tag {
             text-align: center;
             margin-top: 60px;
             background-image: url(../images/con5-box.png);
@@ -385,19 +598,23 @@ div.con5{
             background-position: center;
             background-repeat: no-repeat;
             height: 95px;
-            span{
-                font-size: 24px;
+
+            span {
+                font-size: 1.5rem;
             }
-            h2{
-                font-size: 60px;
+
+            h2 {
+                font-size: 3.75rem;
                 color: #f24453;
             }
-         
+
         }
-        div.circle_boxs{
+
+        div.circle_boxs {
             text-align: center;
             margin-top: 40px;
-            div.circle{
+
+            div.circle {
                 width: 250px;
                 height: 250px;
                 display: inline-block;
@@ -405,28 +622,33 @@ div.con5{
                 vertical-align: middle;
                 border-radius: 100%;
                 position: relative;
-                div{
+
+                div {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    img{
+
+                    img {
                         width: 55px;
                     }
-                    span{
+
+                    span {
                         margin-top: 20px;
                         white-space: nowrap;
                         color: @White;
-                        font-size: 18px;
+                        font-size: 1.125rem;
                         line-height: 22px;
                     }
 
                 }
 
             }
-            span{
+
+            span {
                 display: inline-block;
-                img{
+
+                img {
                     width: 30px;
                     margin-right: 40px;
                     margin-left: 40px;
@@ -434,23 +656,25 @@ div.con5{
             }
         }
 
-        h4{
-            font-size: 30px;
+        h4 {
+            font-size: 1.875rem;
             text-align: center;
             margin-top: 30px;
             color: @Black;
         }
-      
+
 
     }
-    img.obj1{
+
+    img.obj1 {
         width: 400px;
         position: absolute;
-        top:25%;
+        top: 25%;
         left: -0.5%;
         z-index: -1;
     }
-    img.obj2{
+
+    img.obj2 {
         width: 500px;
         position: absolute;
         bottom: 0%;
@@ -459,7 +683,7 @@ div.con5{
     }
 }
 
-div.con6{
+div.con6 {
     width: 100%;
     height: 800px;
     background-image: url(../images/con6-bg.png);
@@ -467,7 +691,8 @@ div.con6{
     margin-top: -150px;
     position: relative;
     z-index: 10;
-    div.con_wrap{
+
+    div.con_wrap {
         width: 100%;
         height: 500px;
         position: absolute;
@@ -475,23 +700,27 @@ div.con6{
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-        h2{
+
+        h2 {
             color: white;
             margin-bottom: 20px;
         }
-        ul{
+
+        ul {
             width: 55%;
             margin: 0 auto;
             text-align: left;
             margin-bottom: 40px;
 
-            li{
+            li {
                 color: white;
                 margin-bottom: 10px;
-                span{
+
+                span {
                     display: inline-block;
                     background-color: #f24453;
-                    width: 85px;
+                    width: 20%;
+                    max-width: 85px;
                     height: 25px;
                     line-height: 25px;
                     text-align: center;
@@ -499,28 +728,42 @@ div.con6{
                     border-radius: 20px;
                     margin-right: 10px;
                 }
+
+                b {
+                    width: 80%;
+                    display: inline-block;
+                }
             }
-            li.none{
+
+            li.none {
                 margin-top: -20px;
-                span{
+
+                span {
                     opacity: 0.0;
+                }
+
+                b {
+                    width: 80%;
+                    display: inline-block;
+                    float: right;
                 }
             }
         }
-  
+
     }
 
 }
 
-footer{
-  
+footer {
+
     width: 100%;
     height: 450px;
     background-image: url(../images/con5-bg.png);
     margin-top: -300px;
     position: relative;
     z-index: 19;
-    div.btn{
+
+    div.btn {
         cursor: pointer;
         width: 300px;
         height: 60px;
@@ -529,26 +772,30 @@ footer{
         color: white;
         margin: 0 auto;
         line-height: 60px;
-        font-size:20px;
+        font-size: 20px;
         position: relative;
         z-index: 100;
         text-align: center;
         top: 20px;
     }
-    div.con_wrap{
+
+    div.con_wrap {
         width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-        h1{
-            img{
+
+        h1 {
+            img {
                 width: 150px;
             }
+
             margin-bottom: 20px;
         }
-        p{
+
+        p {
             margin-top: 10px;
         }
     }
