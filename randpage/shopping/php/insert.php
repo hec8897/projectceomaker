@@ -12,11 +12,11 @@ $sql = "INSERT INTO `Insert_tb` (`idx`, `reqcompany`, `reqname`, `reqphone`, `re
 VALUES (NULL, '', '$reqName', '$reqPhone', '', '', '', '', '', '', '', 'shopping', '$time', NULL)";
 
 $conn = mysqli_query($conn,$sql);
-if(isset($conn)){$phpresult = 'ok';}
-else{$phpresult = 'no';}
+if(isset($conn)){$phpResult = 'ok';}
+else{$phpResult = 'no';}
 
 $json = json_encode(
-    array("datas" => $sql, "phpresult"=>$phpresult)
+    array("datas" => $sql, "phpresult"=>$phpResult)
 );
 echo urldecode($json);
 header('Content-Type: application/json');

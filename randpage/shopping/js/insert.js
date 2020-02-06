@@ -21,8 +21,7 @@ function InsertData() {
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var returnJson = JSON.parse(this.response);
-        console.log(returnJson)
-        if (returnJson.phpresult == "ok") {
+        if (returnJson.phpResult == "ok") {
           alert('수강 신청이 완료되었습니다.');
           location.reload();
         } else {
