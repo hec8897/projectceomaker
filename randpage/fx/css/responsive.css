@@ -41,19 +41,17 @@
     div.con8 div.con8_ilu img{max-width: 370px; margin-top: 0px;}
 }
 
-
 @media (max-width: 767px) {
     header img.pc_head{display: none;}
     header img.mo_head{display: block; width: 100%; margin: 0px;}
     div.con1 img.pc_con1{display: none;}
     div.con1 img.mo_con1{display: block;}
-
-
-
 }
+
 @media (max-width: 640px) {}
 @media (max-width: 564px) {
 }
+
 @media (max-width: 480px) {}
 @media (max-width: 414px) {}
 @media (max-width: 360px) {}

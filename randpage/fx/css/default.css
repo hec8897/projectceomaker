@@ -35,8 +35,8 @@ html,body{
     color: #222;
     overflow-x: hidden;
     word-break: keep-all;
-
 }
+
 div.widgets{width: 120px; position: absolute; right: 10%; top: 10%; z-index: 10;}
 div.widgets div.widget{width: 100%; max-width: 120px; height: 120px;margin-bottom: 5px; border-radius: 100%;-webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.49);
     -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.49);
@@ -83,8 +83,8 @@ div.con5 div.contents div.desc_box p span{color: #f4cd19; font-weight: bold;}
 div.con5 div.contents div.desc_box div.btn_link{font-size:1.125rem;color: white; cursor: pointer;
     width:290px; height: 60px; background-color: #f61f1f; margin-top: 85px; 
     position: absolute; bottom: 0px; text-align: center; line-height: 60px; border-radius: 100px;}
-    div.con5 div.contents div.desc_box div.btn_link a{color: white; text-decoration: none;}
-    div.con5 div.contents div.desc_box div.btn_link img{width: 40px; vertical-align: middle;}
+div.con5 div.contents div.desc_box div.btn_link a{color: white; text-decoration: none;}
+div.con5 div.contents div.desc_box div.btn_link img{width: 40px; vertical-align: middle;}
 
 div.con7{background-image: url(../images/con7_bg.jpg); background-repeat: no-repeat; background-size: cover;}
 div.con7 h2{color: white; text-align: center;}
@@ -101,7 +101,6 @@ div.con8 div.con8_desc h2{margin-bottom: 15px; text-align: left;}
 div.con8 div.con8_desc h2 span{color: #f61f1f; font-weight: bold;}
 div.con8 div.con8_ilu{float: right;}
 div.con8 div.con8_ilu img{margin-top: -160px;}
-
 div.con8 div.btns{width: 100%;float: left; height: 150px;}
 div.con8 div.btn{cursor: pointer; width: 290px; height: 60px; border-radius:100px; line-height: 60px; color: white; background-color: #f61f1f; display: inline-block; margin: 10px;}
 div.con8 div.y_btn{background-color: #fce000; }
