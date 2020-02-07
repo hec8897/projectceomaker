@@ -129,21 +129,21 @@ div.popups div.popup_box {
   transform: translate(-50%, -50%);
 }
 div.popups div.popup_box div.x_box {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #222;
   float: right;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   cursor: pointer;
 }
 div.popups div.popup_box div.x_box img {
   vertical-align: middle;
-  width: 25px;
+  width: 20px;
 }
 div.popups div.popup_box h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875rem;
   padding-top: 50px;
 }
 div.popups div.popup_box div.forms {
@@ -186,6 +186,11 @@ div.popups div.popup_box ul li input {
   border: 1px solid #d0d0d0;
   display: inline-block;
   height: 40px;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
 }
 div.popups div.popup_box ul li:nth-last-child(1) {
   border: 0px;

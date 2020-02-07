@@ -1,4 +1,16 @@
+
+ function getQueryString() {
+  params = {};
+  window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+      params[key] = value;
+  });
+  return params;
+}
+
+
+
 function InsertData() {
+  getQueryString()
   var reqName = document.getElementById('reqname');
   var reqPhone = document.getElementById('reqphone');
   var reqChecked = document.getElementById('reqcheck');
@@ -14,7 +26,8 @@ function InsertData() {
   } else {
     Data = {
       reqName: reqName.value,
-      reqPhone: reqPhone.value
+      reqPhone: reqPhone.value,
+      reqAd:params.id
     };
     xhttp = new XMLHttpRequest();
 
@@ -22,6 +35,7 @@ function InsertData() {
       if (this.readyState == 4 && this.status == 200) {
         var returnJson = JSON.parse(this.response);
         if (returnJson.phpResult == "ok") {
+          console.log(returnJson.phpResult)
           alert('수강 신청이 완료되었습니다.');
           location.reload();
         } else {

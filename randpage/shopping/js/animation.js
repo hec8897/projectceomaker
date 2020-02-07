@@ -42,13 +42,7 @@ function PopupON() {
         return false;
     });
 }
-
 function PopupOut() {
-
     $('#popup').fadeOut(200)
     $('#popup').off('scroll touchmove mousewheel');
 }
-$(document).ready(function () {
-
-
-})
