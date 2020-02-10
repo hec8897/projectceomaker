@@ -60,13 +60,8 @@
 
     div.con2 h2 b{display: block;}
     div.con2 h3 b{display: block;}
-    div.con2 div.panels > div{width: 49.0%; margin-bottom: 1%;}
-    div.con2 div.panels > div:nth-child(1){float: left;}
-    div.con2 div.panels > div:nth-child(2){float: right;}
+    div.con2 div.panels > div{width: 90%; margin-bottom: 3%; }
 
-    div.con2 div.panels > div:nth-last-child(1){min-width: 99%; display: block; margin: 0 auto;}
-    div.con2 div.panels > div img.mo{display: inline;}
-    div.con2 div.panels > div img.pc{display: none;}
 
     div.con3 div.video_nav ul li{font-size: 1.25rem;}
     div.con3 div.video_box div.videos{height: 350px;}
