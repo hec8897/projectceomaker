@@ -1,0 +1,29 @@
+div.con1 img{transform: translateY(50px); opacity: 0.0;animation-duration: 1s; animation-timing-function: ease-in-out; animation-fill-mode: forwards;}
+
+div.con2 div.panels > div{transform: translateY(50px); opacity: 0.0;animation-duration: 1s; animation-timing-function: ease-in-out; animation-fill-mode: forwards;}
+
+div.con2 div.panels > div:nth-child(1){animation-delay: 0.0s;}
+div.con2 div.panels > div:nth-child(2){animation-delay: 0.2s;}
+div.con2 div.panels > div:nth-child(3){animation-delay: 0.4s;}
+
+div.con7 div.captions > div{transform: translateY(50px); opacity: 0.0;animation-duration: .5s; animation-timing-function: ease-in-out; animation-fill-mode: forwards;}
+
+div.con7 div.captions > div:nth-child(1){animation-delay: 0.0s;}
+div.con7 div.captions > div:nth-child(2){animation-delay: 0.1s;}
+div.con7 div.captions > div:nth-child(4){animation-delay: 0.2s;}
+div.con7 div.captions > div:nth-child(3){animation-delay: 0.3s;}
+div.con7 div.captions > div:nth-child(5){animation-delay: 0.4s;}
+div.con7 div.captions > div:nth-child(6){animation-delay: .5s;}
+
+div.con8 div.con8_ilu img{ transform: translateY(50px); opacity: 0.0; animation-duration: 1s; animation-timing-function: ease-in-out; animation-fill-mode: forwards;}
+
+/* div.con1 img,div.con2 div.panels > div,div.con7 div.captions > div,div.con8 div.con8_ilu img{animation-name: fadein_up;} */
+@keyframes fadein_up{
+    0%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+        transform: translate(0px, 0px);
+    }
+}

@@ -41,7 +41,8 @@ div.widgets{width: 120px; position: absolute; right: 10%; top: 10%; z-index: 10;
 div.widgets div.widget{width: 100%; max-width: 120px; height: 120px;margin-bottom: 5px; border-radius: 100%;-webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.49);
     -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.49);
     box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.49);position: relative;}
-div.widgets div.widget img{width: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+div.widgets div.widget img{width: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display: none;}
+div.widgets div.widget img.pc{display: inline;}
 div.widgets div.widget_1{background-color: #193155;}
 div.widgets div.widget_2{background-color: #fce000;}
 div.widgets div.widget_3{background-color: #f61f1f;}
@@ -56,6 +57,7 @@ div.con2 h2 span{font-weight: bold; color: #f61f1f;}
 div.con2 h3{color: #246794; margin-top: 25px; margin-bottom: 25px; transform: skew(-11deg); }
 div.con2 div.panels{text-align: center; }
 div.con2 div.panels > div{width: 32%; max-width: 380px; display: inline-block;margin-right: 0.5%; margin-left: 0.5%;}
+div.con2 div.panels > div img.mo{display: none;}
 
 div.con3 h2{text-align: center; margin-bottom: 30px; }
 div.con3 h2 span{font-weight: bold; }
@@ -85,6 +87,8 @@ div.con5 div.contents div.desc_box div.btn_link{font-size:1.125rem;color: white;
     position: absolute; bottom: 0px; text-align: center; line-height: 60px; border-radius: 100px;}
 div.con5 div.contents div.desc_box div.btn_link a{color: white; text-decoration: none;}
 div.con5 div.contents div.desc_box div.btn_link img{width: 40px; vertical-align: middle;}
+
+div.con6 img.mo{display: none;}
 
 div.con7{background-image: url(../images/con7_bg.jpg); background-repeat: no-repeat; background-size: cover;}
 div.con7 h2{color: white; text-align: center;}
