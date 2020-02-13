@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="FX-ONE" />
+    <meta name="author" content="CEOMAKER" />
+    <meta name="keywords" content="FX-ONE" />
+    <meta name="description" content="FX-ONE 프로점 FX마진거래 데이터 분석서비스" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FX-ONE 프로점" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:description" content="FX-ONE 프로점 FX마진거래" />
+    <title>FX-ONE</title>
+</head>
+<body>
+    <script>
+       function getQueryString() {
+  params = {};
+  window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+    params[key] = value;
+  });
+  return params;
+}
+
+getQueryString();
+
+if (params.id == 'yed') {
+  location.href = 'yed.html';
+} else if (params.id == 'lee') {
+  location.href = 'lee.html';
+} else if (params.id == 'pro') {
+  location.href = 'pro.html';
+} else if (params.id == 'ys') {
+  location.href = 'ys.html';
+} else if (params.id == 'cd') {
+  location.href = 'cd.html';
+} else if (params.id == 'ch') {
+  location.href = 'ch.html';
+}
+
+    </script>
+</body>
+</html>

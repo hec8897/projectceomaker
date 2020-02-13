@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="FX-ONE" />
+    <meta name="author" content="CEOMAKER" />
+    <meta name="keywords" content="FX-ONE" />
+    <meta name="description" content="FX-ONE 전국점 FX마진거래 데이터 분석서비스" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://dhimc.co.kr/images/og.jpg" />
+    <meta property="og:title" content="FX-ONE 전국점" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:description" content="FX-ONE 전국점 FX마진거래" />
+    <meta property="og:url" content="http://dhimc.co.kr/" />
+    <link rel="stylesheet" href="css/element.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/amimation.js"></script>
+    <title>FX-ONE 전국점</title>
+    <style>
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 50%;
+            height: 380px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(images/n_slide.png);
+            border: 0px;
+            --swiper-theme-color: #0000;
+
+        }
+
+        .swiper-button-prev {
+            background-image: url(images/p_slide.png);
+
+        }
+
+        @media (max-width: 767px) {
+            .swiper-slide {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class='widgets' id='banner'>
+            <div class="widget widget_1">
+                <a href='http://www.fx1one.com'>
+                    <img src="images/widget_1.png" alt="위젯" class='pc'>
+                    <img src="images/mo_widget_1.png" alt="위젯" class='mo'>
+                </a>
+            </div>
+            <div class="widget widget_2">
+                <a href='https://open.kakao.com/o/sJ6RwjUb'>
+                    <img src="images/widget_2.png" alt="위젯" class='pc'>
+                    <img src="images/con_kakao.png" alt="위젯" class='mo'>
+
+                </a>
+            </div>
+            <div class="widget widget_3">
+                <a href='https://www.youtube.com/channel/UCMl1CkpA63EJ1Od4lt8mxhg'>
+                    <img src="images/widget_3.png" alt="위젯" class='pc'>
+                    <img src="images/con5-youtube.png" alt="" class='mo'>
+                </a>
+            </div>
+        </div>
+        <header>
+            <img src="images/pc_head_ch.png" alt="헤더" class='pc_head'>
+            <img src="images/mo_head_ch.png" alt="헤더" class='mo_head'>
+
+        </header>
+        <div class="con1">
+            <div class="wrap">
+                <img src="images/con1.png" alt="con1" class="pc_con1">
+                <img src="images/mo_con1.png" alt="con1" class='mo_con1'>
+
+            </div>
+        </div>
+        <div class="con2">
+            <div class="wrap">
+                <h2>
+                    언제까지 감으로만 <b>투자하실건가요?!</b>
+                </h2>
+                <h2>
+                    <span>
+                        정확한 데이터를 믿으세요!
+                    </span>
+                </h2>
+                <h3>FX-ONE 전국점만의 1:1 맞춤 <b>FX마진거래 데이터분석서비스!</b></h3>
+                <div class='panels'>
+                    <div class='panel1'>
+                        <img src="images/con2_panel1.png" alt="p1">
+                    </div>
+                    <div class='panel2'>
+                        <img src="images/con2_panel2.png" alt="p2">
+
+                    </div>
+                    <div class='panel3'>
+                        <img src="images/con2_panel3.png" alt="p3" class='pc'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con3">
+            <div class="wrap">
+                <h2>FX-ONE <span>이용방법 동영상</span></h2>
+                <div class='video_box'>
+                    <div class="video_nav">
+                        <ul>
+                            <li class="active" onclick="VideoChange(1)">1.회원가입가이드</li>
+                            <li onclick="VideoChange(2)">2.실전거래방법</li>
+                            <li onclick="VideoChange(3)">3.차트설정법</li>
+                        </ul>
+                    </div>
+
+                    <div class="videos video1">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HaMncFmYnhQ"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="videos video2">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aCx4m-kY3bs"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="videos video3">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZguDG2Y_tFc"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con4">
+            <div class="wrap">
+                <img src="images/con4_tit.png" alt="c4">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(images/slider2.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/slider3.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/slider4.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/slider5.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/slider1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/slider6.png)"></div>
+                    </div>
+
+                    <div id="js-prev1" class="swiper-button-prev"></div>
+                    <div id="js-next1" class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="con5">
+            <div class="wrap">
+                <h2><span>FX-ONE</span> 전국점 <span>YOUTUBE</span></h2>
+                <div class='contents'>
+                    <div class="youtube_box">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/V_RJAli-_F8"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class='desc_box'>
+                        <p>FX-ONE 전국점의</p>
+                        <p><span>간단 명료한 투자TIP이 궁금하다면?</span></p>
+                        <p>하단 버튼을 클릭해주세요</p>
+
+                        <p class='mt'><span>FX분야 국내 1위 노하우</span>를</p>
+                        <p>100% 얻어가실 수 있습니다.</p>
+
+                        <div class='btn_link'><img src='images/con5-youtube.png'><a
+                                href='https://www.youtube.com/channel/UCMl1CkpA63EJ1Od4lt8mxhg' target="blank">유튜브
+                                바로가기</a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="con6">
+            <img src="images/con6_mo_ch_bg.jpg" alt="con6" class="pc">
+            <img src="images/con6_mo_ch_bg.jpg" alt="con6" class="mo">
+
+        </div>
+        <div class="con7">
+            <div class="wrap">
+                <h2>FX-ONE 전국점과 <span>함께 해야 하는 이유</span></h2>
+                <div class='captions'>
+                    <div class='panel1'>
+                        <div class='inner'>
+                            <img src="images/con7_panel1.png" alt="p1">
+                            <p>FX-ONE 1등</p>
+                            <p>수익 지점방</p>
+                        </div>
+                    </div>
+                    <div class='panel2'>
+                        <div class='inner'>
+                            <img src="images/con7_panel2.png" alt="p2">
+                            <p>전국점만의 1:1 개인맞춤</p>
+                            <p>데이터분석서비스 보유</p>
+                        </div>
+                    </div>
+                    <div class='panel3'>
+                        <div class='inner'>
+                            <img src="images/con7_panel3.png" alt="p3">
+                            <p>전문가 트레이더</p>
+                            <p>항시 상주</p>
+                        </div>
+                    </div>
+                    <div class='panel4'>
+                        <div class='inner'>
+                            <img src="images/con7_panel4.png" alt="p4">
+                            <p>회원전용</p>
+                            <p>오픈카카오톡방 보유</p>
+                        </div>
+                    </div>
+                    <div class='panel5'>
+                        <div class='inner'>
+                            <img src="images/con7_panel5.png" alt="p5">
+                            <p>회원전용 차트지표</p>
+                            <p>설정 및 교육</p>
+                        </div>
+                    </div>
+                    <div class='panel6'>
+                        <div class='inner'>
+                            <img src="images/con7_panel6.png" alt="p6">
+                            <p>24시간</p>
+                            <p>전문상담원 상주</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con8">
+            <div class="wrap">
+                <div class='con8_desc'>
+                    <h2>FX-ONE 전국점으로</h2>
+                    <h2>회원 가입 시</h2>
+                    <h2><span>모든 재테크 리딩</span></h2>
+                    <h2><span>무료 이벤트!</span></h2>
+                </div>
+                <div class="con8_ilu">
+                    <img src="images/con8-ilu.png" alt="c8">
+                </div>
+                <div class="btns">
+
+                    <div class='r_btn btn'><img src="images/con8_join.png" alt="join"><a
+                            href='http://Fxone-01.com'>회원 가입 하기</a></div>
+                    <div class='y_btn btn'><img src='images/con8_kakao.png' alt='kko'><a
+                            href='http://open.kakao.com/o/sJ6RwjUb'>카카오톡 문의</a></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var floatPosition = parseInt($("#banner").css('top'));
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+                var newPosition = scrollTop + floatPosition + "px";
+                $("#banner").stop().animate({
+                    "top": newPosition
+                }, 400);
+
+            }).scroll();
+
+        });
+        function VideoChange(i) {
+            $(".video_nav li").removeClass("active");
+            $(".video_nav li:nth-child(" + i + ")").attr('class', 'active')
+            $('.videos').hide()
+            $('.video' + i).show()
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            initialSlide: 4,
+   
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            navigation: {
+                nextEl: '#js-next1',
+                prevEl: '#js-prev1',
+            },
+
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            autoplay: { // 자동 재생
+                delay: 2500, // 딜레이 0
+            },
+            speed: 500,
+
+
+
+        });
+    </script>
+</body>
+
+</html>
