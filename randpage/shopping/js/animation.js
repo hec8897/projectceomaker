@@ -1,20 +1,21 @@
-var PcMedia = window.matchMedia('( max-width: 1200px )');
-var TabletMedia = window.matchMedia('( max-width: 1024px ) and (min-width: 768px)');
-var MobileMedia = window.matchMedia('(max-width:767px)');
+// var PcMedia = window.matchMedia('( max-width: 1200px )');
+// var TabletMedia = window.matchMedia('( max-width: 1024px ) and (min-width: 768px)');
+// var MobileMedia = window.matchMedia('(max-width:767px)');
 
 $(window).scroll(function () {
 
     var offsets = $(document).scrollTop();
+    console.log(offsets)
+
     var con1 = $('.con1').offset()
     var con5 = $('.con5').offset()
 
-    $(".figure_box").css({
-        "animationName": "up_fadein"
-    })
+    // $(".figure_box").css({
+    //     "animationName": "up_fadein"
+    // })
     // }
     if (offsets * 2 > con1.top) {
-        console.log('1')
-        $("#con1_fig img").css({
+        $("i#con1_fig mg").css({
             "animationName": "up_fadein"
         })
     }

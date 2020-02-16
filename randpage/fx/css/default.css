@@ -51,6 +51,7 @@ header{position: relative;}
 header img{display: none;}
 header img.pc_head{display: block;}
 div.con1 img.mo_con1{display: none;}
+
 div.con2{background-color: #e6ebee;}
 div.con2 h2{text-align: center; margin-bottom: 5px;}
 div.con2 h2 span{font-weight: bold; color: #f61f1f;}
