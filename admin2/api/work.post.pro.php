@@ -80,7 +80,7 @@
         $fileRoute1 = FileRoutRetrun($UploadResult1);
         $fileRoute2 = FileRoutRetrun($UploadResult2);
         $sql = "INSERT INTO `works_tb` (writer,activation,port,customer,class,title,sub_tit,font_color,site_link,project,main_desc,period,img_route,main_img_route) 
-        VALUES ('$reqWriter','0','0','$reqCustomer','$Class','$reqTit','$reqSubTit','$fontColor','$siteLink''$reqProjectDesc','$mainDesc','$reqPeriod',
+        VALUES ('$reqWriter','0','0','$reqCustomer','$Class','$reqTit','$reqSubTit','$fontColor','$siteLink','$reqProjectDesc','$mainDesc','$reqPeriod',
         '$fileRoute1','$fileRoute2')";
     }
     else if($mode =='update'){

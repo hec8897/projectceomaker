@@ -12,21 +12,25 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        include: [
-          path.resolve(__dirname, 'src/js')
-        ],
+        include: [ path.resolve(__dirname, 'src/js')],
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-            // plugins: ['@babel/plugin-proposal-class-properties']
-          }
+          options:{
+            presets:['@babel/preset-env','es2015']
+          },
         }
+      },
+      {
+        test: /\.less$/i,
+        use: ['style-loader', 'css-loader','less-loader'],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
     ]
   },
   devtool: 'source-map',
-  // https://webpack.js.org/concepts/mode/#mode-development
   mode: 'development'
 };
