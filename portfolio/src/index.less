@@ -1,0 +1,73 @@
+
+
+
+html,body{position:relative; width:100%; height:100%; background:#dee7ef}
+html,body,ul,ol,img,div,span,iframe,a,p{margin:0; padding:0; border:0; outline:none}
+html,body,ul,ol,li,img,div,span,iframe,a,p,input,textarea,select,i{
+    font-family:'Roboto','Noto Sans KR', sans-serif;
+    font-size:14px; font-weight:400; font-style:normal; word-break:keep-all; color:#444; letter-spacing:-0.5px;
+}
+a,a:hover,a:active,a:focus{text-decoration:none}
+img{border:none; width: 100%;}
+ul,ol{list-style:none}
+iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
+
+.wrap{position:relative; width:100%; height:100%; padding-left:10px; box-sizing:border-box}
+
+.tabs{padding:10px; min-height:30px}
+.tabs a{display:inline-block; height:30px; line-height:30px; padding:0 8px; margin-bottom:3px; background:#fff; border:1px solid #999; box-sizing:border-box; vertical-align:middle}
+.tabs a:hover{background:#e9e9e9}
+
+.gallery{width:100%; margin:0 -10px}
+.gallery .image{width:25%; display:inline-block; margin-right:-10px; overflow:hidden; padding:10px; box-sizing:border-box}
+.gallery .image-inner{height:200px; overflow:hidden; border-radius:5px 5px 0 0}
+.gallery .image-info{padding:20px; background:#fff; border-radius:0 0 5px 5px}
+.gallery .image-info .title{color:#222; height:25px}
+.gallery .image-info .desc{color:#888; height:23px; overflow:hidden}
+
+.gallery .image-info a{display:block; background:#8b92a9; color:#fff; margin-top:10px; padding:10px; text-align:center}
+.gallery .image-info a:hover{background:#6f7894}
+
+.top_btn{
+    position:fixed; z-index:9999; display:block; right:5px; bottom:100px; opacity:0;
+    width:40px; height:40px; line-height:40px; border-radius:50%; text-align:center; background:#fa453e; color:#fff; font-size:12px;
+    transition:all 0.3s ease;
+}
+.top_btn.in{opacity:1; bottom:10px}
+
+/* Typo Elements*/
+h1,h2,h3,h4,h5,h6{font-style:normal; font-weight:400; letter-spacing:-0.5px; padding:0; margin:0}
+h1{font-size:40px}
+h2{font-size:30px}
+h3{font-size:24px}
+h4{font-size:18px}
+h5{font-size:16px}
+h6{font-size:14px}
+
+
+@media (max-width: 900px){
+    .gallery .image{width:33.33%}
+}
+@media (max-width: 767px){
+    .gallery .image{width:50%}
+}
+@media (max-width: 480px){
+    .wrap{padding-left:0}
+    .gallery {margin:0}
+    .gallery .image{width:100%}
+}
+
+*{
+    //element
+    html,body{font-family: 'Noto Sans KR', sans-serif; font-size: 16px;}
+    h1{text-align: center; font-size: 1.5rem;}
+    img{vertical-align: text-bottom;}
+}
+
+
+h1{
+    padding: 20px 0px;
+    img{
+        width: auto;
+    }
+}
