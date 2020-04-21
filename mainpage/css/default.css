@@ -516,7 +516,7 @@ textarea:focus{border:1px solid #666; background:#f9f9f9}
 .btn span:last-child{transform:rotate(90deg)}
 
 .btn:before{content:''; position:absolute; z-index:-1; top:0; right:0; width:0; height:100%; background:#1dbfd7; transition:width 0.2s}
-.btn:hover:before{width:100%; left:0}
+.btn:hover:before{  }
 .btn:hover{border-color:#1dbfd7; color:#fff}
 .btn:hover span{background:#fff}
 .btn:hover .pluarotate{

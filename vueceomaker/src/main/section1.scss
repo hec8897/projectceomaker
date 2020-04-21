@@ -1,0 +1,45 @@
+@import '../define.scss';
+
+div.main{
+    section.section1{
+        height: 800px;
+        @include BackGroundOption(cover);
+        background-image: url($ImgRoute + "main-section1.jpg");
+        div.text_area{
+            @include absoluteCenter;
+            color: $white;
+            text-align: center;
+            p{
+                font-size: 27px;
+                font-weight: 100;
+            }
+            h2{
+                font-size: 54px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                font-weight: bolder;
+                span{
+                    vertical-align: top;
+                    &.ci_color1{
+                        color: $MainColor;
+                    }
+                    &.ci_color2{
+                        color: $MainDarken;
+                    }
+                }
+                img{
+                    width: auto;
+                    margin-top: -30px;
+                }
+            }
+            p.s_tit{
+                font-size: 18px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+            div.btn{
+                @include btnDefault($white);
+            }
+        }
+    }
+}

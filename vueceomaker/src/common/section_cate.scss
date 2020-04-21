@@ -1,0 +1,38 @@
+@import '../define.scss';
+
+div.section_cate{
+    border-bottom: 1px solid #d0d0d0;;
+    ul{
+        li{
+            display: inline-block;
+            font-size: 16px;
+            text-align: center;
+            padding: 25px 0px;
+            cursor: pointer;
+            &::after{
+                content: "";
+                display: block;
+                vertical-align: bottom;
+                background-color: $MainColor;
+                width: 0%;
+                height: 1px;
+                transition: .2s ease-in;
+                margin: 0 auto;
+                position: relative;top: 26px;
+            }
+            &.router-link-active{
+                color: $MainColor;
+                &::after{
+                    width: 100%;
+                }
+            }
+            &:hover{
+                color: $MainColor;
+                &::after{
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
