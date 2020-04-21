@@ -10,7 +10,6 @@ const workItem = {
             <div class='btn_area'>
                 <div class='item_btn consult'>제작상담</div>
                 <div class='item_btn zoom'>자세히보기</div>
-                <div class='item_btn kakao'>카톡상담</div>
             </div>
         </div>
 
