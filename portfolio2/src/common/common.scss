@@ -1,0 +1,42 @@
+header{
+    text-align: center;
+    padding: 30px 0px;
+    img{
+        cursor: pointer;
+    }
+}
+nav.app-gnb{
+    margin-bottom: 30px;
+    ul{
+        text-align: center;
+        li{
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            cursor: pointer;
+            &::after{
+                content: '';
+                display: block;
+                width:00%;
+                height: 1px;
+                background-color: #1dbfd7;
+                transition: 0.2s ease-in-out;
+                margin: 0 auto;
+            }
+            &:hover{
+                color: #1dbfd7;
+                font-weight: bold;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+        li.router-link-active{
+            color: #1dbfd7;
+            font-weight: bold;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}

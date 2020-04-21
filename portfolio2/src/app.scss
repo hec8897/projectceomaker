@@ -1,0 +1,36 @@
+$font-stack: 'Roboto','Noto Sans KR', sans-serif;
+$font-big:24px;
+$font-normal:16px;
+$font-small:12px;
+$default-font-color:#222;
+
+html,body,ul,ol,li,img,div,span,iframe,a,p,input,textarea,select,i{
+    margin: 0px;
+    padding: 0px;
+    font:400 16px $font-stack;
+    word-break:keep-all;
+    letter-spacing:-0.5px;
+    color:$default-font-color;
+    position: relative;
+}
+
+html,body{
+    background-color: #dee7ef;
+}
+a,a:hover,a:active,a:focus{text-decoration:none;}
+img{border:none; width:auto;}
+ul,ol{list-style:none;}
+iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
+
+input,select{
+    outline: none;
+}
+div#wrap{
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+div#wrap1200{
+    max-width: 1200px;
+    margin: 0 auto;
+}

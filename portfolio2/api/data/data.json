@@ -1,0 +1,198 @@
+[
+    {
+        "idx":0,
+        "standard":"sns",
+        "tit":"sns 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"BM Company 홈페이지",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    },
+    {
+        "idx":1,
+        "standard":"homepage",
+        "tit":"홈페이지 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"BM Company 홈페이지",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    },
+    {
+        "idx":2,
+        "standard":"lend",
+        "tit":"랜딩페이지 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"랜딩페이지 샘플",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    },
+    {
+        "idx":3,
+        "standard":"book",
+        "tit":"도서 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"도서 출판 샘플",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    },
+    {
+        "idx":4,
+        "standard":"etc",
+        "tit":"기타 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"랜딩페이지 샘플",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    },
+    {
+        "idx":4,
+        "standard":"etc",
+        "tit":"기타 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"랜딩페이지 샘플",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    },
+    {
+        "idx":4,
+        "standard":"homepage",
+        "tit":"홈페이지 샘플",
+        "mainimg":"uploadimg/id1-main.jpg",
+        "desc":"랜딩페이지 샘플",
+        "sub":[
+            {
+                "subidx":0,
+                "subtitle":"보험친구들 서브1",
+                "subdesc":"BM Company 홈페이지 서브1",
+                "subImg":"uploadimg/id1-sub_1.jpg"
+            },
+            {
+                "subidx":1,
+                "subtitle":"보험친구들 서브2",
+                "subdesc":"BM Company 홈페이지 서브2",
+                "subImg":"uploadimg/id1-sub_2.jpg"
+            },
+            {
+                "subidx":2,
+                "subtitle":"보험친구들 서브3",
+                "subdesc":"BM Company 홈페이지 서브3",
+                "subImg":"uploadimg/id1-sub_3.jpg"
+            }
+        ]
+
+    }
+]
