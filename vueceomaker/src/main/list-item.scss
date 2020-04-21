@@ -1,0 +1,74 @@
+@import '../define.scss';
+
+div.work-list{
+    padding: 100px 0px;
+    text-align: center;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.85rem;
+
+    }
+    div.item{
+        width: 23%;
+        display: inline-block;
+        border: 1px solid #d0d0d0;
+        border-radius: 4px;
+        margin: 10px;
+        overflow: hidden;
+        transition: .1s ease-in;
+
+        div.img_area{
+            height: 200px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        div.text_area{
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;;
+            h3{
+                text-align: left;
+                font-weight: bold;
+            }
+            p{
+                text-align: left;
+            }
+            div.btn_area{
+                text-align: left;
+                margin-top: 15px;
+                div.item_btn{
+                    cursor: pointer;
+                    text-align: center;
+                    width: 32%;
+                    display: inline-block;
+                    margin: {
+                        right: 3px;
+                    }
+                    margin-top: 5px;
+                    padding: 10px 0px;
+                    background-color: #d0d0d0;
+                    color: white;
+                    &.consult{
+                        background-color: $MainColor;
+                    }
+                    &.zoom{
+                        background-color: $MainDarken;
+                    }
+                    &.kakao{
+                        background-color: darken($color:$MainDarken, $amount: 10%);
+
+                    }
+                }
+            }
+        }
+        &:hover{
+            margin-top: -10px;
+            -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.3);
+            -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.3);
+            box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.3);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../define.scss';
+
+footer{
+    padding: 50px 0px;
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    address{
+        display: block;
+        text-align: center;
+        max-width: 500px;;
+        margin: 0 auto;
+        font-style: normal;
+        color: $FontLight;
+    }
+}
