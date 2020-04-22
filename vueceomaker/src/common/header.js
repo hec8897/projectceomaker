@@ -5,8 +5,7 @@ const Header = {
                         <div class='wrap'>
                             <h1><img src='image/logo_w.png'></h1>
                             <ul>
-                                <li>WORKS</li>
-                                <li>SERVICE
+                            <li><router-link to='/' tag='span'>SERVICE</router-link>
                                     <ol>
                                         <li>design</li>
                                         <li>marketing</li>
@@ -14,6 +13,8 @@ const Header = {
                                         <li>consulting</li>
                                     </ol>
                                 </li>
+                                <router-link to='/works/전체' tag='li'>WORKS</router-link>
+                               
                                 <li>CONTACT</li>
                                 <li>ABOUT</li>
                             </ul>

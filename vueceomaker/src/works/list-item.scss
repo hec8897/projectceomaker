@@ -42,7 +42,7 @@ div.work-list{
                 div.item_btn{
                     cursor: pointer;
                     text-align: center;
-                    width:48%;
+                    width:30%;
                     display: inline-block;
                     margin: 2px;
                     margin-top: 5px;
@@ -54,6 +54,10 @@ div.work-list{
                     }
                     &.zoom{
                         background-color: $MainDarken;
+                    }
+                    &.kakao{
+                        background-color: darken($color: #fce000, $amount: 5%);
+                        color: #424242;
                     }
                   
                 }

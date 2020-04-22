@@ -112,6 +112,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./image/design_section1_bg.png":
+/*!**************************************!*\
+  !*** ./image/design_section1_bg.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/design_section1_bg.png");
+
+/***/ }),
+
 /***/ "./image/main-section1.jpg":
 /*!*********************************!*\
   !*** ./image/main-section1.jpg ***!
@@ -122,6 +135,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/main-section1.jpg");
+
+/***/ }),
+
+/***/ "./image/service-section1.jpg":
+/*!************************************!*\
+  !*** ./image/service-section1.jpg ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/service-section1.jpg");
 
 /***/ }),
 
@@ -2016,24 +2042,6 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/list-item.scss":
-/*!**************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/list-item.scss ***!
-  \**************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.work-list {\n  padding: 100px 0px;\n  text-align: center; }\n  div.work-list h2 {\n    text-align: center;\n    margin-bottom: 30px;\n    font-size: 1.85rem; }\n  div.work-list div.item {\n    width: 23%;\n    display: inline-block;\n    border: 1px solid #d0d0d0;\n    border-radius: 4px;\n    margin: 10px;\n    overflow: hidden;\n    transition: .1s ease-in; }\n    div.work-list div.item div.img_area {\n      height: 200px;\n      overflow: hidden; }\n      div.work-list div.item div.img_area img {\n        width: 100%; }\n    div.work-list div.item div.text_area {\n      width: 100%;\n      padding: 20px;\n      box-sizing: border-box; }\n      div.work-list div.item div.text_area h3 {\n        text-align: left;\n        font-weight: bold; }\n      div.work-list div.item div.text_area p {\n        text-align: left; }\n      div.work-list div.item div.text_area div.btn_area {\n        text-align: center;\n        margin-top: 15px; }\n        div.work-list div.item div.text_area div.btn_area div.item_btn {\n          cursor: pointer;\n          text-align: center;\n          width: 48%;\n          display: inline-block;\n          margin: 2px;\n          margin-top: 5px;\n          padding: 10px 0px;\n          background-color: #d0d0d0;\n          color: white; }\n          div.work-list div.item div.text_area div.btn_area div.item_btn.consult {\n            background-color: #1dbfd7; }\n          div.work-list div.item div.text_area div.btn_area div.item_btn.zoom {\n            background-color: #015b96; }\n    div.work-list div.item:hover {\n      margin-top: -10px;\n      -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3);\n      -moz-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3);\n      box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3); }\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section1.scss":
 /*!*************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section1.scss ***!
@@ -2044,11 +2052,89 @@ module.exports = exports;
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/service-section1.jpg */ "./image/service-section1.jpg");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.main section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.main section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.main section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.main section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      font-weight: bolder; }\n      div.main section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.main section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.main section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.main section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.main section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.main section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.main section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.main section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.main section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.main section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.main section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.main section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.main section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.main section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n\ndiv.main div.client_section {\n  padding: 100px 0px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto; }\n  @media (max-width: 1200px) {\n    div.main div.client_section {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    div.main div.client_section {\n      max-width: 95%; } }\n  div.main div.client_section h2 {\n    text-align: center;\n    font-size: 54px;\n    color: #222;\n    margin: 0; }\n  div.main div.client_section p {\n    margin: 30px 0px;\n    font-size: 18px; }\n  div.main div.client_section div.clients {\n    max-width: 1000px;\n    margin: 0 auto; }\n    div.main div.client_section div.clients div.client {\n      width: 160px;\n      margin: 2px;\n      display: inline-block; }\n  div.main div.client_section div.btn {\n    margin: 20px auto;\n    position: relative;\n    z-index: 9;\n    display: inline-block;\n    border: 1px solid #222;\n    font-size: 14px;\n    text-align: left;\n    color: #222;\n    width: 200px;\n    height: 50px;\n    line-height: 50px;\n    padding: 0 20px;\n    box-sizing: border-box;\n    transition: all 0.2s ease;\n    cursor: pointer; }\n    div.main div.client_section div.btn::before {\n      content: '';\n      position: absolute;\n      z-index: -1;\n      top: 0;\n      right: 0;\n      width: 0;\n      height: 100%;\n      background: #1dbfd7;\n      transition: width 0.2s; }\n    div.main div.client_section div.btn div.pluarotate {\n      position: absolute;\n      top: 17px;\n      right: 20px;\n      display: block;\n      width: 12px;\n      height: 12px;\n      text-align: center; }\n      div.main div.client_section div.btn div.pluarotate span {\n        position: absolute;\n        top: 6px;\n        display: block;\n        width: 11px;\n        height: 1px;\n        background-color: #222; }\n        div.main div.client_section div.btn div.pluarotate span:last-child {\n          transform: rotate(90deg); }\n    div.main div.client_section div.btn:hover::before {\n      width: 100%;\n      left: 0; }\n    div.main div.client_section div.btn:hover {\n      border-color: #1dbfd7;\n      color: #222; }\n    div.main div.client_section div.btn:hover span {\n      background: #222; }\n    div.main div.client_section div.btn:hover div.pluarotate {\n      animation-duration: 1s;\n      animation-fill-mode: both;\n      animation-iteration-count: infinite;\n      animation-name: plusRotate; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section2/section2.scss":
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section2/section2.scss ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../../image/design_section1_bg.png */ "./image/design_section1_bg.png");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\nsection.section2 div.design_section div.section {\n  height: 650px;\n  overflow: hidden;\n  background-color: #fff;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: bottom; }\n\nsection.section2 div.design_section div.sub {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 100px 0px; }\n  @media (max-width: 1200px) {\n    section.section2 div.design_section div.sub {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    section.section2 div.design_section div.sub {\n      max-width: 95%; } }\n  section.section2 div.design_section div.sub div.service_tit {\n    position: relative;\n    text-align: center;\n    margin-bottom: 50px; }\n    section.section2 div.design_section div.sub div.service_tit div.tit_bg {\n      position: absolute;\n      z-index: 1;\n      top: -35px;\n      left: 50%;\n      font-size: 100px;\n      font-weight: 700;\n      color: #f0f0f0;\n      -webkit-transform: translateX(-50%);\n      -moz-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n      transform: translateX(-50%); }\n    section.section2 div.design_section div.sub div.service_tit p {\n      position: relative;\n      z-index: 2;\n      font-weight: 700;\n      color: #1dbfd7;\n      font-size: 15px; }\n    section.section2 div.design_section div.sub div.service_tit h2 {\n      position: relative;\n      font-size: 30px;\n      z-index: 3;\n      font-weight: 300;\n      color: #1dbfd7; }\n      section.section2 div.design_section div.sub div.service_tit h2 span {\n        vertical-align: top;\n        font-size: 30px;\n        font-weight: 700;\n        color: #1dbfd7; }\n  section.section2 div.design_section div.sub div.sec_tit {\n    width: 40%;\n    display: inline-block; }\n    section.section2 div.design_section div.sub div.sec_tit h2 {\n      font-size: 40px;\n      font-weight: 300;\n      letter-spacing: -0.5px; }\n      section.section2 div.design_section div.sub div.sec_tit h2 span {\n        font-weight: bold; }\n    section.section2 div.design_section div.sub div.sec_tit p {\n      font-size: 16px;\n      line-height: 25px; }\n      section.section2 div.design_section div.sub div.sec_tit p.mt {\n        margin-top: 25px; }\n      section.section2 div.design_section div.sub div.sec_tit p b {\n        vertical-align: top;\n        color: #1dbfd7; }\n  section.section2 div.design_section div.sub div.sec_img {\n    width: 50%;\n    display: inline-block;\n    position: absolute;\n    top: 0; }\n    section.section2 div.design_section div.sub div.sec_img img {\n      vertical-align: text-bottom;\n      position: relative; }\n    section.section2 div.design_section div.sub div.sec_img img.sec2 {\n      top: 150px;\n      left: -150px; }\n    section.section2 div.design_section div.sub div.sec_img img.sec3 {\n      top: 200px; }\n    section.section2 div.design_section div.sub div.sec_img img.sec4 {\n      top: 250px;\n      left: -200px; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/transition.scss":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/transition.scss ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".fade-enter-active, .fade-leave-active {\n  transition: opacity .5s; }\n\n.fade-enter, .fade-leave-to {\n  opacity: 0; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/list-item.scss":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/list-item.scss ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.work-list {\n  padding: 100px 0px;\n  text-align: center; }\n  div.work-list h2 {\n    text-align: center;\n    margin-bottom: 30px;\n    font-size: 1.85rem; }\n  div.work-list div.item {\n    width: 23%;\n    display: inline-block;\n    border: 1px solid #d0d0d0;\n    border-radius: 4px;\n    margin: 10px;\n    overflow: hidden;\n    transition: .1s ease-in; }\n    div.work-list div.item div.img_area {\n      height: 200px;\n      overflow: hidden; }\n      div.work-list div.item div.img_area img {\n        width: 100%; }\n    div.work-list div.item div.text_area {\n      width: 100%;\n      padding: 20px;\n      box-sizing: border-box; }\n      div.work-list div.item div.text_area h3 {\n        text-align: left;\n        font-weight: bold; }\n      div.work-list div.item div.text_area p {\n        text-align: left; }\n      div.work-list div.item div.text_area div.btn_area {\n        text-align: center;\n        margin-top: 15px; }\n        div.work-list div.item div.text_area div.btn_area div.item_btn {\n          cursor: pointer;\n          text-align: center;\n          width: 30%;\n          display: inline-block;\n          margin: 2px;\n          margin-top: 5px;\n          padding: 10px 0px;\n          background-color: #d0d0d0;\n          color: white; }\n          div.work-list div.item div.text_area div.btn_area div.item_btn.consult {\n            background-color: #1dbfd7; }\n          div.work-list div.item div.text_area div.btn_area div.item_btn.zoom {\n            background-color: #015b96; }\n          div.work-list div.item div.text_area div.btn_area div.item_btn.kakao {\n            background-color: #e3c900;\n            color: #424242; }\n    div.work-list div.item:hover {\n      margin-top: -10px;\n      -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3);\n      -moz-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3);\n      box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.3); }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/section1.scss":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/section1.scss ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/main-section1.jpg */ "./image/main-section1.jpg");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.main section.section1 {\n  height: 800px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.main section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.main section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.main section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      div.main section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.main section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.main section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.main section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.main section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.main section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.main section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.main section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.main section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.main section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.main section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.main section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.main section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.main section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.work section.section1 {\n  height: 800px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.work section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.work section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.work section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      div.work section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.work section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.work section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.work section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.work section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.work section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.work section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.work section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.work section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.work section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.work section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.work section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.work section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.work section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -5727,8 +5813,7 @@ const Header = {
                         <div class='wrap'>
                             <h1><img src='image/logo_w.png'></h1>
                             <ul>
-                                <li>WORKS</li>
-                                <li>SERVICE
+                            <li><router-link to='/' tag='span'>SERVICE</router-link>
                                     <ol>
                                         <li>design</li>
                                         <li>marketing</li>
@@ -5736,6 +5821,8 @@ const Header = {
                                         <li>consulting</li>
                                     </ol>
                                 </li>
+                                <router-link to='/works/전체' tag='li'>WORKS</router-link>
+                               
                                 <li>CONTACT</li>
                                 <li>ABOUT</li>
                             </ul>
@@ -5802,35 +5889,28 @@ const SectionCate = {
                 <ul class='wrap'>
                     <router-link 
                     tag='li'
-                    class="no"
                     v-for='list in lists' 
-                    v-bind:to="/Works/+list"
+                    v-bind:to="page+list"
                     :style="{ width: 'calc(100%/'+lists.length+')'}"
-                    @click='ActiveList(list,$event)'
-                    >{{list}}</router-link>
+                    v-text='list.toUpperCase()'
+                    ></router-link>
                 </ul>
               </div>`,
               created(){
                 this.cate == 'Works'?this.lists = this.Works:this.lists = this.Normal;
+                this.cate == 'Works'?this.page = '/works/':'';
               },
               data(){
                   return{
+                      page:'',
                       lists:[],
                       Works:[
                           '전체','홈페이지','랜딩페이지','도서','상세페이지','마케팅'
                       ],
                       Normal:[
-                          '디자인','마케팅','컨설팅','아카데미'
+                          'design','marketing','academy','consulting'
                       ]
                   }
-              },
-              methods: {
-                  ActiveList(list,event) {
-                      console.log(list)
-                      console.log(event.target.className)
-                      event.target.className = 'no active'
-                      
-                  },
               },
 }
 /* harmony default export */ __webpack_exports__["default"] = (SectionCate);
@@ -5899,34 +5979,69 @@ module.exports = exported;
 
 /***/ }),
 
-/***/ "./src/main/list-item.scss":
-/*!*********************************!*\
-  !*** ./src/main/list-item.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/main/clients.js":
+/*!*****************************!*\
+  !*** ./src/main/clients.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./list-item.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/list-item.scss");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const ClientsSection = {
+    template:`<div class='client_section'>
+        <h2>CLIENTS</h2>
+        <p>디지털 에이전시 CEOMAKER와 함꼐한 고객입니다.</p>
+        <div class='clients'>
+            <div class='client'>
+                <img src='image/client_1.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_2.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_3.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_4.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_5.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_6.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_7.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_8.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_9.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_10.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_11.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_12.jpg'>
+            </div>
+            
+        </div>
+        <div class='btn'>
+                CONTACT US
+                <div class='pluarotate'>
+                    <span></span>
+                    <span></span>
+                </div>    
+            </div>
+    </div>`
+}
 
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
+/* harmony default export */ __webpack_exports__["default"] = (ClientsSection);
 
 /***/ }),
 
@@ -5940,23 +6055,33 @@ module.exports = exported;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/main/section1.js");
-/* harmony import */ var _common_section_cate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/section-cate */ "./src/common/section-cate.js");
-/* harmony import */ var _works_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works-list */ "./src/main/works-list.js");
+/* harmony import */ var _section2_section2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section2/section2 */ "./src/main/section2/section2.js");
+/* harmony import */ var _common_section_cate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/section-cate */ "./src/common/section-cate.js");
+/* harmony import */ var _clients__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./clients */ "./src/main/clients.js");
+/* harmony import */ var _transition_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./transition.scss */ "./src/main/transition.scss");
+/* harmony import */ var _transition_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_transition_scss__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
 
 
 const MainPage = {
+    props:['cate'],
     template:`<div class='main'>
-                <MainSection1/>
-                <SectionCate cate='Works'/>
-                <WorksList />
-              </div>`,
+                <Section1 />
+                <SectionCate cate='normal'/>
+                <transition name='fade'>
+                    <Section2 v-bind:cate='cate'/>
+                </transition>
+                <ClientsSection />
+                </div>`,
     components:{
-        MainSection1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
-        SectionCate: _common_section_cate__WEBPACK_IMPORTED_MODULE_1__["default"],
-        WorksList: _works_list__WEBPACK_IMPORTED_MODULE_2__["default"]
+        Section1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
+        Section2: _section2_section2__WEBPACK_IMPORTED_MODULE_1__["default"],
+        SectionCate: _common_section_cate__WEBPACK_IMPORTED_MODULE_2__["default"],
+        ClientsSection: _clients__WEBPACK_IMPORTED_MODULE_3__["default"]
     }
-
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MainPage);
@@ -5978,23 +6103,8 @@ __webpack_require__.r(__webpack_exports__);
 const MainSection1 = {
     template:`<section class='main section1'>
         <div class='text_area'>
-            <p>TRUE VALUE IN UNIQUENESS</p>
-            <h2>
-                DIGITAL AGENCY 
-                <span class='ci_color1'>CEO</span><span class='ci_color2'>MAKER</span>
-                <img src='image/ci_symbol.png'>
-            </h2>
-            <p class='s_tit'>
-                유니크한 경험과 그 진정한 가치를 위해 끊임없이 도전하는<br>
-                디지털 에이전시 CEOMAKER입니다
-            </p>
-            <div class='btn'>
-                CONTACT US
-                <div class='pluarotate'>
-                    <span></span>
-                    <span></span>
-                </div>    
-            </div>
+            <h2>MAKE YOUR BRAND <img src='image/ci_symbol.png'></h2>
+            <p class='s_tit'>개인과 기업의 브랜드를 만들어 드립니다</p>
         </div>
     </section>`
 }
@@ -6034,10 +6144,443 @@ module.exports = exported;
 
 /***/ }),
 
-/***/ "./src/main/work-item.js":
+/***/ "./src/main/section2/academy.js":
+/*!**************************************!*\
+  !*** ./src/main/section2/academy.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const academySection = {
+    template:`<div>아카데미</div>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (academySection);
+
+/***/ }),
+
+/***/ "./src/main/section2/consulting.js":
+/*!*****************************************!*\
+  !*** ./src/main/section2/consulting.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const consultSection = {
+    template:`<div>컨설팅</div>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (consultSection);
+
+/***/ }),
+
+/***/ "./src/main/section2/desing.js":
+/*!*************************************!*\
+  !*** ./src/main/section2/desing.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const desingSection = {
+    template: `<div class='design_section'>
+                <div class='section section-1'>
+                    <div class='sub_1 sub'>
+                        <div class='service_tit'>
+                            <div class='tit_bg'>01</div>
+                            <div>
+                                <p>웹사이트 디자인</p>
+                                <h2>WEBSITE <span class="">DESIGN</span></h2>
+                            </div>
+                        </div>
+                        <div class='sec_tit'>
+                            <h2>성공적인 비즈니스를 위한</h2>
+                            <h2><span>웹사이트 구축</span></h2>
+                            <p class='mt'>고객의 니즈를 반영하여 동일한 UI/UX 환경에서</p>
+                            <p>차별화된 브랜드 구축이 가능합니다</p>
+                            <p>기획 설계부터 디자인, 개발, 마케팅까지</p>
+                            <p><b>CEOMAKER</b>가 함께합니다.</p>
+                        </div>
+                        <div class='sec_img'>
+                            <img src='image/service_img_1.gif'>
+                        </div>
+                    </div>
+                </div>
+                <div class='section section-2'>
+                    <div class='sub_1 sub'>
+                    <div class='service_tit'>
+                            <div class='tit_bg'>02</div>
+                            <div>
+                                <p>브랜드 디자인</p>
+                                <h2>BRAND</span> <span class="">DESIGN</span></h2>
+                            </div>
+                        </div>
+                        <div class='sec_tit'>
+                            <h2>브랜드 디자인은</h2>
+                            <h2><span>사업 차별화의 시작입니다.</span></span></h2>
+                            <p class='mt'>라벨, 봉투, 명함부터 제품 홍보용 리플렛, 브로슈어등 각종 편집 디자인까지</p>
+                            <p>기술력과 디자인으로 브랜드를 만들어 드립니다.</p>
+                        </div>
+                    <div class='sec_img'>
+                            <img src='image/service_img_2.png' class='sec2'>
+                        </div>
+                    </div>
+                </div>
+                <div class='section section-3'>
+                    <div class='sub_1 sub'>
+                    <div class='service_tit'>
+                            <div class='tit_bg'>03</div>
+                            <div>
+                                <p>SNS 디자인</p>
+                                <h2>SNS</span> <span class="">DESIGN</span></h2>
+                            </div>
+                        </div>
+                        <div class='sec_tit'>
+                            <h2>다양한 기능과</h2>
+                            <h2>강력한 확산력이있는</h2>
+                            <h2><span>SNS 디자인은 필수입니다.</span></h2>
+                            <p class='mt'>개인 미디어에서 전문적인 홍보 수단으로 발전되고 활용되는 SNS!</p>
+                            <p>차별화된 디자인으로 성공적인 SNS운영을 도와드립니다.</p>
+                        </div>
+                    <div class='sec_img'>
+                            <img src='image/service_img_3.png' class='sec3'>
+                        </div>
+                    </div>
+                </div>
+                <div class='section section-4'>
+                    <div class='sub_1 sub'>
+                    <div class='service_tit'>
+                            <div class='tit_bg'>04</div>
+                            <div>
+                                <p>광고 디자인</p>
+                                <h2>ADVERTISE</span> <span class="">DESIGN</span></h2>
+                            </div>
+                        </div>
+                        <div class='sec_tit'>
+                            <h2>브랜드 광고는</h2>
+                            <h2><span>이제 전문가와 함께하세요.</span></h2>
+                            <p class='mt'>제품 홍보용 랜딩페이지, 쇼핑몰 제품 상세페이지, 포털사이트 배너광고등</p>
+                            <p>최상의 홍보효과를 낼 수 있는 디자인을 제공해 드립니다.</p>
+                        </div>
+                    <div class='sec_img'>
+                            <img src='image/service_img_4.png' class='sec4'>
+                        </div>
+                    </div>
+                </div>
+              </div>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (desingSection);
+
+/***/ }),
+
+/***/ "./src/main/section2/marketing.js":
+/*!****************************************!*\
+  !*** ./src/main/section2/marketing.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const marketingSection = {
+    template:`<div>마케팅</div>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (marketingSection);
+
+/***/ }),
+
+/***/ "./src/main/section2/section2.js":
+/*!***************************************!*\
+  !*** ./src/main/section2/section2.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _section2_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section2.scss */ "./src/main/section2/section2.scss");
+/* harmony import */ var _section2_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section2_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _desing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./desing */ "./src/main/section2/desing.js");
+/* harmony import */ var _consulting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./consulting */ "./src/main/section2/consulting.js");
+/* harmony import */ var _academy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./academy */ "./src/main/section2/academy.js");
+/* harmony import */ var _marketing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./marketing */ "./src/main/section2/marketing.js");
+
+
+
+
+
+
+const Section2 = {
+    props:['cate'],
+    template:`<section class='section2'>
+                <desingSection v-if="cate=='design' || cate==undefined"/>
+                <consultSection v-else-if="cate=='consulting'"/>
+                <academySection v-else-if="cate=='academy'"/>
+                <marketingSection v-else-if="cate=='marketing'"/>
+            </section>`,
+    components:{
+        desingSection: _desing__WEBPACK_IMPORTED_MODULE_1__["default"],
+        consultSection: _consulting__WEBPACK_IMPORTED_MODULE_2__["default"],
+        academySection: _academy__WEBPACK_IMPORTED_MODULE_3__["default"],
+        marketingSection: _marketing__WEBPACK_IMPORTED_MODULE_4__["default"]
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Section2);
+
+/***/ }),
+
+/***/ "./src/main/section2/section2.scss":
+/*!*****************************************!*\
+  !*** ./src/main/section2/section2.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./section2.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section2/section2.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/main/transition.scss":
+/*!**********************************!*\
+  !*** ./src/main/transition.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./transition.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/transition.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/router.js":
+/*!***********************!*\
+  !*** ./src/router.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _main_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main/main */ "./src/main/main.js");
+/* harmony import */ var _works_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works/main */ "./src/works/main.js");
+
+
+
+
+
+const router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
+    routes: [
+        {
+            path: '/',
+            component: _main_main__WEBPACK_IMPORTED_MODULE_1__["default"],
+            name: 'main'
+        },
+        {
+            props:true,
+            path: '/:cate',
+            component: _main_main__WEBPACK_IMPORTED_MODULE_1__["default"],
+            name: 'main'
+        },
+        {
+            props:true,
+            path: '/works/:cate',
+            component: _works_main__WEBPACK_IMPORTED_MODULE_2__["default"],
+            name: 'works'
+        },
+    ]
+})
+
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/works/list-item.scss":
+/*!**********************************!*\
+  !*** ./src/works/list-item.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./list-item.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/list-item.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/works/main.js":
+/*!***************************!*\
+  !*** ./src/works/main.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/works/section1.js");
+/* harmony import */ var _common_section_cate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/section-cate */ "./src/common/section-cate.js");
+/* harmony import */ var _works_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works-list */ "./src/works/works-list.js");
+
+
+
+const MainPage = {
+    template:`<div class='work'>
+                <MainSection1/>
+                <SectionCate cate='Works'/>
+                <WorksList />
+              </div>`,
+    components:{
+        MainSection1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
+        SectionCate: _common_section_cate__WEBPACK_IMPORTED_MODULE_1__["default"],
+        WorksList: _works_list__WEBPACK_IMPORTED_MODULE_2__["default"]
+    }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MainPage);
+
+/***/ }),
+
+/***/ "./src/works/section1.js":
 /*!*******************************!*\
-  !*** ./src/main/work-item.js ***!
+  !*** ./src/works/section1.js ***!
   \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1.scss */ "./src/works/section1.scss");
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section1_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+const MainSection1 = {
+    template:`<section class='main section1'>
+        <div class='text_area'>
+            <p>TRUE VALUE IN UNIQUENESS</p>
+            <h2>
+                DIGITAL AGENCY 
+                <span class='ci_color1'>CEO</span><span class='ci_color2'>MAKER</span>
+                <img src='image/ci_symbol.png'>
+            </h2>
+            <p class='s_tit'>
+                유니크한 경험과 그 진정한 가치를 위해 끊임없이 도전하는<br>
+                디지털 에이전시 CEOMAKER입니다
+            </p>
+            <div class='btn'>
+                CONTACT US
+                <div class='pluarotate'>
+                    <span></span>
+                    <span></span>
+                </div>    
+            </div>
+        </div>
+    </section>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MainSection1);
+
+/***/ }),
+
+/***/ "./src/works/section1.scss":
+/*!*********************************!*\
+  !*** ./src/works/section1.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./section1.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/section1.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/works/work-item.js":
+/*!********************************!*\
+  !*** ./src/works/work-item.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6055,6 +6598,7 @@ const workItem = {
             <div class='btn_area'>
                 <div class='item_btn consult'>제작상담</div>
                 <div class='item_btn zoom'>자세히보기</div>
+                <div class='item_btn kakao'>카카오톡</div>
             </div>
         </div>
 
@@ -6065,10 +6609,10 @@ const workItem = {
 
 /***/ }),
 
-/***/ "./src/main/works-list.js":
-/*!********************************!*\
-  !*** ./src/main/works-list.js ***!
-  \********************************/
+/***/ "./src/works/works-list.js":
+/*!*********************************!*\
+  !*** ./src/works/works-list.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6076,8 +6620,8 @@ const workItem = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _work_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./work-item */ "./src/main/work-item.js");
-/* harmony import */ var _list_item_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list-item.scss */ "./src/main/list-item.scss");
+/* harmony import */ var _work_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./work-item */ "./src/works/work-item.js");
+/* harmony import */ var _list_item_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list-item.scss */ "./src/works/list-item.scss");
 /* harmony import */ var _list_item_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_list_item_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -6108,40 +6652,6 @@ const WorksList = {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (WorksList);   
-
-/***/ }),
-
-/***/ "./src/router.js":
-/*!***********************!*\
-  !*** ./src/router.js ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _main_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main/main */ "./src/main/main.js");
-
-
-
-const router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
-    routes: [
-        {
-            path: '/',
-            component: _main_main__WEBPACK_IMPORTED_MODULE_1__["default"],
-            name: 'main'
-        },
-        {
-            props:true,
-            path: '/works/:cate',
-            component: _main_main__WEBPACK_IMPORTED_MODULE_1__["default"],
-            name: 'works'
-        },
-    ]
-})
-
-/* harmony default export */ __webpack_exports__["default"] = (router);
 
 /***/ })
 

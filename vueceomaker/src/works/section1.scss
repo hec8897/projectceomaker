@@ -1,10 +1,10 @@
 @import '../define.scss';
 
-div.main{
+div.work{
     section.section1{
-        height: 600px;
+        height: 800px;
         @include BackGroundOption(cover);
-        background-image: url($ImgRoute + "service-section1.jpg");
+        background-image: url($ImgRoute + "main-section1.jpg");
         div.text_area{
             @include absoluteCenter;
             color: $white;
@@ -16,6 +16,7 @@ div.main{
             h2{
                 font-size: 54px;
                 font-weight: 700;
+                margin-bottom: 30px;
                 font-weight: bolder;
                 span{
                     vertical-align: top;
@@ -40,35 +41,5 @@ div.main{
                 @include btnDefault($white);
             }
         }
-    }
-    div.client_section{
-        padding: 100px 0px;
-        text-align: center;
-
-        @include wrap1200;
-        h2{
-            text-align: center;
-            font-size: 54px;
-            color: #222;
-            margin: 0;
-        }
-        p{
-            margin: 30px 0px;
-            font-size: 18px;
-        }
-        div.clients{
-            max-width: 1000px;
-            margin: 0 auto;
-            div.client{
-                width: 160px;
-                margin: 2px;
-                display: inline-block;
-            }
-        }
-        div.btn{
-            margin: 20px auto;
-            @include btnDefault(#222)
-        }
-
     }
 }
