@@ -1,5 +1,5 @@
 const desingSection = {
-    template: `<div class='design_section'>
+    template: `<div class='design_section' v-if='show'> 
                 <div class='section section-1'>
                     <div class='sub_1 sub'>
                         <div class='service_tit'>
@@ -18,7 +18,7 @@ const desingSection = {
                             <p><b>CEOMAKER</b>가 함께합니다.</p>
                         </div>
                         <div class='sec_img'>
-                            <img src='image/service_img_1.gif'>
+                            <img src='image/service_img_1.gif' class='sec1'>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,18 @@ const desingSection = {
                         </div>
                     </div>
                 </div>
-              </div>`
+              </div>`,
+              data(){
+                  return{
+                      show:false
+                  }
+              },
+              mounted(){
+                  setTimeout(() => {
+                    this.show = true
+                  }, 100);
+
+              }
 }
 
 export default desingSection;

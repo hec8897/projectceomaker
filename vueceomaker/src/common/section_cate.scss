@@ -9,6 +9,10 @@ div.section_cate{
             text-align: center;
             padding: 25px 0px;
             cursor: pointer;
+            @media (max-width:960px) {
+                font-size: 14px;
+                padding: 20px 0px;
+            }
             &::after{
                 content: "";
                 display: block;
@@ -18,7 +22,14 @@ div.section_cate{
                 height: 1px;
                 transition: .2s ease-in;
                 margin: 0 auto;
-                position: relative;top: 26px;
+                position: relative;
+                top: 26px;
+                @media (max-width:960px) {
+                    top: 21px;
+
+                }
+
+
             }
             &.router-link-active{
                 color: $MainColor;

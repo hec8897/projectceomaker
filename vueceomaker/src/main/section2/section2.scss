@@ -1,5 +1,11 @@
 @import '../../define.scss';
 
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
 
 section.section2 {
     div.design_section{
@@ -11,10 +17,16 @@ section.section2 {
         background-image: url(../../../image/design_section1_bg.png);
         @include BackGroundOption(cover);
         background-position: bottom;;
+        @media (max-width:1024px) {
+            height: 700px;
+        }
+
     }
     
     div.sub {
         @include wrap1200;
+        height: 100%;
+        position: relative;
         padding: 100px 0px;
         div.service_tit {
             position: relative;
@@ -49,6 +61,8 @@ section.section2 {
                 z-index: 3;
                 font-weight: 300;
                 color: $MainColor;
+          
+
                 span{
                     vertical-align: top;
                     font-size: 30px;
@@ -61,17 +75,35 @@ section.section2 {
         div.sec_tit{
             width: 40%;
             display: inline-block;
+            @media (max-width:1024px) {
+                width: 100%;
+                display: block;
+                text-align: center;
+                
+            }
             h2{
                 font-size: 40px;
                 font-weight: 300;;
                 letter-spacing: -0.5px;
+                @media (max-width:1024px) {
+                    font-size: 22px;
+                    display: inline-block;;
+                }
                 span{
                     font-weight: bold;;
+                    @media (max-width:1024px) {
+                        font-size: 26px;
+                    }
                 }
             }
             p{  
                 font-size: 16px;;
                 line-height: 25px;
+                @media (max-width:1024px) {
+                    display: inline-block;
+                    font-size: 14px;
+                }
+
                 &.mt{
                     margin-top: 25px;
                 }
@@ -86,11 +118,25 @@ section.section2 {
             display: inline-block;
             position: absolute;
             top: 0;
+            @media (max-width:1024px) {
+                width: 100%;
+                display: inline-block;
+                position: absolute;
+                left: -12.5%;
+                // top: -20%;
+                bottom: 0;
+                img{
+                    width: 150%;
+
+                    &.sec1{
+                    }
+                }
+            }
+
 
             img{
                 vertical-align: text-bottom;
                 position: relative;
-
             }
 
             img.sec2{

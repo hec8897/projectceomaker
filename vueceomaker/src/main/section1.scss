@@ -9,6 +9,10 @@ div.main{
             @include absoluteCenter;
             color: $white;
             text-align: center;
+            width: 100%;
+
+            @media (max-width:767px) {
+            }
             p{
                 font-size: 27px;
                 font-weight: 100;
@@ -29,7 +33,11 @@ div.main{
                 img{
                     width: auto;
                     margin-top: -30px;
+                    @media (max-width:960px) {
+                        display: none;
+                    }
                 }
+                    
             }
             p.s_tit{
                 font-size: 18px;
