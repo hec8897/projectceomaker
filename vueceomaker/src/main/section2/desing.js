@@ -75,7 +75,7 @@ const desingSection = {
                         <div class='sec_tit'>
                             <h2>브랜드 광고는</h2>
                             <h2><span>이제 전문가와 함께하세요.</span></h2>
-                            <p class='mt'>제품 홍보용 랜딩페이지, 쇼핑몰 제품 상세페이지, 포털사이트 배너광고등</p>
+                            <p class='mt'>제품 홍보용 랜딩페이지, 쇼핑몰 제품 상세페이지, 포털사이트 배너광고 등</p>
                             <p>최상의 홍보효과를 낼 수 있는 디자인을 제공해 드립니다.</p>
                         </div>
                     <div class='sec_img'>

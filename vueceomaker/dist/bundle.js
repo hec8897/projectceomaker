@@ -151,6 +151,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./image/service_bg1.jpg":
+/*!*******************************!*\
+  !*** ./image/service_bg1.jpg ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/service_bg1.jpg");
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1975,7 +1988,7 @@ module.exports = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\nfooter {\n  padding: 50px 0px; }\n  footer h1 {\n    text-align: center;\n    margin-bottom: 30px; }\n  footer address {\n    display: block;\n    text-align: center;\n    max-width: 500px;\n    margin: 0 auto;\n    font-style: normal;\n    color: #888; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\nfooter {\n  padding: 50px 0px;\n  border-top: 1px solid #d0d0d0; }\n  footer h1 {\n    text-align: center;\n    margin-bottom: 30px; }\n  footer address {\n    display: block;\n    text-align: center;\n    max-width: 500px;\n    margin: 0 auto;\n    font-style: normal;\n    color: #888; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2056,7 +2069,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/service-
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.main section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.main section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    width: 100%; }\n    div.main section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.main section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      font-weight: bolder; }\n      div.main section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.main section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.main section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.main section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.main section.section1 div.text_area h2 img {\n            display: none; } }\n    div.main section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.main section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.main section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.main section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.main section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.main section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.main section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.main section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.main section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.main section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n\ndiv.main div.client_section {\n  padding: 100px 0px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto; }\n  @media (max-width: 1200px) {\n    div.main div.client_section {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    div.main div.client_section {\n      max-width: 95%; } }\n  div.main div.client_section h2 {\n    text-align: center;\n    font-size: 54px;\n    color: #222;\n    margin: 0; }\n  div.main div.client_section p {\n    margin: 30px 0px;\n    font-size: 18px; }\n  div.main div.client_section div.clients {\n    max-width: 1000px;\n    margin: 0 auto; }\n    div.main div.client_section div.clients div.client {\n      width: 160px;\n      margin: 2px;\n      display: inline-block; }\n  div.main div.client_section div.btn {\n    margin: 20px auto;\n    position: relative;\n    z-index: 9;\n    display: inline-block;\n    border: 1px solid #222;\n    font-size: 14px;\n    text-align: left;\n    color: #222;\n    width: 200px;\n    height: 50px;\n    line-height: 50px;\n    padding: 0 20px;\n    box-sizing: border-box;\n    transition: all 0.2s ease;\n    cursor: pointer; }\n    div.main div.client_section div.btn::before {\n      content: '';\n      position: absolute;\n      z-index: -1;\n      top: 0;\n      right: 0;\n      width: 0;\n      height: 100%;\n      background: #1dbfd7;\n      transition: width 0.2s; }\n    div.main div.client_section div.btn div.pluarotate {\n      position: absolute;\n      top: 17px;\n      right: 20px;\n      display: block;\n      width: 12px;\n      height: 12px;\n      text-align: center; }\n      div.main div.client_section div.btn div.pluarotate span {\n        position: absolute;\n        top: 6px;\n        display: block;\n        width: 11px;\n        height: 1px;\n        background-color: #222; }\n        div.main div.client_section div.btn div.pluarotate span:last-child {\n          transform: rotate(90deg); }\n    div.main div.client_section div.btn:hover::before {\n      width: 100%;\n      left: 0; }\n    div.main div.client_section div.btn:hover {\n      border-color: #1dbfd7;\n      color: #222; }\n    div.main div.client_section div.btn:hover span {\n      background: #222; }\n    div.main div.client_section div.btn:hover div.pluarotate {\n      animation-duration: 1s;\n      animation-fill-mode: both;\n      animation-iteration-count: infinite;\n      animation-name: plusRotate; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\ndiv.main section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.main section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    width: 100%; }\n    div.main section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.main section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      font-weight: bolder; }\n      div.main section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.main section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.main section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.main section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.main section.section1 div.text_area h2 img {\n            display: none; } }\n      @media (max-width: 767px) {\n        div.main section.section1 div.text_area h2 {\n          font-size: 34px; } }\n    div.main section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n      @media (max-width: 767px) {\n        div.main section.section1 div.text_area p.s_tit {\n          font-size: 16px; } }\n    div.main section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.main section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.main section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.main section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.main section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.main section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.main section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.main section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.main section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n\ndiv.main div.client_section {\n  padding: 100px 0px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto; }\n  @media (max-width: 1200px) {\n    div.main div.client_section {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    div.main div.client_section {\n      max-width: 95%; } }\n  @media (max-width: 767px) {\n    div.main div.client_section {\n      padding-bottom: 50px; } }\n  div.main div.client_section h2 {\n    text-align: center;\n    font-size: 54px;\n    color: #222;\n    margin: 0; }\n    @media (max-width: 767px) {\n      div.main div.client_section h2 {\n        font-size: 30px; } }\n  div.main div.client_section p {\n    margin: 30px 0px;\n    font-size: 18px; }\n    @media (max-width: 767px) {\n      div.main div.client_section p {\n        font-size: 14px; } }\n  div.main div.client_section div.clients {\n    max-width: 1000px;\n    margin: 0 auto; }\n    div.main div.client_section div.clients div.client {\n      width: 160px;\n      margin: 2px;\n      display: inline-block; }\n  div.main div.client_section div.btn {\n    margin: 20px auto;\n    position: relative;\n    z-index: 9;\n    display: inline-block;\n    border: 1px solid #222;\n    font-size: 14px;\n    text-align: left;\n    color: #222;\n    width: 200px;\n    height: 50px;\n    line-height: 50px;\n    padding: 0 20px;\n    box-sizing: border-box;\n    transition: all 0.2s ease;\n    cursor: pointer; }\n    div.main div.client_section div.btn::before {\n      content: '';\n      position: absolute;\n      z-index: -1;\n      top: 0;\n      right: 0;\n      width: 0;\n      height: 100%;\n      background: #1dbfd7;\n      transition: width 0.2s; }\n    div.main div.client_section div.btn div.pluarotate {\n      position: absolute;\n      top: 17px;\n      right: 20px;\n      display: block;\n      width: 12px;\n      height: 12px;\n      text-align: center; }\n      div.main div.client_section div.btn div.pluarotate span {\n        position: absolute;\n        top: 6px;\n        display: block;\n        width: 11px;\n        height: 1px;\n        background-color: #222; }\n        div.main div.client_section div.btn div.pluarotate span:last-child {\n          transform: rotate(90deg); }\n    div.main div.client_section div.btn:hover::before {\n      width: 100%;\n      left: 0; }\n    div.main div.client_section div.btn:hover {\n      border-color: #1dbfd7;\n      color: #222; }\n    div.main div.client_section div.btn:hover span {\n      background: #222; }\n    div.main div.client_section div.btn:hover div.pluarotate {\n      animation-duration: 1s;\n      animation-fill-mode: both;\n      animation-iteration-count: infinite;\n      animation-name: plusRotate; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2074,10 +2087,12 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../../image/design_section1_bg.png */ "./image/design_section1_bg.png");
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(/*! ../../../image/service_bg1.jpg */ "./image/service_bg1.jpg");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.fade-enter-active, .fade-leave-active {\n  transition: opacity 1.5s; }\n\n.fade-enter, .fade-leave-to {\n  opacity: 0; }\n\nsection.section2 div.design_section div.section {\n  height: 650px;\n  overflow: hidden;\n  background-color: #fff;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: bottom; }\n  @media (max-width: 1024px) {\n    section.section2 div.design_section div.section {\n      height: 700px; } }\n\nsection.section2 div.design_section div.sub {\n  max-width: 1200px;\n  margin: 0 auto;\n  height: 100%;\n  position: relative;\n  padding: 100px 0px; }\n  @media (max-width: 1200px) {\n    section.section2 div.design_section div.sub {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    section.section2 div.design_section div.sub {\n      max-width: 95%; } }\n  section.section2 div.design_section div.sub div.service_tit {\n    position: relative;\n    text-align: center;\n    margin-bottom: 50px; }\n    section.section2 div.design_section div.sub div.service_tit div.tit_bg {\n      position: absolute;\n      z-index: 1;\n      top: -35px;\n      left: 50%;\n      font-size: 100px;\n      font-weight: 700;\n      color: #f0f0f0;\n      -webkit-transform: translateX(-50%);\n      -moz-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n      transform: translateX(-50%); }\n    section.section2 div.design_section div.sub div.service_tit p {\n      position: relative;\n      z-index: 2;\n      font-weight: 700;\n      color: #1dbfd7;\n      font-size: 15px; }\n    section.section2 div.design_section div.sub div.service_tit h2 {\n      position: relative;\n      font-size: 30px;\n      z-index: 3;\n      font-weight: 300;\n      color: #1dbfd7; }\n      section.section2 div.design_section div.sub div.service_tit h2 span {\n        vertical-align: top;\n        font-size: 30px;\n        font-weight: 700;\n        color: #1dbfd7; }\n  section.section2 div.design_section div.sub div.sec_tit {\n    width: 40%;\n    display: inline-block; }\n    @media (max-width: 1024px) {\n      section.section2 div.design_section div.sub div.sec_tit {\n        width: 100%;\n        display: block;\n        text-align: center; } }\n    section.section2 div.design_section div.sub div.sec_tit h2 {\n      font-size: 40px;\n      font-weight: 300;\n      letter-spacing: -0.5px; }\n      @media (max-width: 1024px) {\n        section.section2 div.design_section div.sub div.sec_tit h2 {\n          font-size: 22px;\n          display: inline-block; } }\n      section.section2 div.design_section div.sub div.sec_tit h2 span {\n        font-weight: bold; }\n        @media (max-width: 1024px) {\n          section.section2 div.design_section div.sub div.sec_tit h2 span {\n            font-size: 26px; } }\n    section.section2 div.design_section div.sub div.sec_tit p {\n      font-size: 16px;\n      line-height: 25px; }\n      @media (max-width: 1024px) {\n        section.section2 div.design_section div.sub div.sec_tit p {\n          display: inline-block;\n          font-size: 14px; } }\n      section.section2 div.design_section div.sub div.sec_tit p.mt {\n        margin-top: 25px; }\n      section.section2 div.design_section div.sub div.sec_tit p b {\n        vertical-align: top;\n        color: #1dbfd7; }\n  section.section2 div.design_section div.sub div.sec_img {\n    width: 50%;\n    display: inline-block;\n    position: absolute;\n    top: 0; }\n    @media (max-width: 1024px) {\n      section.section2 div.design_section div.sub div.sec_img {\n        width: 100%;\n        display: inline-block;\n        position: absolute;\n        left: -12.5%;\n        bottom: 0; }\n        section.section2 div.design_section div.sub div.sec_img img {\n          width: 150%; } }\n    section.section2 div.design_section div.sub div.sec_img img {\n      vertical-align: text-bottom;\n      position: relative; }\n    section.section2 div.design_section div.sub div.sec_img img.sec2 {\n      top: 150px;\n      left: -150px; }\n    section.section2 div.design_section div.sub div.sec_img img.sec3 {\n      top: 200px; }\n    section.section2 div.design_section div.sub div.sec_img img.sec4 {\n      top: 250px;\n      left: -200px; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.fade-enter-active, .fade-leave-active {\n  transition: opacity 1.5s; }\n\n.fade-enter, .fade-leave-to {\n  opacity: 0; }\n\nsection.section2 div.sub {\n  max-width: 1200px;\n  margin: 0 auto;\n  position: relative;\n  padding: 100px 0px; }\n  @media (max-width: 1200px) {\n    section.section2 div.sub {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    section.section2 div.sub {\n      max-width: 95%; } }\n  @media (max-width: 1024px) {\n    section.section2 div.sub {\n      padding-bottom: 0px; } }\n  section.section2 div.sub div.service_tit {\n    position: relative;\n    text-align: center;\n    margin-bottom: 50px; }\n    section.section2 div.sub div.service_tit div.tit_bg {\n      position: absolute;\n      z-index: 1;\n      top: -35px;\n      left: 50%;\n      font-size: 100px;\n      font-weight: 700;\n      color: #f0f0f0;\n      -webkit-transform: translateX(-50%);\n      -moz-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n      transform: translateX(-50%); }\n    section.section2 div.sub div.service_tit p {\n      position: relative;\n      z-index: 2;\n      font-weight: 700;\n      color: #1dbfd7;\n      font-size: 15px; }\n    section.section2 div.sub div.service_tit h2 {\n      position: relative;\n      font-size: 30px;\n      z-index: 3;\n      font-weight: 100;\n      color: #1dbfd7; }\n      section.section2 div.sub div.service_tit h2 span {\n        vertical-align: top;\n        font-size: 30px;\n        font-weight: 700;\n        color: #1dbfd7; }\n  section.section2 div.sub div.sec_tit {\n    width: 40%;\n    display: inline-block; }\n    section.section2 div.sub div.sec_tit h2 {\n      font-size: 40px;\n      font-weight: 300;\n      letter-spacing: -0.5px;\n      color: #222; }\n      section.section2 div.sub div.sec_tit h2 span {\n        font-weight: bold; }\n      @media (max-width: 960px) {\n        section.section2 div.sub div.sec_tit h2 {\n          display: inline-block; } }\n      @media (max-width: 767px) {\n        section.section2 div.sub div.sec_tit h2 {\n          font-size: 22px; }\n          section.section2 div.sub div.sec_tit h2 span {\n            font-size: 26px; } }\n    @media (max-width: 1024px) {\n      section.section2 div.sub div.sec_tit {\n        width: 100%;\n        display: block;\n        text-align: center; } }\n  section.section2 div.sub div.center_text h2 {\n    font-size: 40px;\n    font-weight: 300;\n    letter-spacing: -0.5px;\n    color: #222; }\n    section.section2 div.sub div.center_text h2 span {\n      font-weight: bold; }\n    @media (max-width: 960px) {\n      section.section2 div.sub div.center_text h2 {\n        display: inline-block; } }\n    @media (max-width: 767px) {\n      section.section2 div.sub div.center_text h2 {\n        font-size: 22px; }\n        section.section2 div.sub div.center_text h2 span {\n          font-size: 26px; } }\n  section.section2 div.sub div.sec_img {\n    width: 50%;\n    display: inline-block;\n    position: absolute;\n    top: 0; }\n    section.section2 div.sub div.sec_img img.sec5 {\n      position: relative;\n      left: 10%;\n      top: 25%; }\n  section.section2 div.sub p {\n    font-size: 16px;\n    line-height: 25px; }\n    @media (max-width: 767px) {\n      section.section2 div.sub p {\n        font-size: 14px; }\n        section.section2 div.sub p:nth-child(2) {\n          display: inline; } }\n    @media (max-width: 767px) {\n      section.section2 div.sub p {\n        font-size: 14px; } }\n    section.section2 div.sub p.mt {\n      margin-top: 25px; }\n    section.section2 div.sub p b {\n      vertical-align: top;\n      color: #1dbfd7; }\n\nsection.section2 div.design_section div.section {\n  height: 650px;\n  overflow: hidden;\n  background-color: #fff;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: bottom; }\n  @media (max-width: 1024px) {\n    section.section2 div.design_section div.section {\n      height: auto; } }\n\nsection.section2 div.design_section div.sub div.sec_img {\n  width: 50%;\n  display: inline-block;\n  position: absolute;\n  top: 0; }\n  section.section2 div.design_section div.sub div.sec_img img.sec2 {\n    top: 150px;\n    left: -150px; }\n  section.section2 div.design_section div.sub div.sec_img img.sec3 {\n    top: 200px; }\n  section.section2 div.design_section div.sub div.sec_img img.sec4 {\n    top: 250px;\n    left: -200px; }\n  @media (max-width: 1024px) {\n    section.section2 div.design_section div.sub div.sec_img {\n      width: 100%;\n      display: inline-block;\n      position: relative;\n      left: 0%;\n      text-align: center; }\n      section.section2 div.design_section div.sub div.sec_img img {\n        width: 100%; }\n        section.section2 div.design_section div.sub div.sec_img img.sec1 {\n          width: 165%;\n          margin-top: -30%;\n          margin-left: -15%; }\n        section.section2 div.design_section div.sub div.sec_img img.sec2 {\n          top: 0px;\n          left: 0px; }\n        section.section2 div.design_section div.sub div.sec_img img.sec3 {\n          width: 90%;\n          top: 20px; }\n        section.section2 div.design_section div.sub div.sec_img img.sec4 {\n          top: 0px;\n          left: 0px; } }\n\nsection.section2 div.marketing_section div.section-1 {\n  background-color: #e7f0f2; }\n\nsection.section2 div.marketing_section div.section-2 {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: bottom center;\n  height: 700px;\n  overflow: hidden; }\n\nsection.section2 div.marketing_section div.sub_1 {\n  text-align: center; }\n  section.section2 div.marketing_section div.sub_1 ul {\n    width: 100%;\n    text-align: center;\n    margin-top: 50px; }\n    section.section2 div.marketing_section div.sub_1 ul li {\n      width: 19%;\n      max-width: 225px;\n      padding: 30px 0px;\n      background-color: #fff;\n      display: inline-block;\n      margin: 5px;\n      color: #444;\n      font-size: 16px;\n      text-align: center; }\n      section.section2 div.marketing_section div.sub_1 ul li span {\n        margin-top: 10px;\n        display: block; }\n\nsection.section2 div.marketing_section div.sub_2 div.sec_img img.sec5 {\n  position: relative;\n  left: 30%;\n  top: 150px; }\n\nsection.section2 div.academy {\n  text-align: center; }\n  section.section2 div.academy div.section-2 {\n    background-color: #eaedee; }\n  section.section2 div.academy div.section-1 ul {\n    margin-top: 50px; }\n    section.section2 div.academy div.section-1 ul li {\n      width: 31.5%;\n      min-height: 160px;\n      padding: 30px;\n      box-sizing: border-box;\n      display: inline-block;\n      margin: 5px;\n      background-color: #eaedee; }\n      section.section2 div.academy div.section-1 ul li p {\n        font-size: 14px;\n        line-height: 20px;\n        margin-top: 20px; }\n  section.section2 div.academy div.section-2 ul {\n    margin-top: 40px; }\n    section.section2 div.academy div.section-2 ul > li {\n      width: 23%;\n      padding: 30px;\n      background-color: #fff;\n      text-align: left;\n      min-height: 210px; }\n      section.section2 div.academy div.section-2 ul > li h3 {\n        font-size: 16px; }\n      section.section2 div.academy div.section-2 ul > li ol.sub_list {\n        margin-top: 20px; }\n        section.section2 div.academy div.section-2 ul > li ol.sub_list li {\n          font-size: 14px;\n          width: 100%;\n          background-color: #fff;\n          min-height: auto;\n          padding: 0;\n          display: block;\n          color: #666; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -6131,7 +6146,131 @@ module.exports = exported;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 const academySection = {
-    template:`<div>아카데미</div>`
+    template: `<div class='academy'>
+               <div class='section section-1'>
+                        <div class='sub_1 sub'>
+                            <div class='service_tit'>
+                                <div class='tit_bg'>01</div>
+                                <div>
+                                    <p>SNS 마케팅 교육</p>
+                                    <h2>SNS<span class=""> MARKETING</span></h2>
+                                </div>
+                            </div>
+                            <div class='center_text'>
+                                <h2>소셜미디어를 활용한 마케팅 필수전략</h2>
+                                <h2><span>소셜마케팅 전문가 과정</span></h2>
+                                <p class='mt'>소셜미디어 활용과 각 채널별 특징 및 노하우 등 고객과 소통하고 기업의 브랜드를 만드는 전문 마케터 양성 커리큘럼 입니다.</p>
+                            </div>
+                            <ul class='academy_list'>
+                                <li>
+                                    <h3>소셜마케팅의 이해</h3>
+                                    <p>소셜서비스의 인터페이스를 이해하고 마케팅 채널별 특징과 
+                                        성공사례분석을 통해서 고객들이 원하는 니즈를 파악할 수 있도록 
+                                        기본지식을 습득합니다
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>소셜마케팅의 기획</h3>
+                                    <p>성공적인 마케팅을 위해 마케팅 시장분석, 경쟁사 분석, 디자인 기획, 
+                                        아이디어 도출 단계를 통해 실전에서 사용될 마케팅 기획을 준비합니다.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>검색엔진 최적화</h3>
+                                    <p>검색엔진 로봇의 이해와 비법을 습득하고 체계적인 관리를 위해 사이트등록, 
+                                        키워드 검색광고 분석을 실습합니다.</p>
+                                </li>
+                                <li>
+                                    <h3>바이럴마케팅 실전교육</h3>
+                                    <p>고객과 직접적으로 소통하는 블로그마케팅, 카페마케팅, 
+                                        지식in 마케팅을 이해하고 30일간의 미션을 통해서 실무를 습득하게 됩니다.</p>
+                                </li>
+                                <li>
+                                    <h3>소셜마케팅 실전교육</h3>
+                                    <p>양방향으로 참여, 공유, 소통하는 트위터, 페이스북, 카카오스토리를 통해 
+                                        다양한 실전사례들을 배우고 현 업무에 활용되는 실무를 습득하게 됩니다.</p>
+                                </li>
+                                <li>
+                                    <h3>스마트폰 활용전략</h3>
+                                    <p>실시간 활용할 수 있는 스마트폰을 활용해 사진촬영, 동영상촬영을 
+                                        통해서 콘텐츠를 생산하고 관리하는 방법을 배우게 됩니다.</p>
+                                </li>
+                                <li>
+                                    <h3>소셜마케팅 팀 프로젝트</h3>
+                                    <p>교육중 소셜마케팅 팀을 구성해 현재 운영중인 기업체의 소셜채널을 기획, 
+                                        운영, 관리 할 수 있도록 기회제공과 팀프로젝트 교육을 지원합니다.</p>
+                                </li>
+                                <li>
+                                    <h3>광고, 홍보기획 전략</h3>
+                                    <p>소셜미디어를 통해 매출증대와 기업의 브랜드를 높일 수 있는 광고/홍보를 
+                                        기획하고 활동결과인 ROL을 분석해 고객들의 만족도를 높일 수 있도록 합니다.</p>
+                                </li>
+                                <li>
+                                    <h3>소셜마케팅 사업계획서 제출</h3>
+                                    <p>4주간의 교육에서 배운 콘텐츠 기획, 고객과의 커뮤니케이션, 이벤트/프로모션, 
+                                        팀프로젝트를 통해서 개인 또는 기업의 소셜마케팅 실무매뉴얼을 작성합니다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                       <div class='section section-2'>
+                            <div class='sub_2 sub'>
+                                <div class='service_tit'>
+                                    <div class='tit_bg'>02</div>
+                                    <div>
+                                        <p>블로그/카페 활성화 교육</p>
+                                        <h2>BLOG, CAFE<span class=""> ACTIVATE</span></h2>
+                                    </div>
+                                </div>
+                                <div class='center_text'>
+                                    <h2>블로그와 카페를 이용한</h2>
+                                    <h2><span>실전 마케팅 과정</span></h2>
+                                    <p class='mt'>성공한 프로블로거들의 노하우와 효과적인 운영방법 등 기업의 브랜드 아이덴티티를 구축 합니다.</p>.</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <h3>성공하는 마케팅 노하우</h3>
+                                        <ol class='sub_list'>
+                                            <li>- 성공사례분석</li>
+                                            <li>- 경쟁사 벤치마킹 방법</li>
+                                            <li>- 마케팅 유형 선택</li>
+                                            <li>- 카테고리 기획</li>
+                                            <li>- 프로필 관리</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <h3>검색 최적화 포스팅</h3>
+                                        <ol class='sub_list'>
+                                            <li>- 지수관리</li>
+                                            <li>- 방문경로 분석</li>
+                                            <li>- 검색 키워드 선정</li>
+                                            <li>- 포스팅 관리 및 활용</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <h3>방문자 소통관리</h3>
+                                        <ol class='sub_list'>
+                                            <li>- 재방문을 높이는 덧글 관리</li>
+                                            <li>- 메타사이트, 트랙백 이용</li>
+                                            <li>- 네이버 오픈캐스트 이용</li>
+                                            <li>- 체험단, 이벤트 활성화</li>
+                                            <li>- 스마트폰을 활용한 실시간 관리</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <h3>홍보를 통한 활성화</h3>
+                                        <ol class='sub_list'>
+                                            <li>- 사이트 등록과 홍보</li>
+                                            <li>- 지식IN 네임카드 활용</li>
+                                            <li>- SNS를 이용한 확산</li>
+                                            <li>- 키워드 광고를 통한 목적 고객 유입</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>`
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (academySection);
@@ -6241,7 +6380,7 @@ const desingSection = {
                         <div class='sec_tit'>
                             <h2>브랜드 광고는</h2>
                             <h2><span>이제 전문가와 함께하세요.</span></h2>
-                            <p class='mt'>제품 홍보용 랜딩페이지, 쇼핑몰 제품 상세페이지, 포털사이트 배너광고등</p>
+                            <p class='mt'>제품 홍보용 랜딩페이지, 쇼핑몰 제품 상세페이지, 포털사이트 배너광고 등</p>
                             <p>최상의 홍보효과를 낼 수 있는 디자인을 제공해 드립니다.</p>
                         </div>
                     <div class='sec_img'>
@@ -6277,7 +6416,58 @@ const desingSection = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 const marketingSection = {
-    template:`<div>마케팅</div>`
+    template: `<div class='marketing_section'>
+                <div class='section section-1'>
+                        <div class='sub_1 sub'>
+                            <div class='service_tit'>
+                                <div class='tit_bg'>01</div>
+                                <div>
+                                    <p>마케팅 통합운영/대행</p>
+                                    <h2>OPERATIONAL <span class="">MARKETING</span></h2>
+                                </div>
+                            </div>
+                            <div class='center_text'>
+                                <h2>마케팅 채널 운영 대행</h2>
+                                <h2><span>CEOMAKER가 함께합니다</span></h2>
+                                <p class='mt'>다양한 소셜미디어 플랫폼, 콘텐츠 기획부터 맞춤형 운영관리로 최적의 마케팅을 진행합니다.</p>
+                            </div>
+                           
+                            <ul class='marketing_list'>
+                                <li><img src='image/icon_service_1.png'><span>포털사이트 등록</span></span></li>
+                                <li><img src='image/icon_service_2.png'><span>검색엔진 최적화</span></li>
+                                <li><img src='image/icon_service_3.png'><span>신디케이션 API</span></li>
+                                <li><img src='image/icon_service_4.png'><span>검색엔진 광고</span></li>
+                                <li><img src='image/icon_service_5.png'><span>바이럴 마케팅</span></li>
+                                <li><img src='image/icon_service_6.png'><span>SNS 마케팅</span></li>
+                                <li><img src='image/icon_service_7.png'><span>모바일 마케팅</span></li>
+                                <li><img src='image/icon_service_8.png'><span>언론홍보 마케팅</span></li>
+                                <li><img src='image/icon_service_9.png'><span>통계분석 서비스</span></li>
+                                <li><img src='image/icon_service_10.png'><span>전문 컨설팅</span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                <div class='section section-2'>
+                    <div class='sub sub_2'>
+                    <div class='service_tit'>
+                                <div class='tit_bg'>02</div>
+                                <div>
+                                    <p>바이럴 마케팅</p>
+                                    <h2>VIRAL <span class="">MARKETING</span></h2>
+                                </div>
+                            </div>
+                    <div class='sec_tit'>
+                            <h2>다양한 채널을 활용한</h2>
+                            <h2><span>브랜드 마케팅 구축</span></h2>
+                            <p class='mt'>다양한 채널을 통하여 빠르고 정확한 정보 제공으로</p>
+                            <p>효과적인 운영 전략을 제공합니다.</p>
+                        </div>
+                        <div class='sec_img'>
+                            <img src='image/service_img_5.png' class='sec5'>
+                        </div>
+                    </div>
+                </div>
+                </div>`
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (marketingSection);
