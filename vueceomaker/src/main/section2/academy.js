@@ -77,7 +77,7 @@ const academySection = {
                                 <div class='center_text'>
                                     <h2>블로그와 카페를 이용한</h2>
                                     <h2><span>실전 마케팅 과정</span></h2>
-                                    <p class='mt'>성공한 프로블로거들의 노하우와 효과적인 운영방법 등 기업의 브랜드 아이덴티티를 구축 합니다.</p>.</p>
+                                    <p class='mt'>성공한 프로블로거들의 노하우와 효과적인 운영방법 등 기업의 브랜드 아이덴티티를 구축 합니다.</p>
                                 </div>
                                 <ul>
                                     <li>
@@ -121,8 +121,69 @@ const academySection = {
                                 </ul>
                             </div>
                         </div>
-
                     </div>
+                    <div class='section section-3'>
+                        <div class='sub'>
+                                <div class='service_tit'>
+                                    <div class='tit_bg'>03</div>
+                                    <div>
+                                        <p>모바일 활용 교육</p>
+                                        <h2>APPLY<span class=""> SMART DEVICE</span></h2>
+                                    </div>
+                                </div>
+                                <div class='center_text'>
+                                    <h2>마케팅 채널의 다변화</h2>
+                                    <h2><span>모바일 마케팅 과정</span></h2>
+                                    <p class='mt'>개인 미디어에서 전문적인 홍보 수단으로 발전되고 활용되는 모바일 실전 마케팅 전문가 양성 커리큘럼 입니다.</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <img src='image/sns_kakao.jpg'>
+                                        <h3>카카오 스토리 마케팅</h3>
+                                        <ol>
+                                            <li>- 검색포털과 모바일 검색로직 분석</li>
+                                            <li>- 카카오스토리 개설 및 노하우</li>
+                                            <li>- 카카오스토리 콘텐츠 개발 및 확산방법</li>
+                                            <li>- 카카오톡을 연동한 다양한 마케팅</li>
+                                            <li>- 제휴마케팅을 활용한 수익모덱 개발</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <img src='image/sns_facebook.jpg'>
+                                        <h3>카카오 스토리 마케팅</h3>
+                                        <ol>
+                                            <li>- 페이스북 개인계정VS페이지VS그룹</li>
+                                            <li>- 브랜드를 만드는 페이지 개설 및 기획방법</li>
+                                            <li>- 인사이트 기능활용 및 분석방법</li>
+                                            <li>- 페이지 광고전략 및 활용방법</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <img src='image/sns_line.jpg'>
+                                        <h3>카카오 스토리 마케팅</h3>
+                                        <ol>
+                                            <li>- 라인카메라를 활용한 사진촬영 노하우</li>
+                                            <li>- 포토샵이 필요없는 라인카메라 활용기능</li>
+                                            <li>- 한장의 사진을 활용한 효과적인 광고비법</li>
+                                            <li>- 소셜채널로 공유하기</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <div>
+                                             <img src='image/sns_band.jpg'>
+                                            <h3>밴드를 활용한 인맥마케팅</h3>
+
+                                        </div>
+                                        <div>
+                                             <img src='image/sns_ndrive.jpg'>
+                                            <h3>N드라이브를 활용한 자료관리 노하우</h3></h3>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+
                 </div>`
 }
 
