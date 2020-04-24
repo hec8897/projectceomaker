@@ -1,6 +1,6 @@
 const consultSection = {
     template:`<div class='consulting'>
-                    <div class='section section-1'>
+                    <div class='section section-1' v-if='show>=1'>
                         <div class='sub_1 sub'>
                             <div class='service_tit'>
                                 <div class='tit_bg'>01</div>
@@ -54,7 +54,7 @@ const consultSection = {
                             </ul>
                         </div>                   
                     </div>
-                    <div class='section section-2'>
+                    <div class='section section-2' v-if='show>=2'>
                         <div class='sub_2 sub'>
                         <div class='service_tit'>
                                 <div class='tit_bg'>02</div>
@@ -79,7 +79,7 @@ const consultSection = {
                         <img class='obj obj7' src='image/obj_7.png'>
 
                     </div>
-                    <div class='section section-3'>
+                    <div class='section section-3' v-if='show>=3'>
                         <div class='sub_3 sub'>
                         <div class='service_tit'>
                             <div class='tit_bg'>03</div>
@@ -131,7 +131,7 @@ const consultSection = {
                         </ul>
                         </div>
                     </div>
-                    <div class='section section-4'>
+                    <div class='section section-4' v-if='show>=4'>
                         <div class='sub_4 sub'>
                             <div class='service_tit'>
                                 <div class='tit_bg'>04</div>
@@ -154,7 +154,34 @@ const consultSection = {
 
                         </div>
                     </div>
-                </div>`
+                </div>`,
+    data() {
+        return {
+            show:1
+        }
+    },
+    created(){
+        document.addEventListener('scroll', () => {
+            this.getDistBottom()
+        })
+    },
+    methods: {
+        getDistBottom() {
+            let scrollPosition = window.pageYOffset;
+            let windowSize = window.innerHeight;
+            let bodyHeight = document.body.offsetHeight;
+            let bottom = Math.max(bodyHeight - (scrollPosition + windowSize), 0)
+            if (bottom <= 500) {
+                    if(this.show == 4){
+                        this.show += 0;
+                    }
+                    else{
+                        this.show += 1;
+
+                    }
+                }
+        }
+    }
 }
 
 export default consultSection;
