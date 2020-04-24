@@ -2,7 +2,6 @@
 header{
     div.head{
         width: 100%;
-        // background-color: #222;
         position: fixed;
         padding: 20px 0px;
         z-index: 999;
@@ -10,7 +9,6 @@ header{
         @media (max-width:767px) {
             padding: 10px 0px;
         }
-
         &::before{
             position: absolute;
             content: '';
@@ -29,13 +27,11 @@ header{
         h1{
             width: 10%;
             display: inline;
-            // position: absolute;
             @media (max-width:767px) {
                 img{
                     width: 130px;
                 }
             }
-
         }
         ul{
             display: inline-block;
@@ -48,6 +44,11 @@ header{
                 margin: 0px 30px;
                 font-family: 'roboto';
                 position: relative;
+                span{
+                    &.router-link-exact-active{
+                        color: $MainColor;
+                    }
+                }
                 @media (max-width:1200px) {
                     margin: 0px 15px;
                     font-size: 16px;
@@ -69,10 +70,14 @@ header{
                         color: $FontLight;
                         font-size: 14px;
                         margin: 15px 0px;
+                        span{
+                            &.router-link-active{
+                                color: $MainColor;
+                            }
+                        }
                     }
                 }
             }
-           
         }
         div.ham_btn{
             cursor: pointer;

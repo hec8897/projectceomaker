@@ -28,14 +28,12 @@ $ImgRoute:"../../image/";
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
 @mixin topBottomBlank{
     padding:100px 0px;
     @media (max-width:960px) {
         padding:50px 0px;
     }
 }
-
 @mixin btnDefault($Color) {
     position: relative;
     z-index: 9;
@@ -207,7 +205,6 @@ $ImgRoute:"../../image/";
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
-
   40% {
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);

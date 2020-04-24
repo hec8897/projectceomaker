@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 import MainPage from './main/main'
 import WorkMainPage from './works/main'
+import contactMainPage from './contact/main'
 
 
 const router = new VueRouter({
@@ -21,6 +22,12 @@ const router = new VueRouter({
             path: '/works/:cate',
             component: WorkMainPage,
             name: 'works'
+        },
+        {
+            props:true,
+            path: '/contact/:id',
+            component:contactMainPage,
+            name: 'contact'
         },
     ]
 })

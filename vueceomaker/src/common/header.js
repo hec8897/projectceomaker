@@ -3,19 +3,28 @@ const Header = {
     template: `<header>
                     <div class='head'>
                         <div class='wrap'>
-                            <h1><img src='image/logo_w.png'></h1>
+                            <router-link to = '/' tag='h1'><img src='image/logo_w.png'></router-link>
                             <ul>
-                            <li><router-link to='/' tag='span'>SERVICE</router-link>
+                            <li>
+                                <router-link to='/' tag='span'>SERVICE</router-link>
                                     <ol>
-                                        <li>design</li>
-                                        <li>marketing</li>
-                                        <li>academy</li>
-                                        <li>consulting</li>
+                                        <li>
+                                            <router-link to='/design' tag='span'>design</router-link>
+                                        </li>
+                                        <li>
+                                            <router-link to='/marketing' tag='span'>marketing</router-link>
+                                        </li>
+                                        <li>
+                                            <router-link to='/academy' tag='span'>academy</router-link>
+                                        </li>
+                                        <li>
+                                            <router-link to='/consulting' tag='span'>consulting</router-link>
+                                        </li>
                                     </ol>
                                 </li>
-                                <router-link to='/works/전체' tag='li'>WORKS</router-link>
+                                <li><router-link to='/works/전체' tag='span'>WORKS</router-link></li>
                                
-                                <li>CONTACT</li>
+                                <li><router-link to='/contact/normal' tag='span'>CONTACT</router-link></li>
                                 <li>ABOUT</li>
                             </ul>
                             <div class='ham_btn'>
