@@ -1,12 +1,10 @@
 @import '../../define.scss';
 
-.fade-enter-active, .fade-leave-active {
-    transition: opacity 1.5s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
-  }
-
+@mixin AniEvent($count,$event) {
+    animation: $event .5s ease-in-out;
+    animation-delay: calc(#{$count}*0.2s);
+    animation-fill-mode: both;
+}
 section.section2 {
     div.sub{
         @include wrap1200;
@@ -15,7 +13,6 @@ section.section2 {
         @media (max-width:1024px) {
             padding-bottom: 0px;
         }
-      
         div.service_tit {
             position: relative;
             text-align: center;
@@ -57,9 +54,13 @@ section.section2 {
             }
     
         }
+     
         div.sec_tit{
             width: 40%;
             display: inline-block;
+            opacity: 0.0;
+            animation: fadeInUp  .8s ease-in-out;
+            animation-fill-mode: both;
               h2{
                     font-size: 40px;
                     font-weight: 300;;
@@ -86,6 +87,8 @@ section.section2 {
             }
             div.center_text{
                 text-align: center;
+                animation: fadeInUp  .8s ease-in-out;
+                animation-fill-mode: both;
                 h2{
                     font-size: 40px;
                     font-weight: 300;;
@@ -166,17 +169,25 @@ section.section2 {
             img{
                 &.sec2{
                     top:150px;
-                    left:-150px
+                    left:-150px;
+                    animation: img_ani_2 1s ease-in-out;
+                    animation-fill-mode: both;
+
                 }
                 &.sec3{
                     top: 200px;
-                 // top: 600px;
+                    animation: fadeInUp 1s ease-in-out;
+                    animation-delay: .2s;
+                    animation-fill-mode: both;
                 }
                 &.sec4{
                     // top: 500px;
                     // left: -500px;
                     top:250px;
-                    left:-200px
+                    left:-200px;
+                    animation: img_ani_2 1s ease-in-out;
+                    animation-fill-mode: both;
+
                 }
             }
             @media (max-width:1024px) {
@@ -217,8 +228,7 @@ section.section2 {
     div.marketing_section{
         div.section-1{
             background-color: #e7f0f2;
-            padding-bottom: 50px;
-
+            padding-bottom: 100px;
         }
         div.section-2{
             background-image: url(../../../image/service_bg1.jpg);
@@ -242,6 +252,7 @@ section.section2 {
         }
         div.sub_1{
             text-align: center;
+            padding-bottom: 0;
             ul{
                 width: 100%;
                 text-align: center;
@@ -264,6 +275,37 @@ section.section2 {
                         margin-top: 10px;
                         display: block;
                     }
+                    &:nth-child(1),
+                    &:nth-child(6){
+                        animation: fadeInUp 1s ease-in-out;
+                        // animation-delay: .2s;
+                        animation-fill-mode: both;
+                    }
+                    &:nth-child(2),
+                    &:nth-child(7){
+                        animation: fadeInUp 1s ease-in-out;
+                        animation-delay: .2s;
+                        animation-fill-mode: both;
+                    }
+                    &:nth-child(3),
+                    &:nth-child(8){
+                        animation: fadeInUp 1s ease-in-out;
+                        animation-delay: .4s;
+                        animation-fill-mode: both;
+                    }
+                    &:nth-child(4),
+                    &:nth-child(9){
+                        animation: fadeInUp 1s ease-in-out;
+                        animation-delay: .6s;
+                        animation-fill-mode: both;
+                    }
+                    &:nth-child(5),
+                    &:nth-child(10){
+                        animation: fadeInUp 1s ease-in-out;
+                        animation-delay: .8s;
+                        animation-fill-mode: both;
+                    }
+                 
                   
                 }
             }
@@ -281,6 +323,9 @@ section.section2 {
                     position: relative;
                     left: 30%;
                     top: 150px;
+                    animation: phone 1s ease-in-out;
+                    // animation-delay: .2s;
+                    animation-fill-mode: both;
                     @media (max-width:767px) {
                         
                         position: relative;
@@ -299,7 +344,7 @@ section.section2 {
     }
     div.academy{
         div.sub{
-            padding-bottom: 50px;
+            padding-bottom: 100px;
         }
         text-align: center;
         div.section-2{
@@ -309,6 +354,9 @@ section.section2 {
             ul{
                 margin-top: 50px;
                 text-align: left;
+                @media (max-width:767px) {
+                    // text-align: center;
+                }
                 li{
                     text-align: center;
                     width: 31.5%;
@@ -318,23 +366,38 @@ section.section2 {
                     display: inline-block;
                     margin: 5px;
                     background-color: #eaedee;
+
+                    @for $i from 1 to 10{
+                        &:nth-child(#{$i}){
+                            @include AniEvent($i,fadeInDown);
+                        }
+                    }
+                    
                     p{
                         font-size: 14px;
                         line-height: 20px;
                         margin-top: 20px;
                     }
                     @media (max-width:767px) {
-                        width: 46%;
-                        height: 160px;
+                        width: 48%;
+                        margin: 3px;
                         padding: 15px 10px;
                         h3{
                             font-size: 16px;
+                            margin-bottom: 20px;
                         }
                         p{
                             font-size: 12px;
                         }
-                        
                     }
+                    @media (max-width:414px) {
+                        width: 47%;
+                        padding: 15px 5px;
+                        h3{
+                            font-size: 14px;
+                        }
+                    }
+
                   
                 }
             }
@@ -352,7 +415,6 @@ section.section2 {
                         width: 46%;
                         padding: 15px 10px;
                         min-height: 190px;
-
                     }
 
                     h3{
@@ -370,6 +432,7 @@ section.section2 {
                             color: #666;
                             text-align: left;
                             height: auto;
+
 
                             @media (max-width:767px) {
                                 width: 100%;
@@ -401,6 +464,12 @@ section.section2 {
                     display: inline-block;
                     margin: 5px;
                     padding: 30px 10px;
+                    
+                    @for $i from 1 to 10{
+                        &:nth-child(#{$i}){
+                            @include AniEvent($i,fadeInDown);
+                        }
+                    }
                     @media (max-width:767px) {
                         width: 100%;
                         margin: 0;
@@ -456,9 +525,14 @@ section.section2 {
     }
     div.consulting{
         div.section-1{
+            padding-bottom: 100px;
             ul{
                 text-align: center;
                 margin-top: 100px;
+                @media (max-width:767px) {
+                    margin-top: 50px;
+                }
+
                 li{
                     min-height: 140px;
                     background-color: #eaedee;
@@ -468,6 +542,78 @@ section.section2 {
                     box-sizing: border-box;;
                     padding: 20px 10px;
                     position: relative;
+                  
+                    &:nth-child(1){
+                        animation: fadeInLeft .6s ease-in-out;
+                        animation-fill-mode: both;
+                        animation-delay: 0;
+                        z-index: 100;
+                        img{
+                            animation: fadeInLeft .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: .1s;
+                            z-index: 99;
+                        }
+                    }
+                    &:nth-child(2){
+                        animation: fadeInLeft .6s ease-in-out;
+                        animation-fill-mode: both;
+                        animation-delay: .3s;
+                        z-index: 90;
+                        img{
+                            animation: fadeInLeft .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: .4s;
+                        }
+                    }
+                    &:nth-child(3){
+                        animation: fadeInLeft .6s ease-in-out;
+                        animation-fill-mode: both;
+                        animation-delay: .6s;
+                        z-index: 80;
+
+                        img{
+                            animation: fadeInLeft .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: .7s;
+                        }
+                    }
+                    &:nth-child(4){
+                        animation: fadeInLeft .6s ease-in-out;
+                        animation-fill-mode: both;
+                        animation-delay: .9s;
+                        z-index: 70;
+
+                        img{
+                            animation: fadeInLeft .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: 1s;
+                        }
+                    }
+                    &:nth-child(5){
+                        animation: fadeInLeft .6s ease-in-out;
+                        animation-fill-mode: both;
+                        animation-delay: 1.2s;
+
+                        img{
+                            animation: fadeInLeft .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: 1.3s;
+                        }
+                    }
+                    &:nth-child(6){
+                        animation: fadeInLeft .6s ease-in-out;
+                        animation-fill-mode: both;
+                        animation-delay: 1.5s;
+                    
+                    }
+
+
+                    @media (max-width:1024px) {
+                        width: 70%;
+                        display: block;   
+                        margin: 10px auto;
+                    }
                     img{
                         display: block;
                         vertical-align: middle;
@@ -479,6 +625,17 @@ section.section2 {
                         z-index: 99;
                         top: 50%;
                         transform: translateY(-50%);
+                        img{
+                            z-index: 99;
+                        }
+                        @media (max-width:1024px) {
+                            position: absolute;
+                            top:145px;
+                            right: 50%;
+                            transform: translateY(-50%) translateX(50%) rotate(90deg);
+
+                        }
+
                     }
                     span{
                         width: 100%;
@@ -490,20 +647,55 @@ section.section2 {
                         height: 50px;
                         line-height: 50px;
                         z-index: 10;
-                        div{
+                        @media (max-width:1024px) {
+                            display: none;
+                            width: 40%;
+                        }
+
+                 
+
+                        &>div{
                             width: 30px;
                             height: 30px;
                             margin: 0 auto;
                             background-color: $MainColor;
                             transform: rotate(45deg);
                             margin-top: -15px;
+                            @media (max-width:1024px) {
+                                margin-top: 0;
+                                display: none;
+                                position: absolute;
+                                left: -30px;
+                                width: 30px;
+                                height: 30px;
+                                margin-top: 0;
+                            }
+
                         }
                         &.top_s{
                             top: -60px;
+                            animation: fadeInDown2 .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: 1.8s;
+
+                            @media (max-width:767px) {
+                                top: 70px;
+                                transform: translateY(-50%);
+                                left: -20%;
+                            }
                         }
                         &.bot_s{
                             line-height: 20px;
                             bottom: -60px;
+                            animation: fadeInUp2 .6s ease-in-out;
+                            animation-fill-mode: both;
+                            animation-delay: 1.8s;
+                            @media (max-width:767px) {
+                                line-height: 50px;
+                                bottom: 70px;
+                                transform: translateY(50%);
+                                left: 80%;
+                            }
                             div{
                                 z-index:-1;
 
@@ -559,36 +751,85 @@ section.section2 {
                 }
                 img.obj1{
                     top: 0;
+                    @media (max-width:1200px) {
+                        top: 0%;
+                        left: -20%;
+                    }
+                    @media (max-width:960px) {
+                        left: -40%;
+                    }
+                    @media (max-width:767px) {
+                        width: 80%;                        
+                        left: -30%;
+                    }
                 }
                 img.obj2{
                     top: -110px;
                     right: 420px;
+                    @media (max-width:1200px) {
+                        top: -20%;
+                        right: -10%;
+                    }
+                    @media (max-width:767px) {
+                        width: 35%;
+                    }
                 }
                 img.obj3{
                     top: 0;
                     right: 0px;
+                    @media (max-width:1200px) {
+                        display: none;
+                    }
                 }
                 img.obj4{
                     bottom: -250px;
                     right: 360px;
+                    @media (max-width:1200px) {
+                        right: -10%;
+                    }
+                    @media (max-width:767px) {
+                        width:50%;
+                        bottom: -200px;
+                        right: -30%;
+
+                    }
                 }
                 img.obj5{
                     top: 315px;
                     right: 460px;
+                    @media (max-width:1200px) {
+                        width: 20%;
+                        top: 300px;
+                        right: -10%;
+                    }
                 }
                 img.obj6{
                     top: 265px;
                     left: 310px;
+                    @media (max-width:1200px) {
+                        display: none;
+                    }
                 }
                 img.obj7{
                     left: 300px;
                     bottom: 0;
-
+                    @media (max-width:1200px) {
+                        width: 40%;
+                        left: -10%;
+                    }
                 }
         }
         div.section-3{
             background-color: #e7f0f2;
+            @media (max-width:1024px) {
+                padding-bottom: 100px;
+                ul{
+                    margin-top: 50px;
+                }
+            }
+
             ul{
+                margin-top: 50px;
                 text-align: center;
                 li{
                     display: inline-block;
@@ -598,6 +839,12 @@ section.section2 {
                     min-height: 130px;
                     padding: 30px;
                     box-sizing: border-box;
+                  
+                    @for $i from 1 to 10{
+                        &:nth-child(#{$i}){
+                            @include AniEvent($i,fadeInDown);
+                        }
+                    }
                     h3.center{
                         position: absolute;
                         top: 50%;
@@ -609,6 +856,24 @@ section.section2 {
                         color: #666;
                         margin-top: 10px;
                     }
+                    @media (max-width:1024px) {
+                        min-height: 150px;
+                        width: 47%;
+                        padding: 15px;
+                        h3{
+                            font-size: 14px;
+                        }
+
+                        p{
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                        &:nth-last-child(1){
+                            width: 96%;
+                            padding-top: 45px;
+                            box-sizing: border-box;
+                        }
+                    }
 
                 }
             }
@@ -619,8 +884,21 @@ section.section2 {
                 width: 50%;
                 display: inline-block;
                 position: absolute;
+                @media (max-width:1024px) {
+                    position: relative;
+                    display: block;
+                    margin: 20px auto;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+
                 img{
+                    width: 100%;
                     top: 0;
+                    @include AniEvent(1,fadeInDown);
+
                 }
             }
         }
