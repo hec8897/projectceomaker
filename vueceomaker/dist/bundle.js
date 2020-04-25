@@ -86,100 +86,45 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../../../../../Users/hec88/AppData/Roaming/npm/node_modules/webpack/node_modules/process/browser.js":
-/*!*************************************************!*\
-  !*** (webpack)/node_modules/process/browser.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./image/about-section1.jpg":
+/*!**********************************!*\
+  !*** ./image/about-section1.jpg ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// shim for using process in browser
-var process = module.exports = {};
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/about-section1.jpg");
 
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
+/***/ }),
 
-var cachedSetTimeout;
-var cachedClearTimeout;
+/***/ "./image/arrow_b.png":
+/*!***************************!*\
+  !*** ./image/arrow_b.png ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/arrow_b.png");
 
+/***/ }),
 
-<<<<<<< HEAD
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-=======
+/***/ "./image/arrow_t.png":
+/*!***************************!*\
+  !*** ./image/arrow_t.png ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/arrow_t.png");
+
+/***/ }),
+
 /***/ "./image/contact-section1.jpg":
 /*!************************************!*\
   !*** ./image/contact-section1.jpg ***!
@@ -199,17 +144,13 @@ __webpack_require__.r(__webpack_exports__);
   \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
->>>>>>> 1642e5b37befa4206afd69f7efc876016397ae2e
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/design_section1_bg.png");
 
+/***/ }),
 
-<<<<<<< HEAD
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-=======
 /***/ "./image/icon_chk.png":
 /*!****************************!*\
   !*** ./image/icon_chk.png ***!
@@ -229,99 +170,49 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
->>>>>>> 1642e5b37befa4206afd69f7efc876016397ae2e
 
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/main-section1.jpg");
 
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
+/***/ }),
 
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
+/***/ "./image/section_bg.jpg":
+/*!******************************!*\
+  !*** ./image/section_bg.jpg ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/section_bg.jpg");
 
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
+/***/ }),
 
-function noop() {}
+/***/ "./image/service-section1.jpg":
+/*!************************************!*\
+  !*** ./image/service-section1.jpg ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/service-section1.jpg");
 
-process.listeners = function (name) { return [] }
+/***/ }),
 
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
+/***/ "./image/service_bg1.jpg":
+/*!*******************************!*\
+  !*** ./image/service_bg1.jpg ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "image/service_bg1.jpg");
 
 /***/ }),
 
@@ -1347,7 +1238,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../Users/hec88/AppData/Roaming/npm/node_modules/webpack/node_modules/process/browser.js */ "../../../../../../Users/hec88/AppData/Roaming/npm/node_modules/webpack/node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -2138,21 +2029,52 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/About/about.scss":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/About/about.scss ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './element.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./src/router.js");
-/* harmony import */ var _common_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common/header */ "./src/common/header.js");
-/* harmony import */ var _common_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./common/footer */ "./src/common/footer.js");
-=======
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.about div.about_main div.section {\n  padding: 100px 0px;\n  text-align: center; }\n  div.about div.about_main div.section h2 {\n    font-size: 54px; }\n    @media (max-width: 767px) {\n      div.about div.about_main div.section h2 {\n        font-size: 28px;\n        width: 80%;\n        margin: 0 auto; } }\n  div.about div.about_main div.section p {\n    font-size: 1.2rem; }\n    @media (max-width: 767px) {\n      div.about div.about_main div.section p {\n        width: 80%;\n        margin: 0 auto; } }\n    div.about div.about_main div.section p.mt {\n      margin-top: 30px; }\n  @media (max-width: 767px) {\n    div.about div.about_main div.section.section1 {\n      height: 600px; } }\n  div.about div.about_main div.section.section1 ul.circle_gret {\n    margin-top: 50px;\n    position: relative; }\n    div.about div.about_main div.section.section1 ul.circle_gret li {\n      display: inline-block;\n      width: 300px;\n      height: 300px;\n      border-radius: 100%;\n      margin: 30px;\n      position: relative;\n      color: white; }\n      div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n        font-size: 30px;\n        margin: 10px 0px; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(1) {\n        background-color: #34dc3c; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n        background-color: #1dbfd7; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n        background-color: #f9c717; }\n      div.about div.about_main div.section.section1 ul.circle_gret li > div {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%); }\n      @media (max-width: 1200px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 220px;\n          height: 220px;\n          margin: 10px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n            font-size: 24px; } }\n      @media (max-width: 767px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 300px;\n          height: 300px;\n          position: absolute;\n          margin: 0; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(1) {\n            left: 50%;\n            transform: translateX(-50%); }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 5%;\n            top: 250px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 5%;\n            top: 250px; } }\n      @media (max-width: 514px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 220px;\n          height: 220px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 1%;\n            top: 180px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 1%;\n            top: 180px; } }\n      @media (max-width: 414px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 200px;\n          height: 200px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n            font-size: 20px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 1%;\n            top: 180px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 1%;\n            top: 180px; } }\n  div.about div.about_main div.section.section2 {\n    background-color: #f6f6f6;\n    overflow-x: hidden; }\n    div.about div.about_main div.section.section2 ul.sq_list {\n      max-width: 1200px;\n      margin: 0 auto;\n      margin-top: 30px; }\n      @media (max-width: 1200px) {\n        div.about div.about_main div.section.section2 ul.sq_list {\n          max-width: 1024px; } }\n      @media (max-width: 1024px) {\n        div.about div.about_main div.section.section2 ul.sq_list {\n          max-width: 95%; } }\n      div.about div.about_main div.section.section2 ul.sq_list li {\n        display: inline-block;\n        width: 24%;\n        height: 265px;\n        margin: 3px;\n        background-color: #fff;\n        padding: 30px;\n        box-sizing: border-box;\n        text-align: left; }\n        div.about div.about_main div.section.section2 ul.sq_list li h3 {\n          font-size: 30px;\n          font-weight: normal;\n          margin-bottom: 30px; }\n        div.about div.about_main div.section.section2 ul.sq_list li p {\n          width: 85%;\n          min-height: 60px;\n          font-size: 14px;\n          line-height: 20px;\n          margin-bottom: 20px; }\n        div.about div.about_main div.section.section2 ul.sq_list li div.btn {\n          position: relative;\n          z-index: 9;\n          display: inline-block;\n          border: 1px solid #222;\n          font-size: 14px;\n          text-align: left;\n          color: #222;\n          width: 200px;\n          height: 50px;\n          line-height: 50px;\n          padding: 0 20px;\n          box-sizing: border-box;\n          transition: all 0.2s ease;\n          cursor: pointer;\n          width: 100%; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn::before {\n            content: '';\n            position: absolute;\n            z-index: -1;\n            top: 0;\n            right: 0;\n            width: 0;\n            height: 100%;\n            background: #1dbfd7;\n            transition: width 0.2s; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate {\n            position: absolute;\n            top: 17px;\n            right: 20px;\n            display: block;\n            width: 12px;\n            height: 12px;\n            text-align: center; }\n            div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate span {\n              position: absolute;\n              top: 6px;\n              display: block;\n              width: 11px;\n              height: 1px;\n              background-color: #222; }\n              div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate span:last-child {\n                transform: rotate(90deg); }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover::before {\n            width: 100%;\n            left: 0; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover {\n            border-color: #1dbfd7;\n            color: #222; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover span {\n            background: #222; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover div.pluarotate {\n            animation-duration: 1s;\n            animation-fill-mode: both;\n            animation-iteration-count: infinite;\n            animation-name: plusRotate; }\n        @media (max-width: 767px) {\n          div.about div.about_main div.section.section2 ul.sq_list li {\n            width: 48%;\n            padding: 20px; }\n            div.about div.about_main div.section.section2 ul.sq_list li h3 {\n              font-size: 18px; }\n            div.about div.about_main div.section.section2 ul.sq_list li p {\n              width: 100%;\n              margin: 0; } }\n  div.about div.about_main div.section.section3 {\n    padding: 0; }\n    div.about div.about_main div.section.section3 div#map {\n      width: 100%;\n      height: 500px;\n      background-color: darkgrey; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/About/section1.scss":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/About/section1.scss ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/about-section1.jpg */ "./image/about-section1.jpg");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.about section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.about section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.about section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.about section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      font-weight: bolder; }\n      div.about section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.about section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.about section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.about section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.about section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.about section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.about section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.about section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.about section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.about section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.about section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.about section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.about section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.about section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/footer.scss":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/footer.scss ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
@@ -2160,13 +2082,17 @@ exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\nfooter {\n  padding: 50px 0px;\n  border-top: 1px solid #d0d0d0; }\n  footer h1 {\n    text-align: center;\n    margin-bottom: 30px; }\n  footer address {\n    display: block;\n    text-align: center;\n    max-width: 500px;\n    margin: 0 auto;\n    font-style: normal;\n    color: #888; }\n", ""]);
 // Exports
 module.exports = exports;
->>>>>>> 1642e5b37befa4206afd69f7efc876016397ae2e
 
 
+/***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/header.scss":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/header.scss ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-=======
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
@@ -2174,25 +2100,17 @@ exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\nheader div.head {\n  width: 100%;\n  position: fixed;\n  padding: 20px 0px;\n  z-index: 999;\n  cursor: pointer; }\n  @media (max-width: 767px) {\n    header div.head {\n      padding: 10px 0px; } }\n  header div.head::before {\n    position: absolute;\n    content: '';\n    width: 100%;\n    height: 0px;\n    background-color: rgba(0, 0, 0, 0.5);\n    top: 0;\n    transition: .2s ease-in; }\n  header div.head:hover ol {\n    opacity: 1.0; }\n  header div.head:hover::before {\n    height: 250px; }\n  header div.head h1 {\n    width: 10%;\n    display: inline; }\n    @media (max-width: 767px) {\n      header div.head h1 img {\n        width: 130px; } }\n  header div.head ul {\n    display: inline-block;\n    text-align: center;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%); }\n    header div.head ul > li {\n      display: inline;\n      color: #fff;\n      font-size: 18px;\n      margin: 0px 30px;\n      font-family: 'roboto';\n      position: relative; }\n      header div.head ul > li span.router-link-exact-active {\n        color: #1dbfd7; }\n      @media (max-width: 1200px) {\n        header div.head ul > li {\n          margin: 0px 15px;\n          font-size: 16px; } }\n      @media (max-width: 960px) {\n        header div.head ul > li {\n          margin: 0px 10px; } }\n      @media (max-width: 767px) {\n        header div.head ul > li {\n          display: none; } }\n      header div.head ul > li ol {\n        text-align: center;\n        position: absolute;\n        left: 50%;\n        top: 40px;\n        transform: translateX(-50%);\n        opacity: 0.0; }\n        header div.head ul > li ol li {\n          color: #888;\n          font-size: 14px;\n          margin: 15px 0px; }\n          header div.head ul > li ol li span.router-link-active {\n            color: #1dbfd7; }\n  header div.head div.ham_btn {\n    cursor: pointer;\n    display: inline-block;\n    width: 30px;\n    height: 30px;\n    position: absolute;\n    top: 50%;\n    right: 0;\n    transform: translateY(-50%);\n    transition: all 0.3s ease; }\n    header div.head div.ham_btn span {\n      background: #fff;\n      display: block;\n      width: 30px;\n      height: 3px;\n      margin-bottom: 7px;\n      transition: all 0.3s ease; }\n      header div.head div.ham_btn span:last-child {\n        background: #1dbfd7;\n        width: 15px;\n        margin-left: 15px; }\n    header div.head div.ham_btn:hover span:nth-child(2) {\n      width: 15px; }\n", ""]);
 // Exports
 module.exports = exports;
->>>>>>> 1642e5b37befa4206afd69f7efc876016397ae2e
 
 
-new Vue({
-    router: _router__WEBPACK_IMPORTED_MODULE_1__["default"],
-    template: `<div>
-                    <app-header/>
-                    <router-view/>
-                    <app-footer/>
-                </div>`,
-    components:{
-                'app-header':_common_header__WEBPACK_IMPORTED_MODULE_2__["default"],
-                'app-footer':_common_footer__WEBPACK_IMPORTED_MODULE_3__["default"]
+/***/ }),
 
-            }
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/section_cate.scss":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/section_cate.scss ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-
-=======
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
@@ -5911,6 +5829,226 @@ if (inBrowser && window.Vue) {
 
 /***/ }),
 
+/***/ "./src/About/about.js":
+/*!****************************!*\
+  !*** ./src/About/about.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _about_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about.scss */ "./src/About/about.scss");
+/* harmony import */ var _about_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_about_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+const About = {
+     template:`<div class='about_main'>
+                    <div class='section section1'>
+                        <h2>개인과 기업의 브랜드를 만들어주는 기업</h2>
+                        <p class='mt'>오랜 실무경험을 바탕으로 전문성을 확보한 디지털 전문기업 CEOMAKER는</p>
+                        <p>전략적인 컨설팅을 통해 개인과 기업 모두 함께 발전하는 환경을 만들어 갑니다.</p>
+                        <ul class='circle_gret'>
+                            <li class='circle_gret1'>
+                                <div>
+                                    <img src='image/icon_about_1.png'>
+                                    <h3>MARKETING</h3>
+                                    <p>창의적인 확장</p>
+                                </div>
+                            </li>
+                            <li class='circle_gret2'>
+                                <div>
+                                    <img src='image/icon_about_2.png'>
+                                    <h3>CONSULTING</h3>
+                                    <p>고객의 니즈 반영</p>
+                                </div>
+                            </li>
+                            <li class='circle_gret3'>
+                                <div>
+                                    <img src='image/icon_about_3.png'>
+                                    <h3>DESIGN</h3>
+                                    <p>브랜드 메이킹</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='section section2'>
+                        <h2>고객의 니즈에 최적화된 솔루션 제공</h2>
+                        <p class='mt'>고객의 니즈에 맞춘 솔루션으로 브랜드의 비전과 가치를 높여 드립니다</p>
+                        <ul class='sq_list'>
+                            <li>
+                                <h3>DESIGN</h3>
+                                <p>PC 및 모바일 웹사이트 맞춤형 개발 기업의 브랜드 메이킹 디자인 광고 디자인</p>
+                                <div class='btn'>디자인 문의
+                                    <div class='pluarotate'>
+                                        <span></span>
+                                        <span></span>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li>
+                                <h3>MARKETING</h3>
+                                <p>마케팅 전략 기획 시장분석 및 트랜드 분석</p>
+                                <div class='btn'>마케팅 문의
+                                    <div class='pluarotate'>
+                                        <span></span>
+                                        <span></span>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li>
+                                <h3>CONSULTING</h3>
+                                <p>프로젝트 매니지먼트 설계, 분석, 서비스 기획</p>
+                                <div class='btn'>컨설팅 문의
+                                    <div class='pluarotate'>
+                                        <span></span>
+                                        <span></span>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li>
+                                <h3>ACADEMY</h3>
+                                <p>마케팅의 이해와 전략수립 과정 기업별 프로모션 전략 기업마케팅팀 구축 및 시스템 활용</p>
+                                <div class='btn'>교육 문의
+                                    <div class='pluarotate'>
+                                        <span></span>
+                                        <span></span>
+                                    </div>    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='section section3'>
+                        <div id='map'></div>
+                    </div>
+
+
+                </div>`
+}
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+/***/ }),
+
+/***/ "./src/About/about.scss":
+/*!******************************!*\
+  !*** ./src/About/about.scss ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./about.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/About/about.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/About/main.js":
+/*!***************************!*\
+  !*** ./src/About/main.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/About/section1.js");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./about */ "./src/About/about.js");
+
+
+const AboutPage = {
+    template:`<div class='about'>
+        <Section1 />
+        <About/>
+    </div>`,
+    components:{
+        Section1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
+        About: _about__WEBPACK_IMPORTED_MODULE_1__["default"]
+    }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
+
+/***/ }),
+
+/***/ "./src/About/section1.js":
+/*!*******************************!*\
+  !*** ./src/About/section1.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1.scss */ "./src/About/section1.scss");
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section1_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+const MainSection1 = {
+    template:`<section class='main section1'>
+        <div class='text_area'>
+            <h2>
+                ABOUT US
+                <img src='image/ci_symbol.png'>
+            </h2>
+            <p class='s_tit'>
+            CEOMAKER는 개인과 기업 모두 함께 발전하는 환경을 만들어 갑니다
+            </p>
+        </div>
+    </section>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MainSection1);
+
+/***/ }),
+
+/***/ "./src/About/section1.scss":
+/*!*********************************!*\
+  !*** ./src/About/section1.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./section1.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/About/section1.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
@@ -5945,7 +6083,6 @@ new Vue({
             }
 
 
->>>>>>> 1642e5b37befa4206afd69f7efc876016397ae2e
 }).$mount('#app')
 
 /***/ }),
@@ -5959,7 +6096,8 @@ new Vue({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './footer.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.scss */ "./src/common/footer.scss");
+/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 const Footer = {
     template:`<footer>
@@ -5978,6 +6116,37 @@ const Footer = {
 
 /***/ }),
 
+/***/ "./src/common/footer.scss":
+/*!********************************!*\
+  !*** ./src/common/footer.scss ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./footer.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/footer.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
 /***/ "./src/common/header.js":
 /*!******************************!*\
   !*** ./src/common/header.js ***!
@@ -5987,7 +6156,8 @@ const Footer = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './header.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.scss */ "./src/common/header.scss");
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 const Header = {
     template: `<header>
@@ -6015,7 +6185,7 @@ const Header = {
                                 <li><router-link to='/works/전체' tag='span'>WORKS</router-link></li>
                                
                                 <li><router-link to='/contact/normal' tag='span'>CONTACT</router-link></li>
-                                <li>ABOUT</li>
+                                <li><router-link to='/about/normal' tag='span'>ABOUT</router-link></li>
                             </ul>
                             <div class='ham_btn'>
                                 <span></span>
@@ -6031,6 +6201,37 @@ const Header = {
 
 /***/ }),
 
+/***/ "./src/common/header.scss":
+/*!********************************!*\
+  !*** ./src/common/header.scss ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./header.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/header.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
 /***/ "./src/common/section-cate.js":
 /*!************************************!*\
   !*** ./src/common/section-cate.js ***!
@@ -6040,7 +6241,8 @@ const Header = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './section_cate.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _section_cate_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section_cate.scss */ "./src/common/section_cate.scss");
+/* harmony import */ var _section_cate_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section_cate_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 const SectionCate = {
     props:['cate'],
@@ -6076,8 +6278,6 @@ const SectionCate = {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./src/common/section_cate.scss":
 /*!**************************************!*\
   !*** ./src/common/section_cate.scss ***!
@@ -6339,7 +6539,6 @@ module.exports = exported;
 
 /***/ }),
 
->>>>>>> 1642e5b37befa4206afd69f7efc876016397ae2e
 /***/ "./src/main/clients.js":
 /*!*****************************!*\
   !*** ./src/main/clients.js ***!
@@ -6453,7 +6652,8 @@ const MainPage = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './section1.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1.scss */ "./src/main/section1.scss");
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section1_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 const MainSection1 = {
     template:`<section class='main section1'>
@@ -6465,6 +6665,37 @@ const MainSection1 = {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MainSection1);
+
+/***/ }),
+
+/***/ "./src/main/section1.scss":
+/*!********************************!*\
+  !*** ./src/main/section1.scss ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./section1.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section1.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
 
 /***/ }),
 
@@ -7128,7 +7359,8 @@ const marketingSection = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './section2.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _section2_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section2.scss */ "./src/main/section2/section2.scss");
+/* harmony import */ var _section2_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section2_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _desing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./desing */ "./src/main/section2/desing.js");
 /* harmony import */ var _consulting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./consulting */ "./src/main/section2/consulting.js");
 /* harmony import */ var _academy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./academy */ "./src/main/section2/academy.js");
@@ -7159,6 +7391,37 @@ const Section2 = {
 
 /***/ }),
 
+/***/ "./src/main/section2/section2.scss":
+/*!*****************************************!*\
+  !*** ./src/main/section2/section2.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./section2.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/section2/section2.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
 /***/ "./src/router.js":
 /*!***********************!*\
   !*** ./src/router.js ***!
@@ -7168,17 +7431,20 @@ const Section2 = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _main_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main/main */ "./src/main/main.js");
 /* harmony import */ var _works_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works/main */ "./src/works/main.js");
 /* harmony import */ var _contact_main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact/main */ "./src/contact/main.js");
+/* harmony import */ var _About_main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./About/main */ "./src/About/main.js");
 
 
 
 
 
 
-const router = new !(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({
+
+
+const router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     routes: [
         {
             path: '/',
@@ -7203,10 +7469,47 @@ const router = new !(function webpackMissingModule() { var e = new Error("Cannot
             component:_contact_main__WEBPACK_IMPORTED_MODULE_3__["default"],
             name: 'contact'
         },
+        {
+            props:true,
+            path: '/about/:id',
+            component:_About_main__WEBPACK_IMPORTED_MODULE_4__["default"],
+            name: 'about'
+        },
     ]
 })
 
 /* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/works/list-item.scss":
+/*!**********************************!*\
+  !*** ./src/works/list-item.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./list-item.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/list-item.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
 
 /***/ }),
 
@@ -7252,7 +7555,8 @@ const MainPage = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module './section1.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1.scss */ "./src/works/section1.scss");
+/* harmony import */ var _section1_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_section1_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 const MainSection1 = {
     template:`<section class='main section1'>
@@ -7279,6 +7583,37 @@ const MainSection1 = {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MainSection1);
+
+/***/ }),
+
+/***/ "./src/works/section1.scss":
+/*!*********************************!*\
+  !*** ./src/works/section1.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./section1.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/works/section1.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
 
 /***/ }),
 
@@ -7323,10 +7658,11 @@ const workItem = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _work_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./work-item */ "./src/works/work-item.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './list-item.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _list_item_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list-item.scss */ "./src/works/list-item.scss");
+/* harmony import */ var _list_item_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_list_item_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -7348,7 +7684,7 @@ const WorksList = {
         WorksItem: _work_item__WEBPACK_IMPORTED_MODULE_1__["default"]
     },
     created(){
-        axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('api/data.json')
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/data.json')
         .then((result)=>{
             this.lists = result.data
         })

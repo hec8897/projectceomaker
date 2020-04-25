@@ -1,0 +1,179 @@
+@import '../define.scss';
+
+div.about{
+    div.about_main{
+        div.section{
+            padding: 100px 0px;
+            text-align: center;
+                h2{
+                    font-size: 54px;
+                    @media (max-width:767px) {
+                        font-size: 28px;
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                }
+                p{
+                    font-size: 1.2rem;
+                    @media (max-width:767px) {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+
+                    &.mt{
+                        margin-top: 30px;
+                    }
+                }
+            &.section1{
+                @media (max-width:767px) {
+                    height: 600px;
+                }
+
+                ul.circle_gret{
+                    margin-top: 50px;
+                    position: relative;
+                    li{
+                        display: inline-block;
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 100%;
+                        margin: 30px;
+                        position: relative;
+                        color: white;
+                 
+                        h3{
+                            font-size: 30px;
+                            margin: 10px 0px;
+                        }
+                        &:nth-child(1){
+                            background-color: #34dc3c;
+                        }
+                        &:nth-child(2){
+                            background-color: $MainColor;
+                        }
+                        &:nth-child(3){
+                            background-color: #f9c717;
+                        }
+                        &>div{
+                            @include absoluteCenter;
+                        }
+                        @media (max-width:1200px) {
+                            width: 220px;
+                            height: 220px;
+                            margin: 10px;
+                            h3{
+                                font-size: 24px;
+                            }
+                        }
+                        @media (max-width:767px) {
+                            width: 300px;
+                            height: 300px;
+                             position: absolute;
+                             margin: 0;
+                                &:nth-child(1){
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                                &:nth-child(2){
+                                    left: 5%;
+                                    top: 250px;
+                                }
+                                &:nth-child(3){
+                                    right: 5%;
+                                    top: 250px;
+                                }
+                        }
+                        @media (max-width:514px) {
+                            width: 220px;
+                            height: 220px;
+                            &:nth-child(2){
+                                left: 1%;
+                                top:180px;
+                            }
+                            &:nth-child(3){
+                                right: 1%;
+                                top: 180px;
+                            }
+                        }
+                        @media (max-width:414px) {
+                            width: 200px;
+                            height: 200px;
+                            h3{
+                                font-size: 20px;
+                            }
+                            &:nth-child(2){
+                                left: 1%;
+                                top:180px;
+                            }
+                            &:nth-child(3){
+                                right: 1%;
+                                top: 180px;
+                            }
+                        }
+
+
+
+                    }
+                }
+            }
+            &.section2{
+                background-color: #f6f6f6;
+                overflow-x: hidden;
+                ul.sq_list{
+                    @include wrap1200;
+                    margin-top: 30px;
+                    li{
+                        display: inline-block;
+                        width: 24%;
+                        height: 265px;
+                        margin: 3px;
+                        background-color: $white;
+                        padding: 30px;
+                        box-sizing: border-box;
+                        text-align: left;
+                    
+
+                        h3{
+                            font-size: 30px;
+                            font-weight: normal;
+                            margin-bottom: 30px;
+                        }
+                        p{
+                            width: 85%;
+                            min-height: 60px;
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-bottom: 20px;
+                        }
+                        div.btn{
+                            @include btnDefault(#222);
+                            width:100%;
+                        }
+                        @media (max-width:767px) {
+                            width: 48%;
+                            padding: 20px;
+                            h3{
+                                font-size: 18px;
+                            }
+                            p{
+                                width: 100%;
+                                margin: 0;
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+            &.section3{
+                padding: 0;
+                div#map{
+                    width: 100%;
+                    height: 500px;
+                    background-color: darkgrey;
+                }
+            }
+        }
+    }
+
+}

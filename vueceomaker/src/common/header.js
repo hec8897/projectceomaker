@@ -25,7 +25,7 @@ const Header = {
                                 <li><router-link to='/works/전체' tag='span'>WORKS</router-link></li>
                                
                                 <li><router-link to='/contact/normal' tag='span'>CONTACT</router-link></li>
-                                <li>ABOUT</li>
+                                <li><router-link to='/about/normal' tag='span'>ABOUT</router-link></li>
                             </ul>
                             <div class='ham_btn'>
                                 <span></span>
