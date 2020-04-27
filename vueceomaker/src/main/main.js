@@ -19,9 +19,11 @@ const MainPage = {
         ClientsSection
     },
     created(){
+        window.scrollTo(0, 0); 
         EventBus.$emit('routerChange',true)
     },
     updated(){
+        window.scrollTo(0, 0); 
         EventBus.$emit('routerChange',true)
     },
 }

@@ -36,25 +36,25 @@ const contactArea = {
                                 <form action="" method='POST' id='frm' enctype="multipart/form-data">
 
                                 <div>
-                                    <p>업체명</p>
-                                    <input type="text" id='reqcompany'>
+                                    <p>신청자명</p>
+                                    <input type="text" id='reqname' v-model="reqName">
                                 </div>
                                 
                                 <div>
                                     <p>연락처*</p>
-                                    <input type="text" id='reqphone'>
+                                    <input type="text" id='reqphone' v-model="reqPhone">
                                 </div>
                                 <div>
                                     <p>이메일*</p>
-                                    <input type="text" id='reqemail'>
+                                    <input type="text" id='reqemail' v-model="reqEmail">
                                 </div>
                                 <div>
                                     <p>상담분야</p>
-                                    <input type="text" id='reqcompany' v-model="consultClass">
+                                    <input type="text" id='reqconsult' v-model="consultClass">
                                 </div>
                                 <div class="text_area">
                                     <p>문의 내용*</p>
-                                    <textarea name="" id="reqmemo"></textarea>
+                                    <textarea name="" id="reqmemo" v-model="reqMemo"></textarea>
                                 </div>
                                 </form>
                             </div>
@@ -62,7 +62,11 @@ const contactArea = {
                </div>`,
                data(){
                    return{
-                       consultClass:''
+                       reqName:'',
+                       reqPhone:'',
+                       reqEmail:'',
+                       consultClass:'',
+                       reqMemo:''
                    }
                },
                created(){
@@ -77,6 +81,9 @@ const contactArea = {
                    }
                    else if(this.mode == 'consulting'){
                         this.consultClass= "컨설팅 문의"
+                   }
+                   else{
+                        this.consultClass= "일반 상담 문의"
                    }
                }
 }

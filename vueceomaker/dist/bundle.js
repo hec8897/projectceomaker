@@ -5914,42 +5914,42 @@ const About = {
                             <li>
                                 <h3>DESIGN</h3>
                                 <p>PC 및 모바일 웹사이트 맞춤형 개발 기업의 브랜드 메이킹 디자인 광고 디자인</p>
-                                <div class='btn'>디자인 문의
+                                <router-link tag='div' to='/contact/design' class='btn'>디자인 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                             <li>
                                 <h3>MARKETING</h3>
                                 <p>마케팅 전략 기획 시장분석 및 트랜드 분석</p>
-                                <div class='btn'>마케팅 문의
+                                <router-link tag='div' to='/contact/marketing' class='btn'>마케팅 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                             <li>
                                 <h3>CONSULTING</h3>
                                 <p>프로젝트 매니지먼트 설계, 분석, 서비스 기획</p>
-                                <div class='btn'>컨설팅 문의
+                                <router-link tag='div' to='/contact/consulting' class='btn'>컨설팅 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                             <li>
                                 <h3>ACADEMY</h3>
                                 <p>마케팅의 이해와 전략수립 과정 기업별 프로모션 전략 기업마케팅팀 구축 및 시스템 활용</p>
-                                <div class='btn'>교육 문의
+                                <router-link tag='div' to='/contact/academy' class='btn'>교육 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                         </ul>
                     </div>
@@ -6021,6 +6021,7 @@ const AboutPage = {
         About: _about__WEBPACK_IMPORTED_MODULE_1__["default"]
     },
     created(){
+        window.scrollTo(0, 0); 
         _eventbus__WEBPACK_IMPORTED_MODULE_2__["default"].$emit('routerChange',true)
     }
 
@@ -6206,15 +6207,15 @@ const ClientsSection = {
                 <b v-else-if="cate == 'consulting'">
                     컨설팅 문의
                 </b>
+                <b v-else>
+                    상담 문의
+                </b>
                 <div class='pluarotate'>
                     <span></span>
                     <span></span>
                 </div>    
             </router-link>
-    </div>`,
-    mounted(){
-        console.log(this.cate)
-    }
+    </div>`
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (ClientsSection);
@@ -6538,9 +6539,9 @@ const SectionCate = {
                     ></router-link>
                 </ul>
               </div>`,
-              created(){
-                this.cate == 'Works'?this.lists = this.Works:this.lists = this.Normal;
-                this.cate == 'Works'?this.page = '/works/':'/design/';
+              mounted(){
+                this.cate == 'normal'?this.lists = this.Normal:this.lists = this.Works
+                this.cate == 'normal'?this.page = '/service/':'/works/';
               },
               data(){
                   return{
@@ -6639,25 +6640,25 @@ const contactArea = {
                                 <form action="" method='POST' id='frm' enctype="multipart/form-data">
 
                                 <div>
-                                    <p>업체명</p>
-                                    <input type="text" id='reqcompany'>
+                                    <p>신청자명</p>
+                                    <input type="text" id='reqname' v-model="reqName">
                                 </div>
                                 
                                 <div>
                                     <p>연락처*</p>
-                                    <input type="text" id='reqphone'>
+                                    <input type="text" id='reqphone' v-model="reqPhone">
                                 </div>
                                 <div>
                                     <p>이메일*</p>
-                                    <input type="text" id='reqemail'>
+                                    <input type="text" id='reqemail' v-model="reqEmail">
                                 </div>
                                 <div>
                                     <p>상담분야</p>
-                                    <input type="text" id='reqcompany' v-model="consultClass">
+                                    <input type="text" id='reqconsult' v-model="consultClass">
                                 </div>
                                 <div class="text_area">
                                     <p>문의 내용*</p>
-                                    <textarea name="" id="reqmemo"></textarea>
+                                    <textarea name="" id="reqmemo" v-model="reqMemo"></textarea>
                                 </div>
                                 </form>
                             </div>
@@ -6665,7 +6666,11 @@ const contactArea = {
                </div>`,
                data(){
                    return{
-                       consultClass:''
+                       reqName:'',
+                       reqPhone:'',
+                       reqEmail:'',
+                       consultClass:'',
+                       reqMemo:''
                    }
                },
                created(){
@@ -6680,6 +6685,9 @@ const contactArea = {
                    }
                    else if(this.mode == 'consulting'){
                         this.consultClass= "컨설팅 문의"
+                   }
+                   else{
+                        this.consultClass= "일반 상담 문의"
                    }
                }
 }
@@ -6746,7 +6754,8 @@ const contactMainPage = {
                     contactArea: _contact__WEBPACK_IMPORTED_MODULE_1__["default"]
                 },
                 created(){
-                    _eventbus__WEBPACK_IMPORTED_MODULE_2__["default"].$emit('routerChange',true)
+                    window.scrollTo(0, 0); 
+                    _eventbus__WEBPACK_IMPORTED_MODULE_2__["default"].$emit('routerChange',true);
                 }
 }
 
@@ -6895,9 +6904,11 @@ const MainPage = {
         ClientsSection: _common_client__WEBPACK_IMPORTED_MODULE_3__["default"]
     },
     created(){
+        window.scrollTo(0, 0); 
         _eventbus__WEBPACK_IMPORTED_MODULE_4__["default"].$emit('routerChange',true)
     },
     updated(){
+        window.scrollTo(0, 0); 
         _eventbus__WEBPACK_IMPORTED_MODULE_4__["default"].$emit('routerChange',true)
     },
 }
@@ -7806,9 +7817,11 @@ const MainPage = {
         WorksList: _works_list__WEBPACK_IMPORTED_MODULE_2__["default"]
     },
     created(){
+        window.scrollTo(0, 0); 
         _eventbus__WEBPACK_IMPORTED_MODULE_3__["default"].$emit('routerChange',true)
     },
     updated(){
+        window.scrollTo(0, 0); 
         _eventbus__WEBPACK_IMPORTED_MODULE_3__["default"].$emit('routerChange',true)
     }
 

@@ -36,42 +36,42 @@ const About = {
                             <li>
                                 <h3>DESIGN</h3>
                                 <p>PC 및 모바일 웹사이트 맞춤형 개발 기업의 브랜드 메이킹 디자인 광고 디자인</p>
-                                <div class='btn'>디자인 문의
+                                <router-link tag='div' to='/contact/design' class='btn'>디자인 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                             <li>
                                 <h3>MARKETING</h3>
                                 <p>마케팅 전략 기획 시장분석 및 트랜드 분석</p>
-                                <div class='btn'>마케팅 문의
+                                <router-link tag='div' to='/contact/marketing' class='btn'>마케팅 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                             <li>
                                 <h3>CONSULTING</h3>
                                 <p>프로젝트 매니지먼트 설계, 분석, 서비스 기획</p>
-                                <div class='btn'>컨설팅 문의
+                                <router-link tag='div' to='/contact/consulting' class='btn'>컨설팅 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                             <li>
                                 <h3>ACADEMY</h3>
                                 <p>마케팅의 이해와 전략수립 과정 기업별 프로모션 전략 기업마케팅팀 구축 및 시스템 활용</p>
-                                <div class='btn'>교육 문의
+                                <router-link tag='div' to='/contact/academy' class='btn'>교육 문의
                                     <div class='pluarotate'>
                                         <span></span>
                                         <span></span>
                                     </div>    
-                                </div>
+                                </router-link>
                             </li>
                         </ul>
                     </div>

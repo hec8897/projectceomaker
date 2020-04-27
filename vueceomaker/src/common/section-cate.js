@@ -12,9 +12,9 @@ const SectionCate = {
                     ></router-link>
                 </ul>
               </div>`,
-              created(){
-                this.cate == 'Works'?this.lists = this.Works:this.lists = this.Normal;
-                this.cate == 'Works'?this.page = '/works/':'/design/';
+              mounted(){
+                this.cate == 'normal'?this.lists = this.Normal:this.lists = this.Works
+                this.cate == 'normal'?this.page = '/service/':'/works/';
               },
               data(){
                   return{

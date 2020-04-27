@@ -64,15 +64,15 @@ const ClientsSection = {
                 <b v-else-if="cate == 'consulting'">
                     컨설팅 문의
                 </b>
+                <b v-else>
+                    상담 문의
+                </b>
                 <div class='pluarotate'>
                     <span></span>
                     <span></span>
                 </div>    
             </router-link>
-    </div>`,
-    mounted(){
-        console.log(this.cate)
-    }
+    </div>`
 }
 
 export default ClientsSection;

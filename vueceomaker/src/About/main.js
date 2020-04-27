@@ -12,6 +12,7 @@ const AboutPage = {
         About
     },
     created(){
+        window.scrollTo(0, 0); 
         EventBus.$emit('routerChange',true)
     }
 

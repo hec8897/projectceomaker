@@ -13,7 +13,8 @@ const contactMainPage = {
                     contactArea
                 },
                 created(){
-                    EventBus.$emit('routerChange',true)
+                    window.scrollTo(0, 0); 
+                    EventBus.$emit('routerChange',true);
                 }
 }
 
