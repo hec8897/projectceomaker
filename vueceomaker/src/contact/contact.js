@@ -57,8 +57,17 @@ const contactArea = {
                                     <textarea name="" id="reqmemo" v-model="reqMemo"></textarea>
                                 </div>
                                 </form>
+            
                             </div>
-                        </div></div>
+                        </div>
+                        <div class='btn'>
+                        상담 문의 하기
+                            <div class='pluarotate'>
+                                <span></span>
+                                <span></span>
+                            </div>    
+                        </div>
+                    </div>
                </div>`,
                data(){
                    return{

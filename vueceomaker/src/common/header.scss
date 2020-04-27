@@ -17,12 +17,20 @@ header{
             background-color: rgba(0,0,0,.5);
             top: 0;
             transition: .2s ease-in;
+            @media (max-width:767px) {
+                height: 70px;
+            }
+
+        
         }
         &:hover ul.gnb ol{
             opacity: 1.0;
         }
         &:hover::before{
             height: 250px;
+            @media (max-width:767px) {
+                height: 70px;
+            }
         }
         h1{
             width: 10%;
@@ -31,7 +39,7 @@ header{
             z-index: 999;
             @media (max-width:767px) {
                 img{
-                    width: 130px;
+                    width: 100px;
                 }
             }
         }
@@ -99,6 +107,10 @@ header{
             -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
             z-index: 999;
+            @media (max-width:767px) {
+                top: 70%;
+            }
+
             span{
                 background: #fff;
                 display: block;

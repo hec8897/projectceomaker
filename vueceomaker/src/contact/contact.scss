@@ -139,6 +139,10 @@ div.form {
 
     }
 
-
+    div.btn{
+        @include btnDefault(#222);
+        display: block;
+        margin: 0 auto;
+    }
 
 }

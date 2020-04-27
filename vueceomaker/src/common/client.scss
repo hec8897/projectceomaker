@@ -22,7 +22,6 @@ div.client_section{
         @media (max-width: 767px){
             font-size: 14px;
         }
-
     }
     div.clients{
         max-width: 1000px;
@@ -39,6 +38,7 @@ div.client_section{
         margin: {
             left: 5px;
             right: 5px;
+            bottom: 10px;
         };
         b{
             font-weight: normal;
