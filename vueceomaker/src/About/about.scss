@@ -7,6 +7,10 @@ div.about{
             text-align: center;
                 h2{
                     font-size: 54px;
+                    @media (max-width:1200px) {
+                        font-size: 44px;
+                    }
+
                     @media (max-width:767px) {
                         font-size: 28px;
                         width: 80%;
@@ -131,12 +135,22 @@ div.about{
                         padding: 30px;
                         box-sizing: border-box;
                         text-align: left;
+                        position: relative;
+                        @media (max-width:460px) {
+                            height: 235px;
+
+                        }
+
                     
 
                         h3{
                             font-size: 30px;
                             font-weight: normal;
                             margin-bottom: 30px;
+                            @media (max-width:460px) {
+                                margin-bottom: 10px;
+                            }
+
                         }
                         p{
                             width: 85%;
@@ -147,7 +161,11 @@ div.about{
                         }
                         div.btn{
                             @include btnDefault(#222);
-                            width:100%;
+                            width: 90%;
+                            position: absolute;
+                            bottom: 5%;
+                            left: 50%;
+                            transform: translateX(-50%);
                         }
                         @media (max-width:767px) {
                             width: 48%;
@@ -161,6 +179,10 @@ div.about{
                             }
 
                         }
+                        @media (max-width:460px) {
+                            width: 47%;
+                        }
+
                         
                     }
                 }

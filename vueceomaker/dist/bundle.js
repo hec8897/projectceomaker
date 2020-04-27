@@ -2040,7 +2040,7 @@ module.exports = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.about div.about_main div.section {\n  padding: 100px 0px;\n  text-align: center; }\n  div.about div.about_main div.section h2 {\n    font-size: 54px; }\n    @media (max-width: 767px) {\n      div.about div.about_main div.section h2 {\n        font-size: 28px;\n        width: 80%;\n        margin: 0 auto; } }\n  div.about div.about_main div.section p {\n    font-size: 1.2rem; }\n    @media (max-width: 767px) {\n      div.about div.about_main div.section p {\n        width: 80%;\n        margin: 0 auto; } }\n    div.about div.about_main div.section p.mt {\n      margin-top: 30px; }\n  @media (max-width: 767px) {\n    div.about div.about_main div.section.section1 {\n      height: 600px; } }\n  div.about div.about_main div.section.section1 ul.circle_gret {\n    margin-top: 50px;\n    position: relative; }\n    div.about div.about_main div.section.section1 ul.circle_gret li {\n      display: inline-block;\n      width: 300px;\n      height: 300px;\n      border-radius: 100%;\n      margin: 30px;\n      position: relative;\n      color: white; }\n      div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n        font-size: 30px;\n        margin: 10px 0px; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(1) {\n        background-color: #34dc3c; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n        background-color: #1dbfd7; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n        background-color: #f9c717; }\n      div.about div.about_main div.section.section1 ul.circle_gret li > div {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%); }\n      @media (max-width: 1200px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 220px;\n          height: 220px;\n          margin: 10px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n            font-size: 24px; } }\n      @media (max-width: 767px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 300px;\n          height: 300px;\n          position: absolute;\n          margin: 0; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(1) {\n            left: 50%;\n            transform: translateX(-50%); }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 5%;\n            top: 250px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 5%;\n            top: 250px; } }\n      @media (max-width: 514px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 220px;\n          height: 220px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 1%;\n            top: 180px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 1%;\n            top: 180px; } }\n      @media (max-width: 414px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 200px;\n          height: 200px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n            font-size: 20px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 1%;\n            top: 180px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 1%;\n            top: 180px; } }\n  div.about div.about_main div.section.section2 {\n    background-color: #f6f6f6;\n    overflow-x: hidden; }\n    div.about div.about_main div.section.section2 ul.sq_list {\n      max-width: 1200px;\n      margin: 0 auto;\n      margin-top: 30px; }\n      @media (max-width: 1200px) {\n        div.about div.about_main div.section.section2 ul.sq_list {\n          max-width: 1024px; } }\n      @media (max-width: 1024px) {\n        div.about div.about_main div.section.section2 ul.sq_list {\n          max-width: 95%; } }\n      div.about div.about_main div.section.section2 ul.sq_list li {\n        display: inline-block;\n        width: 24%;\n        height: 265px;\n        margin: 3px;\n        background-color: #fff;\n        padding: 30px;\n        box-sizing: border-box;\n        text-align: left; }\n        div.about div.about_main div.section.section2 ul.sq_list li h3 {\n          font-size: 30px;\n          font-weight: normal;\n          margin-bottom: 30px; }\n        div.about div.about_main div.section.section2 ul.sq_list li p {\n          width: 85%;\n          min-height: 60px;\n          font-size: 14px;\n          line-height: 20px;\n          margin-bottom: 20px; }\n        div.about div.about_main div.section.section2 ul.sq_list li div.btn {\n          position: relative;\n          z-index: 9;\n          display: inline-block;\n          border: 1px solid #222;\n          font-size: 14px;\n          text-align: left;\n          color: #222;\n          width: 200px;\n          height: 50px;\n          line-height: 50px;\n          padding: 0 20px;\n          box-sizing: border-box;\n          transition: all 0.2s ease;\n          cursor: pointer;\n          width: 100%; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn::before {\n            content: '';\n            position: absolute;\n            z-index: -1;\n            top: 0;\n            right: 0;\n            width: 0;\n            height: 100%;\n            background: #1dbfd7;\n            transition: width 0.2s; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate {\n            position: absolute;\n            top: 17px;\n            right: 20px;\n            display: block;\n            width: 12px;\n            height: 12px;\n            text-align: center; }\n            div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate span {\n              position: absolute;\n              top: 6px;\n              display: block;\n              width: 11px;\n              height: 1px;\n              background-color: #222; }\n              div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate span:last-child {\n                transform: rotate(90deg); }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover::before {\n            width: 100%;\n            left: 0; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover {\n            border-color: #1dbfd7;\n            color: #222; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover span {\n            background: #222; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover div.pluarotate {\n            animation-duration: 1s;\n            animation-fill-mode: both;\n            animation-iteration-count: infinite;\n            animation-name: plusRotate; }\n        @media (max-width: 767px) {\n          div.about div.about_main div.section.section2 ul.sq_list li {\n            width: 48%;\n            padding: 20px; }\n            div.about div.about_main div.section.section2 ul.sq_list li h3 {\n              font-size: 18px; }\n            div.about div.about_main div.section.section2 ul.sq_list li p {\n              width: 100%;\n              margin: 0; } }\n  div.about div.about_main div.section.section3 {\n    padding: 0; }\n    div.about div.about_main div.section.section3 div#map {\n      width: 100%;\n      height: 500px;\n      background-color: darkgrey; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.about div.about_main div.section {\n  padding: 100px 0px;\n  text-align: center; }\n  div.about div.about_main div.section h2 {\n    font-size: 54px; }\n    @media (max-width: 1200px) {\n      div.about div.about_main div.section h2 {\n        font-size: 44px; } }\n    @media (max-width: 767px) {\n      div.about div.about_main div.section h2 {\n        font-size: 28px;\n        width: 80%;\n        margin: 0 auto; } }\n  div.about div.about_main div.section p {\n    font-size: 1.2rem; }\n    @media (max-width: 767px) {\n      div.about div.about_main div.section p {\n        width: 80%;\n        margin: 0 auto; } }\n    div.about div.about_main div.section p.mt {\n      margin-top: 30px; }\n  @media (max-width: 767px) {\n    div.about div.about_main div.section.section1 {\n      height: 600px; } }\n  div.about div.about_main div.section.section1 ul.circle_gret {\n    margin-top: 50px;\n    position: relative; }\n    div.about div.about_main div.section.section1 ul.circle_gret li {\n      display: inline-block;\n      width: 300px;\n      height: 300px;\n      border-radius: 100%;\n      margin: 30px;\n      position: relative;\n      color: white; }\n      div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n        font-size: 30px;\n        margin: 10px 0px; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(1) {\n        background-color: #34dc3c; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n        background-color: #1dbfd7; }\n      div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n        background-color: #f9c717; }\n      div.about div.about_main div.section.section1 ul.circle_gret li > div {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%); }\n      @media (max-width: 1200px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 220px;\n          height: 220px;\n          margin: 10px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n            font-size: 24px; } }\n      @media (max-width: 767px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 300px;\n          height: 300px;\n          position: absolute;\n          margin: 0; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(1) {\n            left: 50%;\n            transform: translateX(-50%); }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 5%;\n            top: 250px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 5%;\n            top: 250px; } }\n      @media (max-width: 514px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 220px;\n          height: 220px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 1%;\n            top: 180px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 1%;\n            top: 180px; } }\n      @media (max-width: 414px) {\n        div.about div.about_main div.section.section1 ul.circle_gret li {\n          width: 200px;\n          height: 200px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li h3 {\n            font-size: 20px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(2) {\n            left: 1%;\n            top: 180px; }\n          div.about div.about_main div.section.section1 ul.circle_gret li:nth-child(3) {\n            right: 1%;\n            top: 180px; } }\n  div.about div.about_main div.section.section2 {\n    background-color: #f6f6f6;\n    overflow-x: hidden; }\n    div.about div.about_main div.section.section2 ul.sq_list {\n      max-width: 1200px;\n      margin: 0 auto;\n      margin-top: 30px; }\n      @media (max-width: 1200px) {\n        div.about div.about_main div.section.section2 ul.sq_list {\n          max-width: 1024px; } }\n      @media (max-width: 1024px) {\n        div.about div.about_main div.section.section2 ul.sq_list {\n          max-width: 95%; } }\n      div.about div.about_main div.section.section2 ul.sq_list li {\n        display: inline-block;\n        width: 24%;\n        height: 265px;\n        margin: 3px;\n        background-color: #fff;\n        padding: 30px;\n        box-sizing: border-box;\n        text-align: left;\n        position: relative; }\n        @media (max-width: 460px) {\n          div.about div.about_main div.section.section2 ul.sq_list li {\n            height: 235px; } }\n        div.about div.about_main div.section.section2 ul.sq_list li h3 {\n          font-size: 30px;\n          font-weight: normal;\n          margin-bottom: 30px; }\n          @media (max-width: 460px) {\n            div.about div.about_main div.section.section2 ul.sq_list li h3 {\n              margin-bottom: 10px; } }\n        div.about div.about_main div.section.section2 ul.sq_list li p {\n          width: 85%;\n          min-height: 60px;\n          font-size: 14px;\n          line-height: 20px;\n          margin-bottom: 20px; }\n        div.about div.about_main div.section.section2 ul.sq_list li div.btn {\n          position: relative;\n          z-index: 9;\n          display: inline-block;\n          border: 1px solid #222;\n          font-size: 14px;\n          text-align: left;\n          color: #222;\n          width: 200px;\n          height: 50px;\n          line-height: 50px;\n          padding: 0 20px;\n          box-sizing: border-box;\n          transition: all 0.2s ease;\n          cursor: pointer;\n          width: 90%;\n          position: absolute;\n          bottom: 5%;\n          left: 50%;\n          transform: translateX(-50%); }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn::before {\n            content: '';\n            position: absolute;\n            z-index: -1;\n            top: 0;\n            right: 0;\n            width: 0;\n            height: 100%;\n            background: #1dbfd7;\n            transition: width 0.2s; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate {\n            position: absolute;\n            top: 17px;\n            right: 20px;\n            display: block;\n            width: 12px;\n            height: 12px;\n            text-align: center; }\n            div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate span {\n              position: absolute;\n              top: 6px;\n              display: block;\n              width: 11px;\n              height: 1px;\n              background-color: #222; }\n              div.about div.about_main div.section.section2 ul.sq_list li div.btn div.pluarotate span:last-child {\n                transform: rotate(90deg); }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover::before {\n            width: 100%;\n            left: 0; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover {\n            border-color: #1dbfd7;\n            color: #222; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover span {\n            background: #222; }\n          div.about div.about_main div.section.section2 ul.sq_list li div.btn:hover div.pluarotate {\n            animation-duration: 1s;\n            animation-fill-mode: both;\n            animation-iteration-count: infinite;\n            animation-name: plusRotate; }\n        @media (max-width: 767px) {\n          div.about div.about_main div.section.section2 ul.sq_list li {\n            width: 48%;\n            padding: 20px; }\n            div.about div.about_main div.section.section2 ul.sq_list li h3 {\n              font-size: 18px; }\n            div.about div.about_main div.section.section2 ul.sq_list li p {\n              width: 100%;\n              margin: 0; } }\n        @media (max-width: 460px) {\n          div.about div.about_main div.section.section2 ul.sq_list li {\n            width: 47%; } }\n  div.about div.about_main div.section.section3 {\n    padding: 0; }\n    div.about div.about_main div.section.section3 div#map {\n      width: 100%;\n      height: 500px;\n      background-color: darkgrey; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2061,7 +2061,25 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/about-se
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.about section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.about section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.about section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.about section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      font-weight: bolder; }\n      div.about section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.about section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.about section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.about section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.about section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.about section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.about section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.about section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.about section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.about section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.about section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.about section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.about section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.about section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.about section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.about section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    font-size: 16px; }\n    @media (max-width: 1200px) {\n      div.about section.section1 div.text_area {\n        font-size: 14px; } }\n    @media (max-width: 767px) {\n      div.about section.section1 div.text_area {\n        font-size: 12px; } }\n    div.about section.section1 div.text_area h2 {\n      font-size: 3.375em;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      @media (max-width: 1200px) {\n        div.about section.section1 div.text_area h2 {\n          font-size: 3.125em; } }\n      @media (max-width: 767px) {\n        div.about section.section1 div.text_area h2 {\n          min-width: 340px; } }\n      div.about section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.about section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.about section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.about section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.about section.section1 div.text_area h2 img {\n            display: none; } }\n    div.about section.section1 div.text_area p.s_tit {\n      font-size: 1.125em;\n      line-height: 30px;\n      margin-bottom: 30px; }\n      @media (max-width: 767px) {\n        div.about section.section1 div.text_area p.s_tit {\n          font-size: 1.275em;\n          width: 80%;\n          margin: 30px auto; } }\n    div.about section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.about section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.about section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.about section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.about section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.about section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.about section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.about section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.about section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/client.scss":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/client.scss ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.client_section {\n  padding: 100px 0px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto; }\n  @media (max-width: 1200px) {\n    div.client_section {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    div.client_section {\n      max-width: 95%; } }\n  @media (max-width: 767px) {\n    div.client_section {\n      padding-bottom: 50px; } }\n  div.client_section h2 {\n    text-align: center;\n    font-size: 54px;\n    color: #222;\n    margin: 0; }\n    @media (max-width: 767px) {\n      div.client_section h2 {\n        font-size: 30px; } }\n  div.client_section p {\n    margin: 30px 0px;\n    font-size: 18px; }\n    @media (max-width: 767px) {\n      div.client_section p {\n        font-size: 14px; } }\n  div.client_section div.clients {\n    max-width: 1000px;\n    margin: 30px auto; }\n    div.client_section div.clients div.client {\n      width: 160px;\n      margin: 2px;\n      display: inline-block; }\n  div.client_section .btn {\n    position: relative;\n    z-index: 9;\n    display: inline-block;\n    border: 1px solid #222;\n    font-size: 14px;\n    text-align: left;\n    color: #222;\n    width: 200px;\n    height: 50px;\n    line-height: 50px;\n    padding: 0 20px;\n    box-sizing: border-box;\n    transition: all 0.2s ease;\n    cursor: pointer;\n    margin: 0px auto;\n    margin-left: 5px;\n    margin-right: 5px; }\n    div.client_section .btn::before {\n      content: '';\n      position: absolute;\n      z-index: -1;\n      top: 0;\n      right: 0;\n      width: 0;\n      height: 100%;\n      background: #1dbfd7;\n      transition: width 0.2s; }\n    div.client_section .btn div.pluarotate {\n      position: absolute;\n      top: 17px;\n      right: 20px;\n      display: block;\n      width: 12px;\n      height: 12px;\n      text-align: center; }\n      div.client_section .btn div.pluarotate span {\n        position: absolute;\n        top: 6px;\n        display: block;\n        width: 11px;\n        height: 1px;\n        background-color: #222; }\n        div.client_section .btn div.pluarotate span:last-child {\n          transform: rotate(90deg); }\n    div.client_section .btn:hover::before {\n      width: 100%;\n      left: 0; }\n    div.client_section .btn:hover {\n      border-color: #1dbfd7;\n      color: #222; }\n    div.client_section .btn:hover span {\n      background: #222; }\n    div.client_section .btn:hover div.pluarotate {\n      animation-duration: 1s;\n      animation-fill-mode: both;\n      animation-iteration-count: infinite;\n      animation-name: plusRotate; }\n    div.client_section .btn b {\n      font-weight: normal; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2097,7 +2115,25 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\nheader div.head {\n  width: 100%;\n  position: fixed;\n  padding: 20px 0px;\n  z-index: 999;\n  cursor: pointer; }\n  @media (max-width: 767px) {\n    header div.head {\n      padding: 10px 0px; } }\n  header div.head::before {\n    position: absolute;\n    content: '';\n    width: 100%;\n    height: 0px;\n    background-color: rgba(0, 0, 0, 0.5);\n    top: 0;\n    transition: .2s ease-in; }\n  header div.head:hover ol {\n    opacity: 1.0; }\n  header div.head:hover::before {\n    height: 250px; }\n  header div.head h1 {\n    width: 10%;\n    display: inline; }\n    @media (max-width: 767px) {\n      header div.head h1 img {\n        width: 130px; } }\n  header div.head ul {\n    display: inline-block;\n    text-align: center;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%); }\n    header div.head ul > li {\n      display: inline;\n      color: #fff;\n      font-size: 18px;\n      margin: 0px 30px;\n      font-family: 'roboto';\n      position: relative; }\n      header div.head ul > li span.router-link-exact-active {\n        color: #1dbfd7; }\n      @media (max-width: 1200px) {\n        header div.head ul > li {\n          margin: 0px 15px;\n          font-size: 16px; } }\n      @media (max-width: 960px) {\n        header div.head ul > li {\n          margin: 0px 10px; } }\n      @media (max-width: 767px) {\n        header div.head ul > li {\n          display: none; } }\n      header div.head ul > li ol {\n        text-align: center;\n        position: absolute;\n        left: 50%;\n        top: 40px;\n        transform: translateX(-50%);\n        opacity: 0.0; }\n        header div.head ul > li ol li {\n          color: #888;\n          font-size: 14px;\n          margin: 15px 0px; }\n          header div.head ul > li ol li span.router-link-active {\n            color: #1dbfd7; }\n  header div.head div.ham_btn {\n    cursor: pointer;\n    display: inline-block;\n    width: 30px;\n    height: 30px;\n    position: absolute;\n    top: 50%;\n    right: 0;\n    transform: translateY(-50%);\n    transition: all 0.3s ease; }\n    header div.head div.ham_btn span {\n      background: #fff;\n      display: block;\n      width: 30px;\n      height: 3px;\n      margin-bottom: 7px;\n      transition: all 0.3s ease; }\n      header div.head div.ham_btn span:last-child {\n        background: #1dbfd7;\n        width: 15px;\n        margin-left: 15px; }\n    header div.head div.ham_btn:hover span:nth-child(2) {\n      width: 15px; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\nheader div.head {\n  width: 100%;\n  position: fixed;\n  padding: 20px 0px;\n  z-index: 999;\n  cursor: pointer; }\n  @media (max-width: 767px) {\n    header div.head {\n      padding: 10px 0px; } }\n  header div.head::before {\n    position: absolute;\n    content: '';\n    width: 100%;\n    height: 90px;\n    background-color: rgba(0, 0, 0, 0.5);\n    top: 0;\n    transition: .2s ease-in; }\n  header div.head:hover ul.gnb ol {\n    opacity: 1.0; }\n  header div.head:hover::before {\n    height: 250px; }\n  header div.head h1 {\n    width: 10%;\n    display: inline;\n    position: relative;\n    z-index: 999; }\n    @media (max-width: 767px) {\n      header div.head h1 img {\n        width: 130px; } }\n  header div.head ul.gnb {\n    display: inline-block;\n    text-align: center;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%); }\n    header div.head ul.gnb > li {\n      display: inline;\n      color: #fff;\n      font-size: 18px;\n      margin: 0px 30px;\n      font-family: 'roboto';\n      position: relative; }\n      header div.head ul.gnb > li span.router-link-exact-active {\n        color: #1dbfd7; }\n      @media (max-width: 1200px) {\n        header div.head ul.gnb > li {\n          margin: 0px 15px;\n          font-size: 16px; } }\n      @media (max-width: 960px) {\n        header div.head ul.gnb > li {\n          margin: 0px 10px; } }\n      @media (max-width: 767px) {\n        header div.head ul.gnb > li {\n          display: none; } }\n      header div.head ul.gnb > li ol {\n        text-align: center;\n        position: absolute;\n        left: 50%;\n        top: 40px;\n        transform: translateX(-50%);\n        opacity: 0.0; }\n        header div.head ul.gnb > li ol > li {\n          color: #888;\n          font-size: 14px;\n          margin: 15px 0px; }\n          header div.head ul.gnb > li ol > li span.router-link-active {\n            color: #1dbfd7; }\n  header div.head div.ham_btn {\n    cursor: pointer;\n    display: inline-block;\n    width: 30px;\n    height: 30px;\n    position: absolute;\n    top: 50%;\n    right: 0;\n    transition: all 0.3s ease;\n    -webkit-transform: rotate(0deg);\n    -moz-transform: rotate(0deg);\n    -o-transform: rotate(0deg);\n    transform: translateY(-50%) rotate(0deg);\n    -webkit-transition: .5s ease-in-out;\n    -moz-transition: .5s ease-in-out;\n    -o-transition: .5s ease-in-out;\n    transition: .5s ease-in-out;\n    z-index: 999; }\n    header div.head div.ham_btn span {\n      background: #fff;\n      display: block;\n      width: 30px;\n      height: 3px;\n      margin-bottom: 7px;\n      transition: all 0.3s ease;\n      position: absolute;\n      -webkit-transform: rotate(0deg);\n      -moz-transform: rotate(0deg);\n      -o-transform: rotate(0deg);\n      transform: rotate(0deg);\n      -webkit-transition: .25s ease-in-out;\n      -moz-transition: .25s ease-in-out;\n      -o-transition: .25s ease-in-out;\n      transition: .25s ease-in-out; }\n      header div.head div.ham_btn span:nth-child(1) {\n        top: 0px; }\n      header div.head div.ham_btn span:nth-child(2) {\n        top: 10px; }\n      header div.head div.ham_btn span:nth-child(3) {\n        top: 10px; }\n      header div.head div.ham_btn span:last-child {\n        top: 20px;\n        background: #1dbfd7;\n        width: 15px;\n        margin-left: 15px; }\n    header div.head div.ham_btn:hover span:nth-child(2) {\n      width: 15px; }\n    header div.head div.ham_btn:hover span:nth-child(3) {\n      width: 15px; }\n    header div.head div.ham_btn.open:hover span:nth-child(2) {\n      width: 100%; }\n    header div.head div.ham_btn.open:hover span:nth-child(3) {\n      width: 100%; }\n    header div.head div.ham_btn.open span:nth-child(1) {\n      top: 18px;\n      width: 0%;\n      left: 50%; }\n    header div.head div.ham_btn.open span:nth-child(2) {\n      -webkit-transform: rotate(45deg);\n      -moz-transform: rotate(45deg);\n      -o-transform: rotate(45deg);\n      transform: rotate(45deg);\n      background-color: #222; }\n    header div.head div.ham_btn.open span:nth-child(3) {\n      -webkit-transform: rotate(-45deg);\n      -moz-transform: rotate(-45deg);\n      -o-transform: rotate(-45deg);\n      transform: rotate(-45deg);\n      background-color: #1dbfd7; }\n    header div.head div.ham_btn.open span:nth-child(4) {\n      top: 18px;\n      width: 0%;\n      left: 50%; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/nav.scss":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/nav.scss ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.nav_mo {\n  position: absolute;\n  width: 100%;\n  height: 0%;\n  background-color: #fff;\n  transition-delay: 1s;\n  transition: .25s ease-in;\n  z-index: 900;\n  top: 0;\n  cursor: default; }\n  div.nav_mo ul.lnb {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    top: 30%;\n    width: 150px;\n    height: 200px;\n    visibility: hidden;\n    opacity: 0.0;\n    transition: 0s ease-in;\n    transition-delay: 0.25s;\n    text-align: center; }\n    @media (max-width: 375px) {\n      div.nav_mo ul.lnb {\n        top: 35%; } }\n    div.nav_mo ul.lnb > li {\n      cursor: pointer;\n      display: block;\n      color: #222;\n      font-size: 24px;\n      font-family: 'roboto';\n      position: relative;\n      margin: 20px 0px;\n      z-index: 990; }\n      @media (max-width: 767px) {\n        div.nav_mo ul.lnb > li {\n          font-size: 18px;\n          margin: 10px 0px; } }\n      @media (max-width: 375px) {\n        div.nav_mo ul.lnb > li {\n          margin: 5px 0px; } }\n      div.nav_mo ul.lnb > li.router-link-active::after {\n        content: '';\n        position: absolute;\n        background-color: #6edbec;\n        display: inline-block;\n        width: 100%;\n        height: 8px;\n        left: 0;\n        bottom: 1px;\n        z-index: -1; }\n    div.nav_mo ul.lnb ol {\n      margin-bottom: 30px; }\n      div.nav_mo ul.lnb ol li {\n        cursor: pointer;\n        display: block;\n        font-size: 16px;\n        color: #666;\n        margin: 10px 0px; }\n        @media (max-width: 767px) {\n          div.nav_mo ul.lnb ol li {\n            font-size: 14px;\n            margin: 5px 0px; } }\n  div.nav_mo.close {\n    height: 0vh; }\n    div.nav_mo.close * {\n      opacity: 0.0; }\n  div.nav_mo.open {\n    height: 100vh; }\n    div.nav_mo.open ul {\n      opacity: 1.0;\n      visibility: visible; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2157,7 +2193,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/contact-
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.contact section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.contact section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.contact section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.contact section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      div.contact section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.contact section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.contact section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.contact section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.contact section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.contact section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.contact section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.contact section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.contact section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.contact section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.contact section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.contact section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.contact section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.contact section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.contact section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.contact section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    font-size: 16px; }\n    @media (max-width: 1200px) {\n      div.contact section.section1 div.text_area {\n        font-size: 14px; } }\n    @media (max-width: 767px) {\n      div.contact section.section1 div.text_area {\n        font-size: 12px; } }\n    div.contact section.section1 div.text_area h2 {\n      font-size: 3.375em;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      @media (max-width: 1200px) {\n        div.contact section.section1 div.text_area h2 {\n          font-size: 3.125em; } }\n      @media (max-width: 767px) {\n        div.contact section.section1 div.text_area h2 {\n          min-width: 340px; } }\n      div.contact section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.contact section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.contact section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.contact section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.contact section.section1 div.text_area h2 img {\n            display: none; } }\n    div.contact section.section1 div.text_area p.s_tit {\n      font-size: 1.125em;\n      line-height: 30px;\n      margin-bottom: 30px; }\n      @media (max-width: 767px) {\n        div.contact section.section1 div.text_area p.s_tit {\n          font-size: 1.275em;\n          width: 80%;\n          margin: 30px auto; } }\n    div.contact section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.contact section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.contact section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.contact section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.contact section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.contact section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.contact section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.contact section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.contact section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2202,7 +2238,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/service-
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.main section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.main section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    width: 100%; }\n    div.main section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.main section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      font-weight: bolder; }\n      div.main section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.main section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.main section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.main section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.main section.section1 div.text_area h2 img {\n            display: none; } }\n      @media (max-width: 767px) {\n        div.main section.section1 div.text_area h2 {\n          font-size: 34px; } }\n    div.main section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n      @media (max-width: 767px) {\n        div.main section.section1 div.text_area p.s_tit {\n          font-size: 16px; } }\n    div.main section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.main section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.main section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.main section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.main section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.main section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.main section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.main section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.main section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n\ndiv.main div.client_section {\n  padding: 100px 0px;\n  text-align: center;\n  max-width: 1200px;\n  margin: 0 auto; }\n  @media (max-width: 1200px) {\n    div.main div.client_section {\n      max-width: 1024px; } }\n  @media (max-width: 1024px) {\n    div.main div.client_section {\n      max-width: 95%; } }\n  @media (max-width: 767px) {\n    div.main div.client_section {\n      padding-bottom: 50px; } }\n  div.main div.client_section h2 {\n    text-align: center;\n    font-size: 54px;\n    color: #222;\n    margin: 0; }\n    @media (max-width: 767px) {\n      div.main div.client_section h2 {\n        font-size: 30px; } }\n  div.main div.client_section p {\n    margin: 30px 0px;\n    font-size: 18px; }\n    @media (max-width: 767px) {\n      div.main div.client_section p {\n        font-size: 14px; } }\n  div.main div.client_section div.clients {\n    max-width: 1000px;\n    margin: 0 auto; }\n    div.main div.client_section div.clients div.client {\n      width: 160px;\n      margin: 2px;\n      display: inline-block; }\n  div.main div.client_section div.btn {\n    margin: 20px auto;\n    position: relative;\n    z-index: 9;\n    display: inline-block;\n    border: 1px solid #222;\n    font-size: 14px;\n    text-align: left;\n    color: #222;\n    width: 200px;\n    height: 50px;\n    line-height: 50px;\n    padding: 0 20px;\n    box-sizing: border-box;\n    transition: all 0.2s ease;\n    cursor: pointer; }\n    div.main div.client_section div.btn::before {\n      content: '';\n      position: absolute;\n      z-index: -1;\n      top: 0;\n      right: 0;\n      width: 0;\n      height: 100%;\n      background: #1dbfd7;\n      transition: width 0.2s; }\n    div.main div.client_section div.btn div.pluarotate {\n      position: absolute;\n      top: 17px;\n      right: 20px;\n      display: block;\n      width: 12px;\n      height: 12px;\n      text-align: center; }\n      div.main div.client_section div.btn div.pluarotate span {\n        position: absolute;\n        top: 6px;\n        display: block;\n        width: 11px;\n        height: 1px;\n        background-color: #222; }\n        div.main div.client_section div.btn div.pluarotate span:last-child {\n          transform: rotate(90deg); }\n    div.main div.client_section div.btn:hover::before {\n      width: 100%;\n      left: 0; }\n    div.main div.client_section div.btn:hover {\n      border-color: #1dbfd7;\n      color: #222; }\n    div.main div.client_section div.btn:hover span {\n      background: #222; }\n    div.main div.client_section div.btn:hover div.pluarotate {\n      animation-duration: 1s;\n      animation-fill-mode: both;\n      animation-iteration-count: infinite;\n      animation-name: plusRotate; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.main section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.main section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    font-size: 16px; }\n    @media (max-width: 1200px) {\n      div.main section.section1 div.text_area {\n        font-size: 14px; } }\n    @media (max-width: 767px) {\n      div.main section.section1 div.text_area {\n        font-size: 12px; } }\n    div.main section.section1 div.text_area h2 {\n      font-size: 3.375em;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      @media (max-width: 1200px) {\n        div.main section.section1 div.text_area h2 {\n          font-size: 3.125em; } }\n      @media (max-width: 767px) {\n        div.main section.section1 div.text_area h2 {\n          min-width: 340px; } }\n      div.main section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.main section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.main section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.main section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.main section.section1 div.text_area h2 img {\n            display: none; } }\n    div.main section.section1 div.text_area p.s_tit {\n      font-size: 1.125em;\n      line-height: 30px;\n      margin-bottom: 30px; }\n      @media (max-width: 767px) {\n        div.main section.section1 div.text_area p.s_tit {\n          font-size: 1.275em;\n          width: 80%;\n          margin: 30px auto; } }\n    div.main section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.main section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.main section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.main section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.main section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.main section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.main section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.main section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.main section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -2266,7 +2302,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../image/main-sec
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.work section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.work section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center; }\n    div.work section.section1 div.text_area p {\n      font-size: 27px;\n      font-weight: 100; }\n    div.work section.section1 div.text_area h2 {\n      font-size: 54px;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      div.work section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.work section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.work section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.work section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n    div.work section.section1 div.text_area p.s_tit {\n      font-size: 18px;\n      line-height: 30px;\n      margin-bottom: 30px; }\n    div.work section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.work section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.work section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.work section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.work section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.work section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.work section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.work section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.work section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
+exports.push([module.i, "/*****animation define*****/\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes fadeInLeft {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-90px);\n    -ms-transform: translateX(-90px);\n    transform: translateX(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInRight {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(90px);\n    -ms-transform: translateX(90px);\n    transform: translateX(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    -ms-transform: translateX(0);\n    transform: translateX(0); } }\n\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(90px);\n    -ms-transform: translateY(90px);\n    transform: translateY(90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInDown {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(-90px);\n    -ms-transform: translateY(-90px);\n    transform: translateY(-90px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); } }\n\n@keyframes fadeInUp2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, 40px);\n    -ms-transform: translate(-50%, 40px);\n    transform: translate(-50%, 40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes fadeInDown2 {\n  0% {\n    opacity: 0;\n    -webkit-transform: translate(-50%, -40px);\n    -ms-transform: translate(-50%, -40px);\n    transform: translate(-50%, -40px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: translate(-50%, 0);\n    -ms-transform: translate(-50%, 0);\n    transform: translate(-50%, 0); } }\n\n@keyframes bounce {\n  0%, 20%, 50%, 80%, 100% {\n    -webkit-transform: translateY(0);\n    -ms-transform: translateY(0);\n    transform: translateY(0); }\n  40% {\n    -webkit-transform: translateY(-30px);\n    -ms-transform: translateY(-30px);\n    transform: translateY(-30px); }\n  60% {\n    -webkit-transform: translateY(-15px);\n    -ms-transform: translateY(-15px);\n    transform: translateY(-15px); } }\n\n@keyframes plusRotate {\n  0% {\n    transform-origin: center;\n    -webkit-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes img_ani_2 {\n  0% {\n    transform-origin: center;\n    -webkit-transform: translateX(-550px) translateY(550px);\n    -ms-transform: translateX(-550px) translateY(550px);\n    transform: translateX(-550px) translateY(550px); }\n  100% {\n    transform-origin: center;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\n@keyframes phone {\n  0% {\n    transform-origin: center;\n    opacity: 0;\n    -webkit-transform: translateX(300px) translateY(300px);\n    -ms-transform: translateX(300px) translateY(300px);\n    transform: translateX(300px) translateY(300px); }\n  100% {\n    transform-origin: center;\n    opacity: 1;\n    -webkit-transform: translateX(0) translateY(0);\n    -ms-transform: translateX(0) translateY(0);\n    transform: translateX(0) translateY(0); } }\n\ndiv.work section.section1 {\n  height: 600px;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); }\n  div.work section.section1 div.text_area {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: #fff;\n    text-align: center;\n    font-size: 16px; }\n    @media (max-width: 1200px) {\n      div.work section.section1 div.text_area {\n        font-size: 14px; } }\n    @media (max-width: 767px) {\n      div.work section.section1 div.text_area {\n        font-size: 12px; } }\n    div.work section.section1 div.text_area h2 {\n      font-size: 3.375em;\n      font-weight: 700;\n      margin-bottom: 30px;\n      font-weight: bolder; }\n      @media (max-width: 1200px) {\n        div.work section.section1 div.text_area h2 {\n          font-size: 3.125em; } }\n      @media (max-width: 767px) {\n        div.work section.section1 div.text_area h2 {\n          min-width: 340px; } }\n      div.work section.section1 div.text_area h2 span {\n        vertical-align: top; }\n        div.work section.section1 div.text_area h2 span.ci_color1 {\n          color: #1dbfd7; }\n        div.work section.section1 div.text_area h2 span.ci_color2 {\n          color: #015b96; }\n      div.work section.section1 div.text_area h2 img {\n        width: auto;\n        margin-top: -30px; }\n        @media (max-width: 960px) {\n          div.work section.section1 div.text_area h2 img {\n            display: none; } }\n    div.work section.section1 div.text_area p.s_tit {\n      font-size: 1.125em;\n      line-height: 30px;\n      margin-bottom: 30px; }\n      @media (max-width: 767px) {\n        div.work section.section1 div.text_area p.s_tit {\n          font-size: 1.275em;\n          width: 80%;\n          margin: 30px auto; } }\n    div.work section.section1 div.text_area div.btn {\n      position: relative;\n      z-index: 9;\n      display: inline-block;\n      border: 1px solid #fff;\n      font-size: 14px;\n      text-align: left;\n      color: #fff;\n      width: 200px;\n      height: 50px;\n      line-height: 50px;\n      padding: 0 20px;\n      box-sizing: border-box;\n      transition: all 0.2s ease;\n      cursor: pointer; }\n      div.work section.section1 div.text_area div.btn::before {\n        content: '';\n        position: absolute;\n        z-index: -1;\n        top: 0;\n        right: 0;\n        width: 0;\n        height: 100%;\n        background: #1dbfd7;\n        transition: width 0.2s; }\n      div.work section.section1 div.text_area div.btn div.pluarotate {\n        position: absolute;\n        top: 17px;\n        right: 20px;\n        display: block;\n        width: 12px;\n        height: 12px;\n        text-align: center; }\n        div.work section.section1 div.text_area div.btn div.pluarotate span {\n          position: absolute;\n          top: 6px;\n          display: block;\n          width: 11px;\n          height: 1px;\n          background-color: #fff; }\n          div.work section.section1 div.text_area div.btn div.pluarotate span:last-child {\n            transform: rotate(90deg); }\n      div.work section.section1 div.text_area div.btn:hover::before {\n        width: 100%;\n        left: 0; }\n      div.work section.section1 div.text_area div.btn:hover {\n        border-color: #1dbfd7;\n        color: #fff; }\n      div.work section.section1 div.text_area div.btn:hover span {\n        background: #fff; }\n      div.work section.section1 div.text_area div.btn:hover div.pluarotate {\n        animation-duration: 1s;\n        animation-fill-mode: both;\n        animation-iteration-count: infinite;\n        animation-name: plusRotate; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -5970,6 +6006,9 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/About/section1.js");
 /* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./about */ "./src/About/about.js");
+/* harmony import */ var _eventbus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../eventbus */ "./src/eventbus.js");
+
+
 
 
 const AboutPage = {
@@ -5980,6 +6019,9 @@ const AboutPage = {
     components:{
         Section1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
         About: _about__WEBPACK_IMPORTED_MODULE_1__["default"]
+    },
+    created(){
+        _eventbus__WEBPACK_IMPORTED_MODULE_2__["default"].$emit('routerChange',true)
     }
 
 }
@@ -6087,6 +6129,129 @@ new Vue({
 
 /***/ }),
 
+/***/ "./src/common/client.js":
+/*!******************************!*\
+  !*** ./src/common/client.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _client_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./client.scss */ "./src/common/client.scss");
+/* harmony import */ var _client_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const ClientsSection = {
+    props:['cate'],
+    template:`<div class='client_section'>
+        <h2>CLIENTS</h2>
+        <p>디지털 에이전시 CEOMAKER와 함꼐한 고객입니다.</p>
+        <div class='clients'>
+            <div class='client'>
+                <img src='image/client_1.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_2.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_3.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_4.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_5.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_6.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_7.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_8.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_9.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_10.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_11.jpg'>
+            </div>
+            <div class='client'>
+                <img src='image/client_12.jpg'>
+            </div>
+            
+        </div>
+        <div class='btn'>
+                카카오톡 문의
+                <div class='pluarotate'>
+                    <span></span>
+                    <span></span>
+                </div>    
+            </div>
+            <router-link v-bind:to ="'/contact/'+cate" tag='div' class='btn'>
+                <b v-if="cate == 'design'">
+                    디자인 문의
+                </b>
+                <b v-else-if="cate == 'marketing'">
+                    마케팅 문의
+                </b>
+                <b v-else-if="cate == 'academy'">
+                    교육 문의
+                </b>
+                <b v-else-if="cate == 'consulting'">
+                    컨설팅 문의
+                </b>
+                <div class='pluarotate'>
+                    <span></span>
+                    <span></span>
+                </div>    
+            </router-link>
+    </div>`,
+    mounted(){
+        console.log(this.cate)
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ClientsSection);
+
+/***/ }),
+
+/***/ "./src/common/client.scss":
+/*!********************************!*\
+  !*** ./src/common/client.scss ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./client.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/client.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
 /***/ "./src/common/footer.js":
 /*!******************************!*\
   !*** ./src/common/footer.js ***!
@@ -6158,43 +6323,86 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.scss */ "./src/common/header.scss");
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav.js */ "./src/common/nav.js");
+/* harmony import */ var _eventbus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../eventbus */ "./src/eventbus.js");
+
+
 
 const Header = {
     template: `<header>
                     <div class='head'>
+                        <NavTag v-bind:show='NavShow'/>
                         <div class='wrap'>
-                            <router-link to = '/' tag='h1'><img src='image/logo_w.png'></router-link>
-                            <ul>
+                            <router-link to = '/' tag='h1'><img v-bind:src='logo' class='logo'></router-link>
+                            <ul class='gnb'>
                             <li>
-                                <router-link to='/' tag='span'>SERVICE</router-link>
+                                <router-link to='/service/design' tag='span'>SERVICE</router-link>
                                     <ol>
                                         <li>
-                                            <router-link to='/design' tag='span'>design</router-link>
+                                            <router-link to='/service/design' tag='span'>design</router-link>
                                         </li>
                                         <li>
-                                            <router-link to='/marketing' tag='span'>marketing</router-link>
+                                            <router-link to='/service/marketing' tag='span'>marketing</router-link>
                                         </li>
                                         <li>
-                                            <router-link to='/academy' tag='span'>academy</router-link>
+                                            <router-link to='/service/academy' tag='span'>academy</router-link>
                                         </li>
                                         <li>
-                                            <router-link to='/consulting' tag='span'>consulting</router-link>
+                                            <router-link to='/service/consulting' tag='span'>consulting</router-link>
                                         </li>
                                     </ol>
                                 </li>
-                                <li><router-link to='/works/전체' tag='span'>WORKS</router-link></li>
-                               
-                                <li><router-link to='/contact/normal' tag='span'>CONTACT</router-link></li>
-                                <li><router-link to='/about/normal' tag='span'>ABOUT</router-link></li>
+                                <li>
+                                    <router-link to='/works/전체' tag='span'>WORKS</router-link>
+                                </li>
+                                <li>
+                                    <router-link to='/contact/normal' tag='span'>CONTACT</router-link>
+                                </li>
+                                <li>
+                                    <router-link to='/about/normal' tag='span'>ABOUT</router-link>
+                                </li>
                             </ul>
-                            <div class='ham_btn'>
+                            <div class='ham_btn' v-bind:class='NavShow' id='ham_btn' @click='NavOpen'>
+                                <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
                         </div>
                     </div>
-               </header>`
+               </header>`,
+               data(){
+                   return{
+                       NavShow:'close',
+                       logo:'image/logo_w.png'
+                    //    logo_color:'image/logo_color.png'
+
+                   }
+               },
+               created(){
+                    _eventbus__WEBPACK_IMPORTED_MODULE_2__["default"].$on('routerChange',()=>{
+                        this.NavClose()
+                    })
+
+               },
+               components:{
+                    NavTag: _nav_js__WEBPACK_IMPORTED_MODULE_1__["default"]
+               },
+               methods: {
+                   NavOpen() {
+                       this.NavShow = this.NavShow == 'open'?
+                       this.NavShow = 'close':
+                       this.NavShow = 'open' ; // show nav
+
+                       this.logo =  this.NavShow == 'close'?
+                       this.logo = 'image/logo_w.png':
+                       this.logo = 'image/logo_color.png'; //change logo
+                   },
+                   NavClose(){
+                    this.NavShow = 'close'; // show nav
+                    this.logo = 'image/logo_w.png'; //change logo
+                   }
+               },
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -6210,6 +6418,79 @@ const Header = {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
             var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./header.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/header.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/common/nav.js":
+/*!***************************!*\
+  !*** ./src/common/nav.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.scss */ "./src/common/nav.scss");
+/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_nav_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const Nav = {
+    props:['show'],
+    template:`<div class='nav_mo' v-bind:class="show">
+                    <ul class='lnb'>
+                        <router-link to='/service/' tag='li'>SERVICE</router-link>
+                        <ol>
+                            <router-link to='/service/design' tag='li'>Design</router-link>
+                            <router-link to='/service/marketing' tag='li'>Marketing</router-link>
+                            <router-link to='/service/academy' tag='li'>Academy</router-link>
+                            <router-link to='/service/consulting' tag='li'>Consulting</router-link>
+                        </ol>
+                        <router-link to='/works/전체' tag='li'>WORKS</router-link>
+                        <ol>
+                            <li>홈페이지</li></li>
+                            <li>랜딩페이지</li>
+                            <li>도서</li>
+                            <li>상세페이지</li>
+                            <li>마케팅</li>
+                        </ol>
+                        <router-link to='/contact/normal' tag='li'>CONTACT</router-link>
+                        <router-link to='/about/normal' tag='li'>ABOUT</router-link>
+                    </ul>
+              </div>`
+             
+}
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
+
+/***/ }),
+
+/***/ "./src/common/nav.scss":
+/*!*****************************!*\
+  !*** ./src/common/nav.scss ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./nav.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/nav.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -6259,7 +6540,7 @@ const SectionCate = {
               </div>`,
               created(){
                 this.cate == 'Works'?this.lists = this.Works:this.lists = this.Normal;
-                this.cate == 'Works'?this.page = '/works/':'';
+                this.cate == 'Works'?this.page = '/works/':'/design/';
               },
               data(){
                   return{
@@ -6322,6 +6603,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contact_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_contact_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 const contactArea = {
+    props:['mode'],
     template:`<div class='form'>
                     <h2>1:1문의</h2>
                     <div class="privacy">
@@ -6371,7 +6653,7 @@ const contactArea = {
                                 </div>
                                 <div>
                                     <p>상담분야</p>
-                                    <input type="text" id='reqcompany'>
+                                    <input type="text" id='reqcompany' v-model="consultClass">
                                 </div>
                                 <div class="text_area">
                                     <p>문의 내용*</p>
@@ -6380,7 +6662,26 @@ const contactArea = {
                                 </form>
                             </div>
                         </div></div>
-               </div>`
+               </div>`,
+               data(){
+                   return{
+                       consultClass:''
+                   }
+               },
+               created(){
+                   if(this.mode == 'design'){
+                        this.consultClass= "디자인 문의"
+                   }
+                   else if(this.mode == 'marketing'){
+                        this.consultClass= "마케팅 문의"
+                   }
+                   else if(this.mode == 'academy'){
+                        this.consultClass= "교육 문의"
+                   }
+                   else if(this.mode == 'consulting'){
+                        this.consultClass= "컨설팅 문의"
+                   }
+               }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (contactArea);
@@ -6429,17 +6730,23 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/contact/section1.js");
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact */ "./src/contact/contact.js");
+/* harmony import */ var _eventbus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../eventbus */ "./src/eventbus.js");
+
+
 
 
 const contactMainPage = {
-    props:['id'],
+    props:['mode'],
     template:`<div class='contact'>
                     <Section1/>
-                    <contactArea />
+                    <contactArea v-bind:mode='mode'/>
                 </div>`,
                 components:{
                     Section1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
                     contactArea: _contact__WEBPACK_IMPORTED_MODULE_1__["default"]
+                },
+                created(){
+                    _eventbus__WEBPACK_IMPORTED_MODULE_2__["default"].$emit('routerChange',true)
                 }
 }
 
@@ -6539,69 +6846,17 @@ module.exports = exported;
 
 /***/ }),
 
-/***/ "./src/main/clients.js":
-/*!*****************************!*\
-  !*** ./src/main/clients.js ***!
-  \*****************************/
+/***/ "./src/eventbus.js":
+/*!*************************!*\
+  !*** ./src/eventbus.js ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const ClientsSection = {
-    template:`<div class='client_section'>
-        <h2>CLIENTS</h2>
-        <p>디지털 에이전시 CEOMAKER와 함꼐한 고객입니다.</p>
-        <div class='clients'>
-            <div class='client'>
-                <img src='image/client_1.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_2.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_3.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_4.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_5.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_6.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_7.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_8.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_9.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_10.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_11.jpg'>
-            </div>
-            <div class='client'>
-                <img src='image/client_12.jpg'>
-            </div>
-            
-        </div>
-        <div class='btn'>
-                CONTACT US
-                <div class='pluarotate'>
-                    <span></span>
-                    <span></span>
-                </div>    
-            </div>
-    </div>`
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (ClientsSection);
+const EventBus = new Vue();
+/* harmony default export */ __webpack_exports__["default"] = (EventBus);
 
 /***/ }),
 
@@ -6617,7 +6872,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/main/section1.js");
 /* harmony import */ var _section2_section2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section2/section2 */ "./src/main/section2/section2.js");
 /* harmony import */ var _common_section_cate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/section-cate */ "./src/common/section-cate.js");
-/* harmony import */ var _clients__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./clients */ "./src/main/clients.js");
+/* harmony import */ var _common_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/client */ "./src/common/client.js");
+/* harmony import */ var _eventbus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../eventbus */ "./src/eventbus.js");
+
 
 
 
@@ -6629,14 +6886,20 @@ const MainPage = {
                 <Section1 />
                 <SectionCate cate='normal'/>
                     <Section2 v-bind:cate='cate'/>
-                <ClientsSection />
+                    <ClientsSection v-bind:cate='cate'/>
                 </div>`,
     components:{
         Section1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
         Section2: _section2_section2__WEBPACK_IMPORTED_MODULE_1__["default"],
         SectionCate: _common_section_cate__WEBPACK_IMPORTED_MODULE_2__["default"],
-        ClientsSection: _clients__WEBPACK_IMPORTED_MODULE_3__["default"]
-    }
+        ClientsSection: _common_client__WEBPACK_IMPORTED_MODULE_3__["default"]
+    },
+    created(){
+        _eventbus__WEBPACK_IMPORTED_MODULE_4__["default"].$emit('routerChange',true)
+    },
+    updated(){
+        _eventbus__WEBPACK_IMPORTED_MODULE_4__["default"].$emit('routerChange',true)
+    },
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MainPage);
@@ -7034,37 +7297,37 @@ const consultSection = {
                         </div>
                         <ul>
                             <li>
-                                <h3>I. 시장환경분석</h5>
+                                <h3>I. 시장환경분석</h3>
                                 <p>시장개요 / 유통구조분석 / 경쟁사분석 / 자사분석</p>
                             </li>
                             <li>
-                                <h3>II. 전략 방향 도출</h5>
+                                <h3>II. 전략 방향 도출</h3>
                                 <p>swot 분석 / 마케팅 기획 / 스토리텔링 기획</p>
                             </li>
                             <li>
-                                <h3>III. 신제품 아이디어 도출</h5>
+                                <h3>III. 신제품 아이디어 도출</h3>
                                 <p>거시환경 분석 / 과업환경 분석 / 내부환경 분석 / 소비자욕구 분석 / 아이디어 도출</p>
                             </li>
                             <li>
-                                <h3>IV. 신제품 콘셉트 개발</h5>
+                                <h3>IV. 신제품 콘셉트 개발</h3>
                                 <p>브랜드 네이밍 개발 / 제품 브랜드 컨셉 / 상품 콘셉트 스크리닝</p>
                             </li>
                             <li>
-                                <h3>V. STP 전략</h5>
+                                <h3>V. STP 전략</h3>
                                 <p>시장세분화 / 표적시장 / 포지셔닝 전략</p>
                             </li>
                             <li>
-                                <h3 class='center'>VI. 마케팅 목표</h5>
+                                <h3 class='center'>VI. 마케팅 목표</h3>
                             </li>
                             <li>
-                                <h3>VII. 마케팅믹스 전략</h5>
+                                <h3>VII. 마케팅믹스 전략</h3>
                                 <p>시장개요 / 유통구조분석 / 경쟁사분석 / 자사분석</p>
                             </li>
                             <li>
-                                <h3 class='center'>VIII. 손익계획</h5>
+                                <h3 class='center'>VIII. 손익계획</h3>
                             </li>
                             <li>
-                                <h3>IX. 실행계획</h5>
+                                <h3>IX. 실행계획</h3>
                                 <p>협조부서 / 추진일정</p>
                             </li>
                         </ul>
@@ -7453,7 +7716,7 @@ const router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
         },
         {
             props:true,
-            path: '/:cate',
+            path: '/service/:cate',
             component: _main_main__WEBPACK_IMPORTED_MODULE_1__["default"],
             name: 'main'
         },
@@ -7465,7 +7728,7 @@ const router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
         },
         {
             props:true,
-            path: '/contact/:id',
+            path: '/contact/:mode',
             component:_contact_main__WEBPACK_IMPORTED_MODULE_3__["default"],
             name: 'contact'
         },
@@ -7525,6 +7788,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./section1 */ "./src/works/section1.js");
 /* harmony import */ var _common_section_cate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/section-cate */ "./src/common/section-cate.js");
 /* harmony import */ var _works_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./works-list */ "./src/works/works-list.js");
+/* harmony import */ var _eventbus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../eventbus */ "./src/eventbus.js");
+
+
 
 
 
@@ -7538,6 +7804,12 @@ const MainPage = {
         MainSection1: _section1__WEBPACK_IMPORTED_MODULE_0__["default"],
         SectionCate: _common_section_cate__WEBPACK_IMPORTED_MODULE_1__["default"],
         WorksList: _works_list__WEBPACK_IMPORTED_MODULE_2__["default"]
+    },
+    created(){
+        _eventbus__WEBPACK_IMPORTED_MODULE_3__["default"].$emit('routerChange',true)
+    },
+    updated(){
+        _eventbus__WEBPACK_IMPORTED_MODULE_3__["default"].$emit('routerChange',true)
     }
 
 }
@@ -7571,13 +7843,7 @@ const MainSection1 = {
                 유니크한 경험과 그 진정한 가치를 위해 끊임없이 도전하는<br>
                 디지털 에이전시 CEOMAKER입니다
             </p>
-            <div class='btn'>
-                CONTACT US
-                <div class='pluarotate'>
-                    <span></span>
-                    <span></span>
-                </div>    
-            </div>
+           
         </div>
     </section>`
 }

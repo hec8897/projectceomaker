@@ -1,5 +1,6 @@
 import './contact.scss'
 const contactArea = {
+    props:['mode'],
     template:`<div class='form'>
                     <h2>1:1문의</h2>
                     <div class="privacy">
@@ -49,7 +50,7 @@ const contactArea = {
                                 </div>
                                 <div>
                                     <p>상담분야</p>
-                                    <input type="text" id='reqcompany'>
+                                    <input type="text" id='reqcompany' v-model="consultClass">
                                 </div>
                                 <div class="text_area">
                                     <p>문의 내용*</p>
@@ -58,7 +59,26 @@ const contactArea = {
                                 </form>
                             </div>
                         </div></div>
-               </div>`
+               </div>`,
+               data(){
+                   return{
+                       consultClass:''
+                   }
+               },
+               created(){
+                   if(this.mode == 'design'){
+                        this.consultClass= "디자인 문의"
+                   }
+                   else if(this.mode == 'marketing'){
+                        this.consultClass= "마케팅 문의"
+                   }
+                   else if(this.mode == 'academy'){
+                        this.consultClass= "교육 문의"
+                   }
+                   else if(this.mode == 'consulting'){
+                        this.consultClass= "컨설팅 문의"
+                   }
+               }
 }
 
 export default contactArea;

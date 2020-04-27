@@ -13,12 +13,12 @@ header{
             position: absolute;
             content: '';
             width: 100%;
-            height: 0px;
+            height: 90px;
             background-color: rgba(0,0,0,.5);
             top: 0;
             transition: .2s ease-in;
         }
-        &:hover ol{
+        &:hover ul.gnb ol{
             opacity: 1.0;
         }
         &:hover::before{
@@ -27,13 +27,15 @@ header{
         h1{
             width: 10%;
             display: inline;
+            position: relative;
+            z-index: 999;
             @media (max-width:767px) {
                 img{
                     width: 130px;
                 }
             }
         }
-        ul{
+        ul.gnb{
             display: inline-block;
             text-align: center;
             @include absoluteCenter;
@@ -66,7 +68,7 @@ header{
                     top: 40px;
                     transform: translateX(-50%);
                     opacity: 0.0;
-                    li{
+                    &>li{
                         color: $FontLight;
                         font-size: 14px;
                         margin: 15px 0px;
@@ -87,8 +89,16 @@ header{
             position: absolute;
             top: 50%;
             right: 0;
-            transform: translateY(-50%);
             transition: all 0.3s ease;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            z-index: 999;
             span{
                 background: #fff;
                 display: block;
@@ -96,13 +106,65 @@ header{
                 height: 3px;
                 margin-bottom: 7px;
                 transition: all 0.3s ease;
+                position: absolute;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .25s ease-in-out;
+                -moz-transition: .25s ease-in-out;
+                -o-transition: .25s ease-in-out;
+                transition: .25s ease-in-out;
+                &:nth-child(1){
+                    top: 0px;
+
+                }
+                &:nth-child(2){
+                    top: 10px;
+                }
+                &:nth-child(3){
+                    top: 10px;
+                }
+
                 &:last-child{
+                    top: 20px;
                     background: #1dbfd7;
                     width: 15px;
                     margin-left: 15px;
                 }
+                
             }
             &:hover span:nth-child(2){width:15px}
+            &:hover span:nth-child(3){width:15px}
+
+            &.open:hover span:nth-child(2){width:100%}
+            &.open:hover span:nth-child(3){width:100%}
+            &.open span:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+              }
+              &.open span:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                background-color: #222;
+           
+              }
+              &.open span:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                background-color: $MainColor;
+
+              }
+              &.open span:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+              }
         }
     }
 }

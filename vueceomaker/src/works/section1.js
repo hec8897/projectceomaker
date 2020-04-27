@@ -12,13 +12,7 @@ const MainSection1 = {
                 유니크한 경험과 그 진정한 가치를 위해 끊임없이 도전하는<br>
                 디지털 에이전시 CEOMAKER입니다
             </p>
-            <div class='btn'>
-                CONTACT US
-                <div class='pluarotate'>
-                    <span></span>
-                    <span></span>
-                </div>    
-            </div>
+           
         </div>
     </section>`
 }

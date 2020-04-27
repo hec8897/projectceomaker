@@ -1,0 +1,94 @@
+@import '../define.scss';
+
+div.nav_mo{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: #fff;
+    transition-delay: 1s;
+    transition: .25s ease-in;
+    z-index: 900;
+    top: 0;
+    cursor: default;
+    ul.lnb{
+        @include absoluteCenter;
+        top: 30%;
+        width: 150px;
+        height: 200px;
+        visibility: hidden;
+        opacity: 0.0;
+        transition: 0s ease-in;
+        transition-delay: 0.25s;
+        text-align: center;
+        @media (max-width:375px) {
+            top: 35%;
+
+        }
+
+        &>li{
+            cursor: pointer;
+            display: block;
+            color: #222;
+            font-size: 24px;
+            font-family: 'roboto';
+            position: relative;
+            margin: 20px 0px;
+            z-index: 990;
+            @media (max-width:767px) {
+                font-size: 18px;
+                margin: 10px 0px;
+                
+            }
+            @media (max-width:375px) {
+                margin: 5px 0px;
+            }
+
+          
+            &.router-link-active{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-color: lighten($color: $MainColor, $amount: 20%);
+                    display: inline-block;
+                    width: 100%;
+                    height: 8px;
+                    left: 0;
+                    bottom: 1px;
+                    z-index: -1;
+
+                }
+            }
+            
+        }
+        ol{
+            margin-bottom: 30px;
+            li{
+                cursor: pointer;
+                display: block;
+                font-size: 16px;
+                color: #666;
+                margin: 10px 0px;
+                @media (max-width:767px) {
+                    font-size: 14px;
+                    margin: 5px 0px;
+                }
+            }
+        }
+
+    }
+    &.close{
+        height: 0vh;
+        *{
+            opacity: 0.0;
+        }
+    }
+    &.open{
+        height: 100vh;
+        ul{
+            opacity: 1.0;
+            visibility: visible;
+        }
+        
+    }
+   
+}

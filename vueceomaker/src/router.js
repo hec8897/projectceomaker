@@ -15,7 +15,7 @@ const router = new VueRouter({
         },
         {
             props:true,
-            path: '/:cate',
+            path: '/service/:cate',
             component: MainPage,
             name: 'main'
         },
@@ -27,7 +27,7 @@ const router = new VueRouter({
         },
         {
             props:true,
-            path: '/contact/:id',
+            path: '/contact/:mode',
             component:contactMainPage,
             name: 'contact'
         },

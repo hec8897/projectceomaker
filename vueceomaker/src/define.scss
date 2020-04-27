@@ -5,6 +5,7 @@ $MainColor:#1dbfd7;
 $MainDarken:#015b96;
 $ImgRoute:"../../image/";
 
+
 @mixin wrap1200 {
     max-width: 1200px;
     margin: 0 auto;
@@ -93,6 +94,65 @@ $ImgRoute:"../../image/";
     }
 }
 
+@mixin section1($Img) {
+    height: 600px;
+    @include BackGroundOption(cover);
+    background-image: url($ImgRoute + $Img);
+    div.text_area{
+        @include absoluteCenter;
+        color: $white;
+        text-align: center;
+        font-size: 16px;
+        @media (max-width:1200px) {
+            font-size: 14px;
+        }
+        @media (max-width:767px) {
+            font-size: 12px;
+        }
+        h2{
+            font-size: 3.375em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-weight: bolder;
+            @media (max-width:1200px) {
+                font-size: 3.125em;
+            }
+            @media (max-width:767px) {
+                min-width: 340px;
+            }
+            span{
+                vertical-align: top;
+                &.ci_color1{
+                    color: $MainColor;
+                }
+                &.ci_color2{
+                    color: $MainDarken;
+                }
+            }
+            img{
+                width: auto;
+                margin-top: -30px;
+                @media (max-width:960px) { 
+                    display: none;
+                }
+            }
+        }
+        p.s_tit{
+            font-size: 1.125em;
+            line-height: 30px;
+            margin-bottom: 30px;
+            @media (max-width:767px) {
+                font-size: 1.275em;
+                width: 80%;
+                margin: 30px auto;
+            }
+        }
+        div.btn{
+            @include btnDefault($white);
+        }
+    }
+    
+}
 /*****animation define*****/
 
 @keyframes plusRotate {

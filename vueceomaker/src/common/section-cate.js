@@ -14,7 +14,7 @@ const SectionCate = {
               </div>`,
               created(){
                 this.cate == 'Works'?this.lists = this.Works:this.lists = this.Normal;
-                this.cate == 'Works'?this.page = '/works/':'';
+                this.cate == 'Works'?this.page = '/works/':'/design/';
               },
               data(){
                   return{
