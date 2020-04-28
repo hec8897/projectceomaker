@@ -20,10 +20,14 @@
 ##### 쇼핑몰교육 랜딩페이지
 <http://ceomaker.kr/shopping/>
 
+### 4.vueceomaker(작업중)
+<http://ceomaker.kr/test/>
 
-+개인랜딩페이지 개설
+SPA 리뉴얼
+*Vue.js vue router vuex axios *
+*css sass*
+*webpack, babel*
+*PHP,mysql*
 
-### 4.ver3 리뉴얼버전 javascript(ajax),php 완료 db 삭제기능 미삽입
-<http://dbplace.kr/bmadmin/>
 
-전체 디자인 수정, 기능 리뉴얼
+
