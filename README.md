@@ -25,7 +25,7 @@
 
 SPA 리뉴얼
 
-*Vue.js vue router vuex axios *
+*Vue.js vue router vuex axios*
 
 *css sass*
 
