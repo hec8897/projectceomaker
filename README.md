@@ -25,8 +25,11 @@
 
 SPA 리뉴얼
 *Vue.js vue router vuex axios *
+
 *css sass*
+
 *webpack, babel*
+
 *PHP,mysql*
 
 
