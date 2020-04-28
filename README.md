@@ -9,12 +9,16 @@
 
 ### 3.randpage
 
-fx-one 랜딩페이지(크몽외주)
-전국<http://dhimc.co.kr/?id=ch>
-멘토<http://dhimc.co.kr/?id=mt>
-여의도<http://dhimc.co.kr/?id=lee>
+#### fx-one 랜딩페이지(크몽외주)
 
-쇼핑몰교육 랜딩페이지<http://ceomaker.kr/shopping/>
+ *전국지점<http://dhimc.co.kr/?id=ch>
+ 
+ *멘토지점<http://dhimc.co.kr/?id=mt>
+ 
+ *여의도지점<http://dhimc.co.kr/?id=lee>
+
+##### 쇼핑몰교육 랜딩페이지
+<http://ceomaker.kr/shopping/>
 
 
 +개인랜딩페이지 개설
